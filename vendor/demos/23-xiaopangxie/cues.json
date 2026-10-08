@@ -1,0 +1,34 @@
+{
+  "fps": 30,
+  "duration": 10.0,
+  "bpm": 78,
+  "key": "F",
+  "frames": {
+    "hook": 0,
+    "rain": 18,
+    "pink_in": 48,
+    "together": 90,
+    "flower": 117,
+    "moon": 162,
+    "hearts": 186,
+    "lights": 216,
+    "hold": 258,
+    "end": 300
+  },
+  "hits": {
+    "rain": 0.6,
+    "pink_in": 1.6,
+    "together": 3.0,
+    "flower": 3.9,
+    "moon": 5.4,
+    "hearts": 6.2,
+    "lights": 7.2,
+    "title": 8.6
+  },
+  "lyrics": [
+    { "t": 0.75, "out": 3.15, "text": "我陪你看完这场雨" },
+    { "t": 3.35, "out": 5.95, "text": "雨停之前 你别走" },
+    { "t": 6.15, "out": 8.45, "text": "灯一盏一盏 亮起来" }
+  ],
+  "title": { "main": "小螃蟹", "sub": "XIAO PANG XIE" }
+}

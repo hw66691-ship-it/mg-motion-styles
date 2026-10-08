@@ -1,0 +1,1901 @@
+{
+ "jamendo-3400aacf8992": {
+  "categories": [
+   "轻快日常",
+   "欢快搞怪"
+  ],
+  "mood": "悠闲度假风小曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、度假休闲片段"
+ },
+ "jamendo-4ed97335f061": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "法式忧郁钢琴前奏",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、安静铺底"
+ },
+ "jamendo-7790d61a27c1": {
+  "categories": [
+   "异域风情",
+   "复古爵士"
+  ],
+  "mood": "巴黎风情爵士律动",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "异域风情、浪漫片段"
+ },
+ "jamendo-b94df2fd5041": {
+  "categories": [
+   "轻快日常",
+   "科技电子"
+  ],
+  "mood": "轻松律动电子小曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、过渡段落"
+ },
+ "migu-012a3ab1ca09": {
+  "categories": [
+   "激昂燃向",
+   "史诗大气"
+  ],
+  "mood": "经典古典舞曲式燃向",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、燃向古典段落"
+ },
+ "migu-0c3add881993": {
+  "categories": [
+   "史诗大气",
+   "悬疑紧张"
+  ],
+  "mood": "古典管弦悬疑氛围",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "史诗铺垫、庄重段落"
+ },
+ "migu-0d8581ada2e2": {
+  "categories": [
+   "史诗大气",
+   "温馨治愈"
+  ],
+  "mood": "宽广治愈的新世纪配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "风景、旅程铺垫"
+ },
+ "migu-0e794c023e59": {
+  "categories": [
+   "欢快搞怪",
+   "节日欢庆"
+  ],
+  "mood": "动感欢闹的派对金曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "搞笑高潮、派对氛围"
+ },
+ "migu-11b1f6ad9262": {
+  "categories": [
+   "欢快搞怪",
+   "复古爵士"
+  ],
+  "mood": "轻松法式小品配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、轻松过渡"
+ },
+ "migu-1fcd80123523": {
+  "categories": [
+   "史诗大气",
+   "激昂燃向"
+  ],
+  "mood": "经典弦乐四重奏终章",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、古典燃向段落"
+ },
+ "migu-59c755fd40e6": {
+  "categories": [
+   "欢快搞怪",
+   "轻快日常"
+  ],
+  "mood": "轻快诙谐的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、日常过渡"
+ },
+ "migu-6f4738c5543e": {
+  "categories": [
+   "异域风情",
+   "节日欢庆"
+  ],
+  "mood": "经典曼波派对金曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "派对高潮、异域欢庆"
+ },
+ "migu-7a1f40042b25": {
+  "categories": [
+   "温馨治愈",
+   "复古爵士"
+  ],
+  "mood": "怀旧乡村情歌",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "讲解铺底、怀旧片段"
+ },
+ "migu-9389e2785d1d": {
+  "categories": [
+   "复古爵士",
+   "异域风情"
+  ],
+  "mood": "探戈风情怀旧男声",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "复古、异域风情段落"
+ },
+ "migu-ac63d678eb00": {
+  "categories": [
+   "抒情钢琴",
+   "悬疑紧张"
+  ],
+  "mood": "空灵神秘的爵士氛围",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "悬疑、科幻氛围铺垫"
+ },
+ "migu-be5fcddc9bee": {
+  "categories": [
+   "温馨治愈",
+   "抒情钢琴"
+  ],
+  "mood": "柔软童真的治愈配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "温情、童真片段"
+ },
+ "migu-c0c5a6020a2d": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "韩式治愈轻快配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温情片段"
+ },
+ "migu-d2e8a667bb9c": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "经典法式手风琴圆舞曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "回忆、浪漫怀旧段落"
+ },
+ "migu-dc2863529e52": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "轻柔日系小品",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温情片段"
+ },
+ "migu-e1bd1fb83e6a": {
+  "categories": [
+   "异域风情",
+   "节日欢庆"
+  ],
+  "mood": "拉丁雷鬼顿热门舞曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "派对高潮、异域欢庆"
+ },
+ "migu-e673a80a27ff": {
+  "categories": [
+   "欢快搞怪",
+   "复古爵士"
+  ],
+  "mood": "法式喜剧配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、法式喜剧"
+ },
+ "migu-fb0b9f008fa9": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "温柔治愈小旋律",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温情片段"
+ },
+ "qianqian-62912c9a5a10": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "俏皮可爱的角色主题",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、角色登场"
+ },
+ "qianqian-7519a9052880": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "轻松愉悦的日系治愈",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、轻快铺底"
+ },
+ "qianqian-845d209e2a62": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "宁静夏夜氛围曲",
+  "energy": "low",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "夜晚、安静片段"
+ },
+ "qianqian-c434bb938930": {
+  "categories": [
+   "动漫游戏",
+   "轻快日常"
+  ],
+  "mood": "轻快角色主题曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、角色登场"
+ },
+ "qianqian-e9a61321f5f8": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "静谧前奏钢琴曲",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "开头、安静铺垫"
+ },
+ "qq-01151710adb2": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "魔性洗脑搞笑单曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "搞笑高潮、魔性循环"
+ },
+ "qq-033ca1bf4cbb": {
+  "categories": [
+   "科技电子",
+   "温馨治愈"
+  ],
+  "mood": "温暖电子流行律动",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、清新转场"
+ },
+ "qq-06181dec9113": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "细腻忧伤的钢琴独白",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、安静情感段落"
+ },
+ "qq-09e71bdbb28d": {
+  "categories": [
+   "轻快日常",
+   "温馨治愈"
+  ],
+  "mood": "轻松校园日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、日常片段"
+ },
+ "qq-0cd2d74fd23b": {
+  "categories": [
+   "轻快日常",
+   "温馨治愈"
+  ],
+  "mood": "惯常悠闲的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、日常片段"
+ },
+ "qq-0d0df311fa5e": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "浪漫唯美配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "结尾、浪漫升华"
+ },
+ "qq-0da2da474ac4": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "轻松诙谐的游戏配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、轻松过渡"
+ },
+ "qq-0f94f12094f2": {
+  "categories": [
+   "悬疑紧张",
+   "科技电子"
+  ],
+  "mood": "阴郁电子氛围，压抑感",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑铺垫、潜行段落"
+ },
+ "qq-0f9b3c03bbf8": {
+  "categories": [
+   "抒情钢琴",
+   "悬疑紧张"
+  ],
+  "mood": "空灵忧郁的氛围曲",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、安静铺垫"
+ },
+ "qq-103823022209": {
+  "categories": [
+   "科技电子",
+   "激昂燃向"
+  ],
+  "mood": "强劲说唱电子律动",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "高潮、燃向说唱段落"
+ },
+ "qq-113337ff3ed5": {
+  "categories": [
+   "轻快日常"
+  ],
+  "mood": "慢悠悠的治愈小调",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常铺底、过渡"
+ },
+ "qq-11e3697adbbc": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "荒诞热血恶搞人声曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "搞笑高潮、荒诞冒险"
+ },
+ "qq-176c06c70434": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "慢节奏晨间治愈拼贴",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "清晨、日常片段"
+ },
+ "qq-17b4002cb491": {
+  "categories": [
+   "异域风情",
+   "节日欢庆"
+  ],
+  "mood": "经典非洲合唱金曲",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "异域欢庆、怀旧高潮"
+ },
+ "qq-17dbd3e5c01b": {
+  "categories": [
+   "复古爵士",
+   "欢快搞怪"
+  ],
+  "mood": "经典拉格泰姆钢琴",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、复古欢快"
+ },
+ "qq-18333cc74289": {
+  "categories": [
+   "欢快搞怪",
+   "轻快日常"
+  ],
+  "mood": "明朗愉快的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、愉快片段"
+ },
+ "qq-18bac4d4636a": {
+  "categories": [
+   "异域风情",
+   "节日欢庆"
+  ],
+  "mood": "经典拉丁舞曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "异域欢庆、派对高潮"
+ },
+ "qq-19da5d4137d0": {
+  "categories": [
+   "抒情钢琴",
+   "史诗大气"
+  ],
+  "mood": "空灵史诗主题曲",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "开头、史诗铺垫"
+ },
+ "qq-1a68f29aa4cc": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "温暖治愈的意式小调",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、温情片段"
+ },
+ "qq-1a9efbf7bd38": {
+  "categories": [
+   "欢快搞怪",
+   "温馨治愈"
+  ],
+  "mood": "软萌治愈的日常配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、软萌片段"
+ },
+ "qq-1b72ef151a7f": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "巴西风情抒情民谣",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "讲解铺底、情感片段"
+ },
+ "qq-1ba0b58d8ee2": {
+  "categories": [
+   "温馨治愈",
+   "抒情钢琴"
+  ],
+  "mood": "宁静忧伤的民谣女声",
+  "energy": "low",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "结尾、安静情感段落"
+ },
+ "qq-1c679e8ac9aa": {
+  "categories": [
+   "异域风情",
+   "欢快搞怪"
+  ],
+  "mood": "经典科幻酒馆爵士曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "异域搞笑、科幻梗"
+ },
+ "qq-227a64780fe2": {
+  "categories": [
+   "动漫游戏",
+   "欢快搞怪"
+  ],
+  "mood": "经典游戏通关欢快曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "搞笑段落、游戏梗"
+ },
+ "qq-23d6deb1fdaa": {
+  "categories": [
+   "异域风情",
+   "复古爵士"
+  ],
+  "mood": "法式手风琴圆舞曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "异域风情、浪漫转场"
+ },
+ "qq-28a9aa57a7c5": {
+  "categories": [
+   "欢快搞怪",
+   "节日欢庆"
+  ],
+  "mood": "热闹活泼的流行舞曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "高潮、派对气氛"
+ },
+ "qq-2a5c5a0dfe07": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "怀旧忧伤的国风抒情",
+  "energy": "low",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "回忆、感伤段落"
+ },
+ "qq-2ba1aadb6ef3": {
+  "categories": [
+   "悬疑紧张",
+   "动漫游戏"
+  ],
+  "mood": "庄重神秘的奇幻配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑、奇幻铺垫"
+ },
+ "qq-301097830dc5": {
+  "categories": [
+   "动漫游戏",
+   "悬疑紧张"
+  ],
+  "mood": "慵懒神秘的游戏主题",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "搞笑反转、游戏梗"
+ },
+ "qq-33e5f4f904fc": {
+  "categories": [
+   "温馨治愈",
+   "节日欢庆"
+  ],
+  "mood": "经典国民动画主题曲",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "开头钩子、怀旧欢乐"
+ },
+ "qq-344870c54a41": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "滑稽喜剧时间配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、喜剧时刻"
+ },
+ "qq-37ab89f69c05": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "魔性复古网络神曲",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、魔性循环"
+ },
+ "qq-397ea583a0e9": {
+  "categories": [
+   "复古爵士",
+   "欢快搞怪"
+  ],
+  "mood": "滑稽拉格泰姆小调",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、复古欢快"
+ },
+ "qq-3d19e0b6db32": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "静谧抒情的钢琴曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、安静情感段落"
+ },
+ "qq-3e7def9fded1": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "热闹喧闹的登场曲",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、角色登场"
+ },
+ "qq-415bb6ab0c2d": {
+  "categories": [
+   "科技电子",
+   "动漫游戏"
+  ],
+  "mood": "迷幻disco电子人声",
+  "energy": "mid",
+  "vocal": "some",
+  "copyright_risk": false,
+  "use": "转场、迷幻片段"
+ },
+ "qq-4355e1451355": {
+  "categories": [
+   "节日欢庆",
+   "轻快日常"
+  ],
+  "mood": "欢快圣诞指弹吉他",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "节日、圣诞欢庆片段"
+ },
+ "qq-439bd9ab7f9c": {
+  "categories": [
+   "悬疑紧张",
+   "欢快搞怪"
+  ],
+  "mood": "紧张搞笑的潜行配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、紧张潜行"
+ },
+ "qq-48bc2b841616": {
+  "categories": [
+   "科技电子",
+   "激昂燃向"
+  ],
+  "mood": "明亮电子流行律动",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、燃向段落"
+ },
+ "qq-4b76c031afca": {
+  "categories": [
+   "节日欢庆",
+   "异域风情"
+  ],
+  "mood": "热闹喜庆的市集配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "节日、热闹市集氛围"
+ },
+ "qq-4bd4c5efe7d5": {
+  "categories": [
+   "异域风情",
+   "节日欢庆"
+  ],
+  "mood": "德式啤酒节欢唱手风琴",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "异域节日、欢庆气氛"
+ },
+ "qq-5274b7608182": {
+  "categories": [
+   "轻快日常",
+   "温馨治愈"
+  ],
+  "mood": "明快幸福感流行曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、暖心片段"
+ },
+ "qq-534f87dee969": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "滑稽小黄人号角主题",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "开头钩子、搞笑引入"
+ },
+ "qq-550d77d8d433": {
+  "categories": [
+   "轻快日常",
+   "温馨治愈"
+  ],
+  "mood": "轻快温暖的放学配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、日常片段"
+ },
+ "qq-55d737179c08": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "沮丧又滑稽的配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、沮丧吐槽"
+ },
+ "qq-567f68200702": {
+  "categories": [
+   "科技电子",
+   "激昂燃向"
+  ],
+  "mood": "动感电子Future Bass",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、动感剪辑"
+ },
+ "qq-568600c6de16": {
+  "categories": [
+   "科技电子",
+   "激昂燃向"
+  ],
+  "mood": "经典电子舞曲律动",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、动感剪辑"
+ },
+ "qq-5878bce7a342": {
+  "categories": [
+   "悬疑紧张",
+   "温馨治愈"
+  ],
+  "mood": "低落情绪下沉配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "情绪低落、沮丧段落"
+ },
+ "qq-5a7241703dfb": {
+  "categories": [
+   "欢快搞怪",
+   "科技电子"
+  ],
+  "mood": "荒诞科幻指令配乐",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、荒诞科幻"
+ },
+ "qq-5aa4b1792f6e": {
+  "categories": [
+   "科技电子",
+   "激昂燃向"
+  ],
+  "mood": "动感EDM电子律动",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、燃向段落"
+ },
+ "qq-5dcc2b50c1a8": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "悠闲海边治愈配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、悠闲片段"
+ },
+ "qq-5e8461701707": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "忧伤怀旧的圆舞曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、感伤段落"
+ },
+ "qq-5e96216d87c0": {
+  "categories": [
+   "动漫游戏",
+   "激昂燃向"
+  ],
+  "mood": "经典游戏主题变奏",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "高潮、游戏梗燃向"
+ },
+ "qq-628ddb804fc1": {
+  "categories": [
+   "悬疑紧张",
+   "动漫游戏"
+  ],
+  "mood": "神秘悬疑的推理配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑、线索揭示段落"
+ },
+ "qq-63f1d23ba228": {
+  "categories": [
+   "轻快日常",
+   "欢快搞怪"
+  ],
+  "mood": "平淡滑稽的角色主题",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、角色吐槽"
+ },
+ "qq-6507f20d607d": {
+  "categories": [
+   "异域风情",
+   "激昂燃向"
+  ],
+  "mood": "热烈佛拉门戈吉他",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、异域激情段落"
+ },
+ "qq-665a267def54": {
+  "categories": [
+   "悬疑紧张",
+   "抒情钢琴"
+  ],
+  "mood": "极简冷调氛围前奏",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑、安静前奏"
+ },
+ "qq-66aeda053f16": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "阳光治愈小曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、治愈铺底"
+ },
+ "qq-67ccfcc8e925": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "温暖怀旧的青梅竹马配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、温情片段"
+ },
+ "qq-691d3bbb15cb": {
+  "categories": [
+   "欢快搞怪"
+  ],
+  "mood": "轻松滑稽结尾曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "结尾、搞笑收尾"
+ },
+ "qq-69b69991b586": {
+  "categories": [
+   "异域风情",
+   "欢快搞怪"
+  ],
+  "mood": "经典科幻酒馆爵士曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "异域搞笑、科幻梗"
+ },
+ "qq-69ee0eed11cb": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "安静、略带感伤的独奏钢琴",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "适合回忆、结尾升华、低沉段落"
+ },
+ "qq-6a8c53851480": {
+  "categories": [
+   "欢快搞怪"
+  ],
+  "mood": "经典滑稽追逐配乐",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "搞笑高潮、追逐戏"
+ },
+ "qq-6bead242ffcc": {
+  "categories": [
+   "欢快搞怪",
+   "轻快日常"
+  ],
+  "mood": "滑稽默片式快节奏",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、快速剪辑"
+ },
+ "qq-6e57b2693dc3": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "紧张又滑稽的吃醋配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、情绪波动"
+ },
+ "qq-6ee49742429e": {
+  "categories": [
+   "复古爵士",
+   "欢快搞怪"
+  ],
+  "mood": "经典拉格泰姆钢琴曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、复古欢快"
+ },
+ "qq-6f91b1918089": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "浪漫交响钢琴改编",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "结尾升华、浪漫片段"
+ },
+ "qq-71d607eda311": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "柔和细腻的日常配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温情片段"
+ },
+ "qq-723b1a97e5a6": {
+  "categories": [
+   "科技电子",
+   "悬疑紧张"
+  ],
+  "mood": "阴暗电子remix律动",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "转场、紧张电子段落"
+ },
+ "qq-75fad1f4595b": {
+  "categories": [
+   "激昂燃向",
+   "欢快搞怪"
+  ],
+  "mood": "鲁莽冲动的搞笑配乐",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、冒失冲动"
+ },
+ "qq-76d838181958": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "放松悠闲的纯音乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、放松片段"
+ },
+ "qq-770d47ae8be8": {
+  "categories": [
+   "欢快搞怪",
+   "异域风情"
+  ],
+  "mood": "韩式幽默小调",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "搞笑段落、幽默小调"
+ },
+ "qq-77dc6fb3bd6b": {
+  "categories": [
+   "异域风情",
+   "复古爵士"
+  ],
+  "mood": "法式musette小调",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "异域风情、复古转场"
+ },
+ "qq-7c380eafe133": {
+  "categories": [
+   "异域风情",
+   "温馨治愈"
+  ],
+  "mood": "宁静村落的异域氛围",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、村落氛围"
+ },
+ "qq-7ce3323e52ec": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "混搭鬼畜remix片段",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、鬼畜剪辑"
+ },
+ "qq-7e0af5ea9d5d": {
+  "categories": [
+   "悬疑紧张",
+   "科技电子"
+  ],
+  "mood": "诡异女巫电子氛围",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑、怪诞段落"
+ },
+ "qq-848c658532ba": {
+  "categories": [
+   "欢快搞怪",
+   "温馨治愈"
+  ],
+  "mood": "慢节奏饥饿吐槽配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、吐槽情绪"
+ },
+ "qq-8a594b248dbe": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "松软惬意的治愈配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、慵懒片段"
+ },
+ "qq-8de797739400": {
+  "categories": [
+   "动漫游戏",
+   "轻快日常"
+  ],
+  "mood": "轻快明亮的平台关卡配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "日常、轻快探索段落"
+ },
+ "qq-8dfe2af84c23": {
+  "categories": [
+   "轻快日常",
+   "欢快搞怪"
+  ],
+  "mood": "甜美可爱的流行小曲",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "日常生活、甜美片段"
+ },
+ "qq-904dd48f176e": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "柔和舒缓的情感流行",
+  "energy": "low",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "讲解铺底、情感片段"
+ },
+ "qq-913e2d97eec0": {
+  "categories": [
+   "科技电子",
+   "悬疑紧张"
+  ],
+  "mood": "诡异电子节奏感",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、怪诞气氛"
+ },
+ "qq-92995a3465f8": {
+  "categories": [
+   "激昂燃向",
+   "动漫游戏"
+  ],
+  "mood": "热血动漫战斗配乐",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、热血战斗段落"
+ },
+ "qq-92e446b426fe": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "混乱滑稽的快节奏",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、混乱场面"
+ },
+ "qq-958a288e1e4c": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "柔和治愈的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温情片段"
+ },
+ "qq-95be493bb936": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "悠闲搞笑的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、悠闲过渡"
+ },
+ "qq-9afb4538dcd6": {
+  "categories": [
+   "悬疑紧张",
+   "温馨治愈"
+  ],
+  "mood": "呆滞发愣的低沉配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、发愣瞬间"
+ },
+ "qq-9e37b203af8f": {
+  "categories": [
+   "复古爵士",
+   "欢快搞怪"
+  ],
+  "mood": "活泼拉格泰姆钢琴",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、快速剪辑"
+ },
+ "qq-9e6bc642008f": {
+  "categories": [
+   "科技电子",
+   "轻快日常"
+  ],
+  "mood": "清新电子流行节奏",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、轻快转场"
+ },
+ "qq-a02800d63055": {
+  "categories": [
+   "动漫游戏",
+   "欢快搞怪"
+  ],
+  "mood": "经典8位元游戏欢快曲",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、复古游戏梗"
+ },
+ "qq-a1eef5d7f91c": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "怀旧日系小清新",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "日常、怀旧片段"
+ },
+ "qq-a51419c0a7bc": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "滑稽吐槽的紧张配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、吐槽时刻"
+ },
+ "qq-a5f5791e21d8": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "柔美花瓣般旋律",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温柔片段"
+ },
+ "qq-a69b0a8b3f65": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "滑稽温泉大作战配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、短促过渡"
+ },
+ "qq-a81f21b99379": {
+  "categories": [
+   "动漫游戏",
+   "温馨治愈"
+  ],
+  "mood": "明快治愈的动漫配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "动漫、轻快铺底"
+ },
+ "qq-a8a6a68d9006": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "滑稽卡通感主题曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "开头钩子、搞笑引入"
+ },
+ "qq-a9ff75e4941e": {
+  "categories": [
+   "复古爵士",
+   "欢快搞怪"
+  ],
+  "mood": "经典侦探喜剧爵士",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "搞笑反转、悬疑喜剧"
+ },
+ "qq-ac02c668930b": {
+  "categories": [
+   "史诗大气",
+   "悬疑紧张"
+  ],
+  "mood": "肃穆压迫的战国配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑、反派登场"
+ },
+ "qq-acda55a6ebe2": {
+  "categories": [
+   "温馨治愈",
+   "抒情钢琴"
+  ],
+  "mood": "励志温暖的钢琴流行",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "励志、升华段落"
+ },
+ "qq-ad53b468bd67": {
+  "categories": [
+   "节日欢庆",
+   "欢快搞怪"
+  ],
+  "mood": "经典迪斯科合唱金曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "派对高潮、欢庆合唱"
+ },
+ "qq-b3873d89fb36": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "温暖清新的校园日常",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、温情片段"
+ },
+ "qq-b54e775af56c": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "慵懒治愈的日常配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、慵懒片段"
+ },
+ "qq-b5c8546e67b3": {
+  "categories": [
+   "悬疑紧张",
+   "温馨治愈"
+  ],
+  "mood": "低落无趣的情绪配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "情绪低落、无聊段落"
+ },
+ "qq-b6af93c6b402": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "平静日常的治愈配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、日常片段"
+ },
+ "qq-b937f82978b3": {
+  "categories": [
+   "轻快日常",
+   "欢快搞怪"
+  ],
+  "mood": "欢乐轻快的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、愉快片段"
+ },
+ "qq-ba6ddcc722d1": {
+  "categories": [
+   "科技电子",
+   "轻快日常"
+  ],
+  "mood": "轻松电子律动小曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、过渡段落"
+ },
+ "qq-bbb97eace92d": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "轻松搞笑的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、轻松过渡"
+ },
+ "qq-bbf61d1588ee": {
+  "categories": [
+   "温馨治愈",
+   "动漫游戏"
+  ],
+  "mood": "动漫经典恋爱旋律弦乐改编",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "动漫、温情回忆"
+ },
+ "qq-bc066c2e5fb2": {
+  "categories": [
+   "轻快日常",
+   "温馨治愈"
+  ],
+  "mood": "轻松惬意的生活小调",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、轻松片段"
+ },
+ "qq-bd2865247e1e": {
+  "categories": [
+   "复古爵士",
+   "温馨治愈"
+  ],
+  "mood": "法式手风琴爵士漫步",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、复古漫步"
+ },
+ "qq-bdfc343507c1": {
+  "categories": [
+   "悬疑紧张",
+   "欢快搞怪"
+  ],
+  "mood": "疑惑滑稽的短促配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、疑惑表情"
+ },
+ "qq-c1639e66418f": {
+  "categories": [
+   "科技电子",
+   "异域风情"
+  ],
+  "mood": "海洋感电子流行",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、清新转场"
+ },
+ "qq-c5c82e186522": {
+  "categories": [
+   "欢快搞怪",
+   "异域风情"
+  ],
+  "mood": "滑稽改编版经典进行曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "搞笑反转、经典梗改编"
+ },
+ "qq-c734ffc44a60": {
+  "categories": [
+   "动漫游戏",
+   "欢快搞怪"
+  ],
+  "mood": "经典游戏通关欢快曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "搞笑段落、游戏梗"
+ },
+ "qq-c78afea00dff": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "宁静乡间的治愈配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、乡间氛围"
+ },
+ "qq-cbcb66641712": {
+  "categories": [
+   "异域风情",
+   "欢快搞怪"
+  ],
+  "mood": "巴尔干风情铜管小调",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "异域搞笑、转场"
+ },
+ "qq-d0a1a94e2022": {
+  "categories": [
+   "欢快搞怪",
+   "节日欢庆"
+  ],
+  "mood": "明快欢乐的流行曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "高潮、欢庆片段"
+ },
+ "qq-d1a7259fcda4": {
+  "categories": [
+   "轻快日常",
+   "欢快搞怪"
+  ],
+  "mood": "轻松诙谐的建造感配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、轻松过程"
+ },
+ "qq-d237f51bce74": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "悠闲周末料理氛围",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、生活片段"
+ },
+ "qq-d3e93167ce65": {
+  "categories": [
+   "欢快搞怪",
+   "复古爵士"
+  ],
+  "mood": "经典进行曲改编",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、复古进行曲"
+ },
+ "qq-d5754deb80e3": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "癫狂洗脑的鬼畜配乐",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、鬼畜循环"
+ },
+ "qq-d74c73c1fb49": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "愉快伙伴主题配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、伙伴登场"
+ },
+ "qq-d7dc4287471c": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "清新夏日放松旋律",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、治愈铺底"
+ },
+ "qq-de1e8c7b3a33": {
+  "categories": [
+   "欢快搞怪",
+   "温馨治愈"
+  ],
+  "mood": "欢快可爱的庆祝配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑段落、小庆祝"
+ },
+ "qq-df04a152e16e": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "温暖励志的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "讲解铺底、励志片段"
+ },
+ "qq-df4a1a9515ec": {
+  "categories": [
+   "动漫游戏",
+   "轻快日常"
+  ],
+  "mood": "轻快明亮的平台关卡配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "日常、轻快探索段落"
+ },
+ "qq-e07251d2af4a": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "滑稽恶搞remix感",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、梗图配乐"
+ },
+ "qq-e18d1864b112": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "自信张扬的搞笑主题",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑高潮、角色自夸"
+ },
+ "qq-e1f9bfd02210": {
+  "categories": [
+   "温馨治愈",
+   "抒情钢琴"
+  ],
+  "mood": "经典动画治愈片头曲",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": true,
+  "use": "开头钩子、温情片头"
+ },
+ "qq-e284eb31a89a": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "沉思忧郁的情感配乐",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "回忆、沉思段落"
+ },
+ "qq-e4b26fe99884": {
+  "categories": [
+   "悬疑紧张",
+   "科技电子"
+  ],
+  "mood": "克制紧张的氛围电子",
+  "energy": "low",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑铺垫、紧张段落"
+ },
+ "qq-e4ebd73b5641": {
+  "categories": [
+   "抒情钢琴",
+   "温馨治愈"
+  ],
+  "mood": "经典抒情情歌",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": true,
+  "use": "结尾、深情片段"
+ },
+ "qq-e5e85d89d09e": {
+  "categories": [
+   "悬疑紧张",
+   "欢快搞怪"
+  ],
+  "mood": "小心翼翼的潜行配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、紧张潜行"
+ },
+ "qq-e6de76bede8a": {
+  "categories": [
+   "轻快日常",
+   "温馨治愈"
+  ],
+  "mood": "轻松口哨治愈小调",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、轻松铺底"
+ },
+ "qq-e808017c731f": {
+  "categories": [
+   "节日欢庆",
+   "轻快日常"
+  ],
+  "mood": "阳光热带儿童歌谣感",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "夏日、欢乐片段"
+ },
+ "qq-e9d466271dd5": {
+  "categories": [
+   "复古爵士",
+   "欢快搞怪"
+  ],
+  "mood": "摩登复古摇摆爵士",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "转场、复古摇摆片段"
+ },
+ "qq-eb4255274d5a": {
+  "categories": [
+   "激昂燃向",
+   "复古爵士"
+  ],
+  "mood": "炽热摇滚吉他炸裂",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "高潮、动作炫技段落"
+ },
+ "qq-ecd24d97058d": {
+  "categories": [
+   "科技电子",
+   "激昂燃向"
+  ],
+  "mood": "动感浩室电子舞曲",
+  "energy": "high",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "高潮、派对律动"
+ },
+ "qq-ee40f715b0fd": {
+  "categories": [
+   "温馨治愈",
+   "复古爵士"
+  ],
+  "mood": "怀旧公路片式人声民谣",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "结尾、情感升华"
+ },
+ "qq-ef1e59c993b5": {
+  "categories": [
+   "欢快搞怪",
+   "动漫游戏"
+  ],
+  "mood": "紧张滑稽的考试配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、紧张滑稽"
+ },
+ "qq-f1ca74318fb6": {
+  "categories": [
+   "轻快日常",
+   "欢快搞怪"
+  ],
+  "mood": "轻松俏皮的日常配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、日常过渡"
+ },
+ "qq-f1ef42c5f3fb": {
+  "categories": [
+   "异域风情",
+   "轻快日常"
+  ],
+  "mood": "法式巴黎风情小调",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "异域风情、浪漫转场"
+ },
+ "qq-f30194a02b77": {
+  "categories": [
+   "史诗大气",
+   "悬疑紧张"
+  ],
+  "mood": "厚重神秘的北欧氛围",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "悬疑、史诗铺垫"
+ },
+ "qq-f3e389ea6c20": {
+  "categories": [
+   "欢快搞怪"
+  ],
+  "mood": "紧张滑稽的喜剧配乐",
+  "energy": "high",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "搞笑反转、慌乱追逐"
+ },
+ "qq-f5662d877b44": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "温暖家庭感配乐",
+  "energy": "mid",
+  "vocal": "none",
+  "copyright_risk": false,
+  "use": "日常、家庭温情片段"
+ },
+ "qq-f90cafc7969d": {
+  "categories": [
+   "温馨治愈",
+   "轻快日常"
+  ],
+  "mood": "可爱轻柔的小曲",
+  "energy": "mid",
+  "vocal": "full",
+  "copyright_risk": false,
+  "use": "日常、可爱片段"
+ }
+}

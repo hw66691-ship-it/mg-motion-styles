@@ -1,0 +1,616 @@
+{
+  "categories": [
+    {
+      "id": "female",
+      "name": "女声精选",
+      "order": 1
+    },
+    {
+      "id": "male",
+      "name": "男声精选",
+      "order": 2
+    },
+    {
+      "id": "cartoon",
+      "name": "卡通搞怪",
+      "order": 3
+    },
+    {
+      "id": "narration",
+      "name": "旁白解说",
+      "order": 4
+    },
+    {
+      "id": "dialect",
+      "name": "方言口音",
+      "order": 5
+    },
+    {
+      "id": "foreign",
+      "name": "外语音色",
+      "order": 6
+    }
+  ],
+  "voices": [
+    {
+      "id": "御姐",
+      "name": "御姐",
+      "category": "female",
+      "desc": "成熟自信的中低音，慵懒带距离感",
+      "design_lang": "zh",
+      "prompt": "御姐音。成熟自信的年轻女性，中低音区，嗓音略带沙哑磁性，语速从容不紧不慢，尾音微微下沉，带一点慵懒和距离感。",
+      "preview": {
+        "zh": "别紧张，坐下慢慢说。",
+        "en": "Relax. Sit down and tell me slowly."
+      }
+    },
+    {
+      "id": "甜妹",
+      "name": "甜妹",
+      "category": "female",
+      "desc": "清亮甜美，句尾上扬带笑意",
+      "design_lang": "zh",
+      "prompt": "甜美的年轻女孩，嗓音清亮偏细，语速稍快，句尾轻轻上扬带笑意，撒娇感明显，整体甜而不腻。",
+      "preview": {
+        "zh": "你今天有没有想我呀？",
+        "en": "Did you miss me today?"
+      }
+    },
+    {
+      "id": "清冷女声",
+      "name": "清冷女声",
+      "category": "female",
+      "desc": "干净偏冷，情绪起伏很小",
+      "design_lang": "zh",
+      "prompt": "清冷疏离的年轻女性，中高音区，音色干净偏冷，语速平缓，几乎没有情绪起伏，句尾平收。",
+      "preview": {
+        "zh": "我知道了，就这样吧。",
+        "en": "I see. Let's leave it at that."
+      }
+    },
+    {
+      "id": "温柔姐姐",
+      "name": "温柔姐姐",
+      "category": "female",
+      "desc": "气声柔和，安慰感强",
+      "design_lang": "zh",
+      "prompt": "温柔成熟的大姐姐，中音区，气声偏多，语速缓慢，句尾轻软，听起来亲切安心，像在耳边安慰人。",
+      "preview": {
+        "zh": "辛苦了，先歇一会儿吧。",
+        "en": "You've worked hard. Take a rest."
+      }
+    },
+    {
+      "id": "元气少女",
+      "name": "元气少女",
+      "category": "female",
+      "desc": "明亮跳跃，活力满满",
+      "design_lang": "zh",
+      "prompt": "元气满满的少女，明亮的高音区，语速快，节奏跳跃，充满活力和笑意，有运动番主角的感觉。",
+      "preview": {
+        "zh": "走吧走吧，出发啦！",
+        "en": "Come on, let's go go go!"
+      }
+    },
+    {
+      "id": "知性女声",
+      "name": "知性女声",
+      "category": "female",
+      "desc": "吐字清晰，像访谈主持",
+      "design_lang": "zh",
+      "prompt": "知性稳重的成熟女性，中低音区，吐字清晰饱满，语速从容，语气专业而不冷淡，像访谈节目主持人。",
+      "preview": {
+        "zh": "我们来聊聊这个话题。",
+        "en": "Let's talk about this topic."
+      }
+    },
+    {
+      "id": "磁性女中音",
+      "name": "磁性女中音",
+      "category": "female",
+      "desc": "胸腔共鸣强，有故事感",
+      "design_lang": "zh",
+      "prompt": "磁性醇厚的女中音，中低音区，胸腔共鸣明显，颗粒感强，语速偏慢，像深夜讲故事的人，很有故事感。",
+      "preview": {
+        "zh": "这个故事，我讲给你听。",
+        "en": "Let me tell you this story."
+      }
+    },
+    {
+      "id": "软糯少女",
+      "name": "软糯少女",
+      "category": "female",
+      "desc": "稚嫩黏糊，撒娇感重",
+      "design_lang": "zh",
+      "prompt": "软糯嗲甜的少女音，音色偏稚嫩，咬字靠前，语速慢，带一点黏糊的撒娇感，像撒娇的小猫。",
+      "preview": {
+        "zh": "再陪我一会儿好不好？",
+        "en": "Stay with me a bit longer, okay?"
+      }
+    },
+    {
+      "id": "霸总",
+      "name": "霸总",
+      "category": "male",
+      "desc": "极低音，压迫感强",
+      "design_lang": "zh",
+      "prompt": "低沉霸道的成熟男性，低音区，胸腔共鸣厚重，语速缓慢有压迫感，尾音下沉，冷峻自信，不容置疑。",
+      "preview": {
+        "zh": "这件事，我说了算。",
+        "en": "This is my call, and it's final."
+      }
+    },
+    {
+      "id": "青年男声",
+      "name": "青年男声",
+      "category": "male",
+      "desc": "干净自然，像身边朋友",
+      "design_lang": "zh",
+      "prompt": "普通青年男性，中音区，声音干净自然，语速中等，吐字松紧适中，像身边的朋友在聊天，不刻意。",
+      "preview": {
+        "zh": "我跟你讲个事儿啊。",
+        "en": "Let me tell you something."
+      }
+    },
+    {
+      "id": "少年音",
+      "name": "少年音",
+      "category": "male",
+      "desc": "清亮年轻，略带单薄",
+      "design_lang": "zh",
+      "prompt": "清亮的少年音，中高音区，嗓音年轻略带单薄，语速略快，语气真诚，有一点青春期少年的青涩感。",
+      "preview": {
+        "zh": "我一定会做到的！",
+        "en": "I will make it happen!"
+      }
+    },
+    {
+      "id": "磁性低音",
+      "name": "磁性低音",
+      "category": "male",
+      "desc": "深沉颗粒，深夜电台感",
+      "design_lang": "zh",
+      "prompt": "深沉磁性的成熟男声，低音区，颗粒感明显，气息厚实，语速慢，像深夜电台主播，安静而可靠。",
+      "preview": {
+        "zh": "夜深了，还没睡吗？",
+        "en": "It's late. Still awake?"
+      }
+    },
+    {
+      "id": "痞帅男声",
+      "name": "痞帅男声",
+      "category": "male",
+      "desc": "松弛尾音上扬，玩世不恭",
+      "design_lang": "zh",
+      "prompt": "痞帅的年轻男性，中低音区，语气松弛懒散，尾音上扬带一点玩世不恭，说话像带着坏笑。",
+      "preview": {
+        "zh": "行啊，那就陪你玩。",
+        "en": "Fine, let's play along."
+      }
+    },
+    {
+      "id": "温柔哥哥",
+      "name": "温柔哥哥",
+      "category": "male",
+      "desc": "气声柔和，耐心安慰",
+      "design_lang": "zh",
+      "prompt": "温柔耐心的年轻男性，中音区，气声柔和，语速慢，句尾轻，像在安慰人，温暖而没有攻击性。",
+      "preview": {
+        "zh": "别怕，有我在呢。",
+        "en": "Don't be afraid. I'm here."
+      }
+    },
+    {
+      "id": "沧桑大叔",
+      "name": "沧桑大叔",
+      "category": "male",
+      "desc": "沙哑干涩，带叹息感",
+      "design_lang": "zh",
+      "prompt": "饱经沧桑的中年男声，中低音区，嗓音沙哑干涩，语速慢，时不时带一点叹息感，声音里有故事。",
+      "preview": {
+        "zh": "人这一辈子，不容易啊。",
+        "en": "Life is never easy, you know."
+      }
+    },
+    {
+      "id": "阳光男孩",
+      "name": "阳光男孩",
+      "category": "male",
+      "desc": "明亮有弹性，尾音上扬",
+      "design_lang": "zh",
+      "prompt": "阳光开朗的年轻男生，中高音区，明亮有弹性，语速快，尾音上扬，笑起来很有感染力。",
+      "preview": {
+        "zh": "今天天气真好呀！",
+        "en": "What a beautiful day today!"
+      }
+    },
+    {
+      "id": "猴哥",
+      "name": "猴哥",
+      "category": "cartoon",
+      "desc": "尖细滑稽，上蹿下跳",
+      "design_lang": "zh",
+      "prompt": "滑稽夸张的猴子角色音，音调高而尖，语速极快，音高上蹿下跳，语气戏谑调侃，像动画片里的猴子。",
+      "preview": {
+        "zh": "嘿嘿，看俺老孙的！",
+        "en": "Heh, watch me do this!"
+      }
+    },
+    {
+      "id": "机器人",
+      "name": "机器人",
+      "category": "cartoon",
+      "desc": "扁平无起伏，机械停顿",
+      "design_lang": "zh",
+      "prompt": "机械感机器人角色音，音色扁平没有情绪起伏，语速均匀，字与字之间有明显停顿，冰冷生硬。",
+      "preview": {
+        "zh": "指令已接收，开始执行。",
+        "en": "Command received. Executing."
+      }
+    },
+    {
+      "id": "外星人",
+      "name": "外星人",
+      "category": "cartoon",
+      "desc": "又高又怪，带颤音",
+      "design_lang": "zh",
+      "prompt": "古怪的外星生物角色音，音调又高又怪，忽高忽低，带尖细的颤音和好奇心，像科幻片里的小外星人。",
+      "preview": {
+        "zh": "地球人，你好奇怪哦。",
+        "en": "Earthling, you are so strange."
+      }
+    },
+    {
+      "id": "小怪兽",
+      "name": "小怪兽",
+      "category": "cartoon",
+      "desc": "粗糙沙哑，呜呜低吼",
+      "design_lang": "zh",
+      "prompt": "呆萌小怪兽角色音，粗糙沙哑的低音，气息很重，语速慢，带呜呜的低吼感和憨憨的委屈。",
+      "preview": {
+        "zh": "呜呜，我饿了嘛。",
+        "en": "Grrr, I'm hungry..."
+      }
+    },
+    {
+      "id": "呆萌小熊",
+      "name": "呆萌小熊",
+      "category": "cartoon",
+      "desc": "含糊圆润，憨厚可爱",
+      "design_lang": "zh",
+      "prompt": "憨厚呆萌的卡通熊角色音，中低音区，咬字含糊圆润，语速慢，憨憨的很可爱，像儿童动画旁白。",
+      "preview": {
+        "zh": "蜂蜜，我最喜欢蜂蜜啦。",
+        "en": "Honey! I love honey the most."
+      }
+    },
+    {
+      "id": "大魔王",
+      "name": "大魔王",
+      "category": "cartoon",
+      "desc": "极低压嗓，阴沉威胁",
+      "design_lang": "zh",
+      "prompt": "阴沉邪恶的大魔王角色音，极低音，压着嗓子说话，语速慢而重，每个字都带着威胁和冷笑。",
+      "preview": {
+        "zh": "你，逃不掉的。",
+        "en": "You cannot escape from me."
+      }
+    },
+    {
+      "id": "搞怪小丑",
+      "name": "搞怪小丑",
+      "category": "cartoon",
+      "desc": "尖细夸张，滑稽起伏",
+      "design_lang": "zh",
+      "prompt": "尖细夸张的小丑角色音，音调忽高忽低，语速快，带笑声式的起伏和滑稽的拖腔，古灵精怪。",
+      "preview": {
+        "zh": "哈哈，惊喜不惊喜？",
+        "en": "Haha! What a surprise, right?"
+      }
+    },
+    {
+      "id": "AI助手",
+      "name": "AI助手",
+      "category": "cartoon",
+      "desc": "中性平缓，冷静清晰",
+      "design_lang": "zh",
+      "prompt": "冷静的AI助手音，中性音色，非常平缓清晰，语速均匀，几乎没有情绪起伏，礼貌而疏离。",
+      "preview": {
+        "zh": "已为你完成整理。",
+        "en": "I have finished sorting it for you."
+      }
+    },
+    {
+      "id": "纪录片解说",
+      "name": "纪录片解说",
+      "category": "narration",
+      "desc": "沉稳厚实，缓慢庄重",
+      "design_lang": "zh",
+      "prompt": "沉稳的纪录片解说男声，中低音区，共鸣厚实，语速缓慢庄重，句尾平稳下落，有画面感和权威感。",
+      "preview": {
+        "zh": "在遥远的北方，冬天来了。",
+        "en": "Far in the north, winter has come."
+      }
+    },
+    {
+      "id": "新闻播报",
+      "name": "新闻播报",
+      "category": "narration",
+      "desc": "标准播音，清晰规整",
+      "design_lang": "zh",
+      "prompt": "标准的新闻播音女声，中高音区，吐字清晰饱满，语速稳，节奏规整，字正腔圆，正式而客观。",
+      "preview": {
+        "zh": "下面请看详细报道。",
+        "en": "Here is our detailed report."
+      }
+    },
+    {
+      "id": "科普讲解",
+      "name": "科普讲解",
+      "category": "narration",
+      "desc": "亲切自然，讲清重点",
+      "design_lang": "zh",
+      "prompt": "亲切的科普讲解声，中音区，语气自然带一点兴奋，吐字清楚，重点处稍微加重，像在跟你解释原理。",
+      "preview": {
+        "zh": "其实原理特别简单。",
+        "en": "The principle is actually simple."
+      }
+    },
+    {
+      "id": "广告促销",
+      "name": "广告促销",
+      "category": "narration",
+      "desc": "高亢饱满，煽动性强",
+      "design_lang": "zh",
+      "prompt": "高亢的促销广告音，中高音区，语速快，情绪饱满有煽动性，尾音上扬，节奏感强，像电视购物。",
+      "preview": {
+        "zh": "仅限今天，抓紧下单！",
+        "en": "Today only - order right now!"
+      }
+    },
+    {
+      "id": "情感电台",
+      "name": "情感电台",
+      "category": "narration",
+      "desc": "气声多，深夜治愈",
+      "design_lang": "zh",
+      "prompt": "深夜情感电台主播，中低音区，气声偏多，语速极慢，句尾轻轻落下，温柔治愈，有一点疲惫的暖意。",
+      "preview": {
+        "zh": "今晚，我们聊聊遗憾。",
+        "en": "Tonight, let's talk about regret."
+      }
+    },
+    {
+      "id": "悬疑旁白",
+      "name": "悬疑旁白",
+      "category": "narration",
+      "desc": "压低气声，停顿多",
+      "design_lang": "zh",
+      "prompt": "悬疑惊悚旁白，压低的男声，气声和沙哑感重，语速慢，停顿多，音量收着，制造不安和悬念。",
+      "preview": {
+        "zh": "那天晚上，门是锁着的。",
+        "en": "That night, the door was locked."
+      }
+    },
+    {
+      "id": "体育解说",
+      "name": "体育解说",
+      "category": "narration",
+      "desc": "语速极快，情绪爆发",
+      "design_lang": "zh",
+      "prompt": "激情体育解说，中高音区，语速极快，情绪爆发，音量起伏大，句尾常常喊出来，紧张又亢奋。",
+      "preview": {
+        "zh": "球进了！太精彩了！",
+        "en": "It's in! What a play!"
+      }
+    },
+    {
+      "id": "财经播报",
+      "name": "财经播报",
+      "category": "narration",
+      "desc": "干脆理性，克制专业",
+      "design_lang": "zh",
+      "prompt": "冷静专业的财经播报，中音区，吐字干脆利落，语速稳，语气理性克制，像在念市场数据。",
+      "preview": {
+        "zh": "今日指数小幅收涨。",
+        "en": "The index closed slightly higher today."
+      }
+    },
+    {
+      "id": "东北大哥",
+      "name": "东北大哥",
+      "category": "dialect",
+      "desc": "豪爽快速，热心唠嗑",
+      "design_lang": "zh",
+      "prompt": "豪爽的东北口音男性，中低音区，语速快，儿化音和上扬尾音明显，语气热心直爽，像在唠嗑。",
+      "preview": {
+        "zh": "哎呀妈呀，你咋才来呢！",
+        "en": "Oh man, why are you so late!"
+      }
+    },
+    {
+      "id": "四川话",
+      "name": "四川话",
+      "category": "dialect",
+      "desc": "川渝腔调，活泼泼辣",
+      "design_lang": "zh",
+      "prompt": "成都口音的女性，中音区，语速中等，带明显的川渝腔调和活泼泼辣的语气，尾音软糯上扬。",
+      "preview": {
+        "zh": "走嘛，我们吃火锅去！",
+        "en": "Come on, let's go for hotpot!"
+      }
+    },
+    {
+      "id": "台湾腔",
+      "name": "台湾腔",
+      "category": "dialect",
+      "desc": "尾音软绵上扬",
+      "design_lang": "zh",
+      "prompt": "台湾腔的年轻女生，中高音区，语速偏慢，尾音软绵上扬，咬字轻软，听起来嗲而不腻。",
+      "preview": {
+        "zh": "真的假的啦，你别骗我。",
+        "en": "Really? Don't lie to me."
+      }
+    },
+    {
+      "id": "天津话",
+      "name": "天津话",
+      "category": "dialect",
+      "desc": "幽默诙谐，哏儿味重",
+      "design_lang": "zh",
+      "prompt": "天津口音的男性，中音区，语速快，语气幽默诙谐，尾音下滑带哏儿味，像在说相声逗人乐。",
+      "preview": {
+        "zh": "您猜怎么着，这事儿成了！",
+        "en": "Guess what? It worked out!"
+      }
+    },
+    {
+      "id": "广东口音",
+      "name": "广东口音",
+      "category": "dialect",
+      "desc": "普通话带粤语腔调",
+      "design_lang": "zh",
+      "prompt": "广东口音的普通话男性，中低音区，语速中等，字尾偏短促，带一点粤语腔调，听感利落。",
+      "preview": {
+        "zh": "你先听我讲完先。",
+        "en": "Hear me out first, okay?"
+      }
+    },
+    {
+      "id": "河南话",
+      "name": "河南话",
+      "category": "dialect",
+      "desc": "实在憨厚，中音偏平",
+      "design_lang": "zh",
+      "prompt": "河南口音的男性，中音区，普通话带明显的河南味，语速中等偏慢，语气实在憨厚，尾音往下压。",
+      "preview": {
+        "zh": "中，就这么定了！",
+        "en": "Alright, that's settled then!"
+      }
+    },
+    {
+      "id": "上海腔",
+      "name": "上海腔",
+      "category": "dialect",
+      "desc": "吴语软糯，平缓斯文",
+      "design_lang": "zh",
+      "prompt": "上海口音的普通话女性，中音区，语速平缓，咬字斯文，带吴语软糯的尾音，听起来细致讲究。",
+      "preview": {
+        "zh": "慢慢交，伐要急呀。",
+        "en": "Take it slow, no need to rush."
+      }
+    },
+    {
+      "id": "陕西腔",
+      "name": "陕西腔",
+      "category": "dialect",
+      "desc": "开口音重，憨厚豪爽",
+      "design_lang": "zh",
+      "prompt": "陕西口音的男性，中低音区，语速慢，开口音重，语气憨厚豪爽，尾音粗犷有力。",
+      "preview": {
+        "zh": "咥碗面，美得很！",
+        "en": "A bowl of noodles - that's the good life!"
+      }
+    },
+    {
+      "id": "日语少女",
+      "name": "日语少女",
+      "category": "foreign",
+      "desc": "清亮偏高，活泼可爱",
+      "design_lang": "zh",
+      "prompt": "日语少女音，清亮偏高音，语速稍快，语气活泼可爱，尾音轻扬，像动画里的元气少女。",
+      "preview": {
+        "zh": "今天也要加油哦！",
+        "en": "Let's do our best today!",
+        "ja": "今日もがんばろうね！"
+      }
+    },
+    {
+      "id": "日语少年",
+      "name": "日语少年",
+      "category": "foreign",
+      "desc": "清冷克制，语速平稳",
+      "design_lang": "zh",
+      "prompt": "日语少年音，中高音区，音色清冷克制，语速平稳，情绪内敛，像安静的少年在低声说话。",
+      "preview": {
+        "zh": "我知道了。",
+        "en": "I understand.",
+        "ja": "わかったよ。"
+      }
+    },
+    {
+      "id": "韩语女声",
+      "name": "韩语女声",
+      "category": "foreign",
+      "desc": "温柔亲切，语速中等",
+      "design_lang": "zh",
+      "prompt": "韩语年轻女声，中音区，音色温柔亲切，语速中等，语气柔和礼貌，句尾轻收。",
+      "preview": {
+        "zh": "谢谢你今天来。",
+        "en": "Thank you for coming today.",
+        "ko": "오늘 와 줘서 고마워."
+      }
+    },
+    {
+      "id": "韩语男声",
+      "name": "韩语男声",
+      "category": "foreign",
+      "desc": "中低音，温暖干净",
+      "design_lang": "zh",
+      "prompt": "韩语年轻男声，中低音区，音色温暖干净，语速平稳，语气礼貌克制，像温柔的哥哥。",
+      "preview": {
+        "zh": "慢慢来也没关系。",
+        "en": "It's okay to take your time.",
+        "ko": "천천히 해도 괜찮아."
+      }
+    },
+    {
+      "id": "美式男声",
+      "name": "美式男声",
+      "category": "foreign",
+      "desc": "美音饱满，自然随意",
+      "design_lang": "en",
+      "prompt": "美式英语男性，中低音区，共鸣饱满，美式口音明显，语速中等偏慢，语气自然随意，像播客主持。",
+      "preview": {
+        "zh": "我们开始吧。",
+        "en": "Alright, let's get started."
+      }
+    },
+    {
+      "id": "英式女声",
+      "name": "英式女声",
+      "category": "foreign",
+      "desc": "英音讲究，优雅克制",
+      "design_lang": "en",
+      "prompt": "英式英语女性，中音区，发音讲究清晰，英式口音，语速平稳，语气优雅克制，像纪录片旁白。",
+      "preview": {
+        "zh": "欢迎来到这里。",
+        "en": "Welcome. Please, come this way."
+      }
+    },
+    {
+      "id": "法语女声",
+      "name": "法语女声",
+      "category": "foreign",
+      "desc": "鼻化元音，优雅",
+      "design_lang": "en",
+      "prompt": "法语女性，中音区，鼻化元音明显，语速中等，语气优雅从容，带着一点慵懒的法式腔调。",
+      "preview": {
+        "zh": "很高兴认识你。",
+        "en": "It's a pleasure to meet you."
+      }
+    },
+    {
+      "id": "俄语男声",
+      "name": "俄语男声",
+      "category": "foreign",
+      "desc": "低音厚重，沉稳有力",
+      "design_lang": "en",
+      "prompt": "俄语男性，低音区，嗓音厚重有力，语速偏慢，语气沉稳有力，像在严肃地陈述。",
+      "preview": {
+        "zh": "一切都很好。",
+        "en": "Everything is going to be fine."
+      }
+    }
+  ]
+}

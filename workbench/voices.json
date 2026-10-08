@@ -1,0 +1,1481 @@
+{
+ "generated": "2026-10-06 12:34:47",
+ "langs": {
+  "zh": "中文",
+  "en": "English",
+  "ja": "日本語",
+  "ko": "한국어",
+  "de": "Deutsch",
+  "fr": "Français",
+  "ru": "Русский",
+  "pt": "Português",
+  "es": "Español",
+  "it": "Italiano"
+ },
+ "instruct_model": true,
+ "design_model": true,
+ "categories": [
+  {
+   "id": "mine",
+   "name": "我的音色",
+   "order": 0
+  },
+  {
+   "id": "female",
+   "name": "女声精选",
+   "order": 1
+  },
+  {
+   "id": "male",
+   "name": "男声精选",
+   "order": 2
+  },
+  {
+   "id": "cartoon",
+   "name": "卡通搞怪",
+   "order": 3
+  },
+  {
+   "id": "narration",
+   "name": "旁白解说",
+   "order": 4
+  },
+  {
+   "id": "dialect",
+   "name": "方言口音",
+   "order": 5
+  },
+  {
+   "id": "foreign",
+   "name": "外语音色",
+   "order": 6
+  }
+ ],
+ "preview_clips": {
+  "zh": {
+   "Vivian": "previews/adc6d11a17845550.wav",
+   "Serena": "previews/78993b19889fe316.wav",
+   "Uncle_Fu": "previews/c76d1bbb43d6a213.wav",
+   "Dylan": "previews/bd40d0add2964a64.wav",
+   "Eric": "previews/2b6466b025ea676d.wav",
+   "Ryan": "previews/1f8b89d8d1b97666.wav",
+   "Aiden": "previews/dd50785b116143c8.wav",
+   "Ono_Anna": "previews/43f00a5df733af7d.wav",
+   "Sohee": "previews/3e92dc94bda90a2a.wav",
+   "AI助手": "previews/773734e1a4104a1b.wav",
+   "上海腔": "previews/f30989d5c6e19bc6.wav",
+   "东北大哥": "previews/e0a07021c9d9362e.wav",
+   "体育解说": "previews/e7fad0c1c6602b15.wav",
+   "俄语男声": "previews/d95c16a128212369.wav",
+   "元气少女": "previews/7b79133ae5630a13.wav",
+   "台湾腔": "previews/0841a2d620bc670c.wav",
+   "呆萌小熊": "previews/a1811e9043782ca9.wav",
+   "四川话": "previews/3661af767c651925.wav",
+   "外星人": "previews/054f2bd13e490daa.wav",
+   "大魔王": "previews/3d4a66b32182bb93.wav",
+   "天津话": "previews/bc0afbae95e22374.wav",
+   "小怪兽": "previews/96c56fe06fa66f40.wav",
+   "少年音": "previews/c4dc3f92d919b08d.wav",
+   "广东口音": "previews/a99e7857300ef009.wav",
+   "广告促销": "previews/df7bb54ddb9d4ac2.wav",
+   "御姐": "previews/f84c9525fe97a026.wav",
+   "悬疑旁白": "previews/732be88f7e46dc8e.wav",
+   "情感电台": "previews/c85541e1ee6f6041.wav",
+   "搞怪小丑": "previews/866387ddba846e16.wav",
+   "新闻播报": "previews/7f6395658255cce2.wav",
+   "日语少女": "previews/a48f595add1d4439.wav",
+   "日语少年": "previews/6674000974eef837.wav",
+   "机器人": "previews/c120aefefaf0b358.wav",
+   "沧桑大叔": "previews/48d0800ffc9fbc9a.wav",
+   "河南话": "previews/e21568fac69f065a.wav",
+   "法语女声": "previews/faefb96d6b82d3df.wav",
+   "清冷女声": "previews/e8145777bfc7966f.wav",
+   "温柔哥哥": "previews/92418a44ca0d77da.wav",
+   "温柔姐姐": "previews/93b73a9f5367b921.wav",
+   "猴哥": "previews/598953c685bca6d8.wav",
+   "甜妹": "previews/feaaa265f0510bc6.wav",
+   "痞帅男声": "previews/4e186855daea8f68.wav",
+   "知性女声": "previews/141085ff975cc3d3.wav",
+   "磁性低音": "previews/48c57927bf65262f.wav",
+   "磁性女中音": "previews/b993f4ce5ef76d42.wav",
+   "科普讲解": "previews/44eb8a52477537fb.wav",
+   "纪录片解说": "previews/11170af20cdda218.wav",
+   "美式男声": "previews/7956e512975018b6.wav",
+   "英式女声": "previews/0ac0a1067a10afc7.wav",
+   "财经播报": "previews/41f28425d71c602f.wav",
+   "软糯少女": "previews/0204f3ea51c6c4c9.wav",
+   "阳光男孩": "previews/94304323ad285f62.wav",
+   "陕西腔": "previews/01a44d421f6249c6.wav",
+   "霸总": "previews/e61ec15596680fd1.wav",
+   "青年男声": "previews/7b06bbf3d540fdab.wav",
+   "韩语女声": "previews/c9b9607048712e29.wav",
+   "韩语男声": "previews/b8d2b8aa56ccfafc.wav"
+  },
+  "en": {
+   "Vivian": "previews/3d8fbb79ff7227dc.wav",
+   "Serena": "previews/4c175cb05e8a9216.wav",
+   "Uncle_Fu": "previews/26c7c733bbee7573.wav",
+   "Dylan": "previews/21cf66f726e29dd3.wav",
+   "Eric": "previews/a3e55f98599cc0ff.wav",
+   "Ryan": "previews/38ae1d86aba5eff3.wav",
+   "Aiden": "previews/566c309ca018c97c.wav",
+   "Ono_Anna": "previews/259dcec1f543b409.wav",
+   "Sohee": "previews/9b63a9ebf614d2eb.wav",
+   "AI助手": "previews/2147163b962bdc23.wav",
+   "上海腔": "previews/52b31ac8d09574e3.wav",
+   "东北大哥": "previews/3ccdb5d59c1f110b.wav",
+   "体育解说": "previews/4ef8817b2398f179.wav",
+   "俄语男声": "previews/9afa6a936944c5d2.wav",
+   "元气少女": "previews/2aeacd8bfd1316d0.wav",
+   "台湾腔": "previews/26095d8a5274af31.wav",
+   "呆萌小熊": "previews/e2dc1e35cfb28039.wav",
+   "四川话": "previews/e0e831f880799326.wav",
+   "外星人": "previews/d0d7a265740aa3ec.wav",
+   "大魔王": "previews/4851a1204850b2c8.wav",
+   "天津话": "previews/f23f879a5db9d16f.wav",
+   "小怪兽": "previews/ad10584567cf2ce4.wav",
+   "少年音": "previews/a5ab24f030545ab7.wav",
+   "广东口音": "previews/1bb43ec7fc91757a.wav",
+   "广告促销": "previews/670f4484da5d619d.wav",
+   "御姐": "previews/d90f3f4befd21c6c.wav",
+   "悬疑旁白": "previews/d9b5502a46e2a3e0.wav",
+   "情感电台": "previews/665b3efe1055218f.wav",
+   "搞怪小丑": "previews/18402f2a4ecd14de.wav",
+   "新闻播报": "previews/4320b9da03e559d7.wav",
+   "日语少女": "previews/a5e87d462b9c42d0.wav",
+   "日语少年": "previews/2d23278b63f13117.wav",
+   "机器人": "previews/29c9cda03c4560f6.wav",
+   "沧桑大叔": "previews/a5e9c655a2f43762.wav",
+   "河南话": "previews/747305ad6855d0b4.wav",
+   "法语女声": "previews/b0f506e890c5baf9.wav",
+   "清冷女声": "previews/6e46361cd1e7857e.wav",
+   "温柔哥哥": "previews/566d6e4977ecadd2.wav",
+   "温柔姐姐": "previews/c88e9e1ec991a3f7.wav",
+   "猴哥": "previews/cd53fcbaacd18d09.wav",
+   "甜妹": "previews/c4050e626b0b0094.wav",
+   "痞帅男声": "previews/c49a2977ee6e2e8e.wav",
+   "知性女声": "previews/9a0b1e753baa1c70.wav",
+   "磁性低音": "previews/6cccf9e7cfa652bc.wav",
+   "磁性女中音": "previews/2e8a2c41379a7684.wav",
+   "科普讲解": "previews/e2cd2095aa62c446.wav",
+   "纪录片解说": "previews/a9113dcdd3d6576f.wav",
+   "美式男声": "previews/4843388f7e730b32.wav",
+   "英式女声": "previews/9fd124d956bf3add.wav",
+   "财经播报": "previews/6e9b6c6ed077cc8b.wav",
+   "软糯少女": "previews/a6a185326356edcf.wav",
+   "阳光男孩": "previews/dd8e186b66b7c24e.wav",
+   "陕西腔": "previews/49d6184715a5c669.wav",
+   "霸总": "previews/d3f733c87003961c.wav",
+   "青年男声": "previews/57749a6ff4b2c91e.wav",
+   "韩语女声": "previews/373f1bcb2eb1fe1a.wav",
+   "韩语男声": "previews/8f4cfced49ab00e6.wav"
+  },
+  "ja": {
+   "Ono_Anna": "previews/d432873dbf2a214c.wav"
+  }
+ },
+ "preview_texts": {
+  "zh": {
+   "Vivian": "嘿，今天也要元气满满哦！",
+   "Serena": "别着急，慢慢来就好。",
+   "Uncle_Fu": "这个故事，要从很久以前说起。",
+   "Dylan": "得嘞，咱这就出发！",
+   "Eric": "巴适得很，走起嘛！",
+   "Ryan": "准备好了吗？节奏起！",
+   "Aiden": "阳光正好，出去走走吧！",
+   "Ono_Anna": "今天也请多多关照呀！",
+   "Sohee": "谢谢你一直陪着我。",
+   "AI助手": "已为你完成整理。",
+   "上海腔": "慢慢交，伐要急呀。",
+   "东北大哥": "哎呀妈呀，你咋才来呢！",
+   "体育解说": "球进了！太精彩了！",
+   "俄语男声": "一切都很好。",
+   "元气少女": "走吧走吧，出发啦！",
+   "台湾腔": "真的假的啦，你别骗我。",
+   "呆萌小熊": "蜂蜜，我最喜欢蜂蜜啦。",
+   "四川话": "走嘛，我们吃火锅去！",
+   "外星人": "地球人，你好奇怪哦。",
+   "大魔王": "你，逃不掉的。",
+   "天津话": "您猜怎么着，这事儿成了！",
+   "小怪兽": "呜呜，我饿了嘛。",
+   "少年音": "我一定会做到的！",
+   "广东口音": "你先听我讲完先。",
+   "广告促销": "仅限今天，抓紧下单！",
+   "御姐": "别紧张，坐下慢慢说。",
+   "悬疑旁白": "那天晚上，门是锁着的。",
+   "情感电台": "今晚，我们聊聊遗憾。",
+   "搞怪小丑": "哈哈，惊喜不惊喜？",
+   "新闻播报": "下面请看详细报道。",
+   "日语少女": "今天也要加油哦！",
+   "日语少年": "我知道了。",
+   "机器人": "指令已接收，开始执行。",
+   "沧桑大叔": "人这一辈子，不容易啊。",
+   "河南话": "中，就这么定了！",
+   "法语女声": "很高兴认识你。",
+   "清冷女声": "Kingsley哥哥，我喜欢你",
+   "温柔哥哥": "别怕，有我在呢。",
+   "温柔姐姐": "辛苦了，先歇一会儿吧。",
+   "猴哥": "嘿嘿，看俺老孙的！",
+   "甜妹": "你今天有没有想我呀？",
+   "痞帅男声": "行啊，那就陪你玩。",
+   "知性女声": "我们来聊聊这个话题。",
+   "磁性低音": "夜深了，还没睡吗？",
+   "磁性女中音": "这个故事，我讲给你听。",
+   "科普讲解": "其实原理特别简单。",
+   "纪录片解说": "在遥远的北方，冬天来了。",
+   "美式男声": "我们开始吧。",
+   "英式女声": "欢迎来到这里。",
+   "财经播报": "今日指数小幅收涨。",
+   "软糯少女": "再陪我一会儿好不好？",
+   "阳光男孩": "今天天气真好呀！",
+   "陕西腔": "咥碗面，美得很！",
+   "霸总": "这件事，我说了算。",
+   "青年男声": "我跟你讲个事儿啊。",
+   "韩语女声": "谢谢你今天来。",
+   "韩语男声": "慢慢来也没关系。"
+  },
+  "en": {
+   "Vivian": "Hey, let's make today amazing!",
+   "Serena": "Take a breath, you're doing great.",
+   "Uncle_Fu": "Let me tell you an old story.",
+   "Dylan": "Alright, let's get this going!",
+   "Eric": "Sounds good, let's roll!",
+   "Ryan": "Ready? Let's drop the beat!",
+   "Aiden": "Sun's out, let's go outside!",
+   "Ono_Anna": "Nice to meet you, let's have fun!",
+   "Sohee": "Thank you for always being here.",
+   "AI助手": "I have finished sorting it for you.",
+   "上海腔": "Take it slow, no need to rush.",
+   "东北大哥": "Oh man, why are you so late!",
+   "体育解说": "It's in! What a play!",
+   "俄语男声": "Everything is going to be fine.",
+   "元气少女": "Come on, let's go go go!",
+   "台湾腔": "Really? Don't lie to me.",
+   "呆萌小熊": "Honey! I love honey the most.",
+   "四川话": "Come on, let's go for hotpot!",
+   "外星人": "Earthling, you are so strange.",
+   "大魔王": "You cannot escape from me.",
+   "天津话": "Guess what? It worked out!",
+   "小怪兽": "Grrr, I'm hungry...",
+   "少年音": "I will make it happen!",
+   "广东口音": "Hear me out first, okay?",
+   "广告促销": "Today only - order right now!",
+   "御姐": "Relax. Sit down and tell me slowly.",
+   "悬疑旁白": "That night, the door was locked.",
+   "情感电台": "Tonight, let's talk about regret.",
+   "搞怪小丑": "Haha! What a surprise, right?",
+   "新闻播报": "Here is our detailed report.",
+   "日语少女": "Let's do our best today!",
+   "日语少年": "I understand.",
+   "机器人": "Command received. Executing.",
+   "沧桑大叔": "Life is never easy, you know.",
+   "河南话": "Alright, that's settled then!",
+   "法语女声": "It's a pleasure to meet you.",
+   "清冷女声": "Kingsley哥哥，我喜欢你",
+   "温柔哥哥": "Don't be afraid. I'm here.",
+   "温柔姐姐": "You've worked hard. Take a rest.",
+   "猴哥": "Heh, watch me do this!",
+   "甜妹": "Did you miss me today?",
+   "痞帅男声": "Fine, let's play along.",
+   "知性女声": "Let's talk about this topic.",
+   "磁性低音": "It's late. Still awake?",
+   "磁性女中音": "Let me tell you this story.",
+   "科普讲解": "The principle is actually simple.",
+   "纪录片解说": "Far in the north, winter has come.",
+   "美式男声": "Alright, let's get started.",
+   "英式女声": "Welcome. Please, come this way.",
+   "财经播报": "The index closed slightly higher today.",
+   "软糯少女": "Stay with me a bit longer, okay?",
+   "阳光男孩": "What a beautiful day today!",
+   "陕西腔": "A bowl of noodles - that's the good life!",
+   "霸总": "This is my call, and it's final.",
+   "青年男声": "Let me tell you something.",
+   "韩语女声": "Thank you for coming today.",
+   "韩语男声": "It's okay to take your time."
+  },
+  "ja": {
+   "Ono_Anna": "今日もよろしくね！"
+  }
+ },
+ "voices": [
+  {
+   "id": "Vivian",
+   "name": "Vivian",
+   "kind": "preset",
+   "desc": "明亮、略带锋芒的年轻女声",
+   "category": "female",
+   "native": "Chinese",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Serena",
+   "name": "Serena",
+   "kind": "preset",
+   "desc": "温暖、柔和的年轻女声",
+   "category": "female",
+   "native": "Chinese",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Uncle_Fu",
+   "name": "Uncle Fu",
+   "kind": "preset",
+   "desc": "低沉醇厚的成熟男声",
+   "category": "male",
+   "native": "Chinese",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Dylan",
+   "name": "Dylan",
+   "kind": "preset",
+   "desc": "北京口音的年轻男声",
+   "category": "male",
+   "native": "Chinese",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Eric",
+   "name": "Eric",
+   "kind": "preset",
+   "desc": "成都口音、微沙哑的活泼男声",
+   "category": "male",
+   "native": "Chinese",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Ryan",
+   "name": "Ryan",
+   "kind": "preset",
+   "desc": "节奏感强的动感男声",
+   "category": "male",
+   "native": "English",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Aiden",
+   "name": "Aiden",
+   "kind": "preset",
+   "desc": "阳光的美式男声",
+   "category": "male",
+   "native": "English",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Ono_Anna",
+   "name": "Ono Anna",
+   "kind": "preset",
+   "desc": "轻快灵动的日语女声",
+   "category": "foreign",
+   "native": "Japanese",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "Sohee",
+   "name": "Sohee",
+   "kind": "preset",
+   "desc": "情感丰富的温暖韩语女声",
+   "category": "foreign",
+   "native": "Korean",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "AI助手",
+   "name": "AI助手",
+   "kind": "design",
+   "desc": "冷静的AI助手音，中性音色，非常平缓清晰，语速均匀，几乎没有情绪起伏，礼貌而疏离。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "冷静的AI助手音，中性音色，非常平缓清晰，语速均匀，几乎没有情绪起伏，礼貌而疏离。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "上海腔",
+   "name": "上海腔",
+   "kind": "design",
+   "desc": "上海口音的普通话女性，中音区，语速平缓，咬字斯文，带吴语软糯的尾音，听起来细致讲究。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "上海口音的普通话女性，中音区，语速平缓，咬字斯文，带吴语软糯的尾音，听起来细致讲究。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "东北大哥",
+   "name": "东北大哥",
+   "kind": "design",
+   "desc": "豪爽的东北口音男性，中低音区，语速快，儿化音和上扬尾音明显，语气热心直爽，像在唠嗑。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "豪爽的东北口音男性，中低音区，语速快，儿化音和上扬尾音明显，语气热心直爽，像在唠嗑。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "体育解说",
+   "name": "体育解说",
+   "kind": "design",
+   "desc": "激情体育解说，中高音区，语速极快，情绪爆发，音量起伏大，句尾常常喊出来，紧张又亢奋。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "激情体育解说，中高音区，语速极快，情绪爆发，音量起伏大，句尾常常喊出来，紧张又亢奋。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "俄语男声",
+   "name": "俄语男声",
+   "kind": "design",
+   "desc": "俄语男性，低音区，嗓音厚重有力，语速偏慢，语气沉稳有力，像在严肃地陈述。",
+   "category": "foreign",
+   "native": "English",
+   "design_prompt": "俄语男性，低音区，嗓音厚重有力，语速偏慢，语气沉稳有力，像在严肃地陈述。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "元气少女",
+   "name": "元气少女",
+   "kind": "design",
+   "desc": "元气满满的少女，明亮的高音区，语速快，节奏跳跃，充满活力和笑意，有运动番主角的感觉。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "元气满满的少女，明亮的高音区，语速快，节奏跳跃，充满活力和笑意，有运动番主角的感觉。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "台湾腔",
+   "name": "台湾腔",
+   "kind": "design",
+   "desc": "台湾腔的年轻女生，中高音区，语速偏慢，尾音软绵上扬，咬字轻软，听起来嗲而不腻。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "台湾腔的年轻女生，中高音区，语速偏慢，尾音软绵上扬，咬字轻软，听起来嗲而不腻。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "呆萌小熊",
+   "name": "呆萌小熊",
+   "kind": "design",
+   "desc": "憨厚呆萌的卡通熊角色音，中低音区，咬字含糊圆润，语速慢，憨憨的很可爱，像儿童动画旁白。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "憨厚呆萌的卡通熊角色音，中低音区，咬字含糊圆润，语速慢，憨憨的很可爱，像儿童动画旁白。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "四川话",
+   "name": "四川话",
+   "kind": "design",
+   "desc": "成都口音的女性，中音区，语速中等，带明显的川渝腔调和活泼泼辣的语气，尾音软糯上扬。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "成都口音的女性，中音区，语速中等，带明显的川渝腔调和活泼泼辣的语气，尾音软糯上扬。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "外星人",
+   "name": "外星人",
+   "kind": "design",
+   "desc": "古怪的外星生物角色音，音调又高又怪，忽高忽低，带尖细的颤音和好奇心，像科幻片里的小外星人。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "古怪的外星生物角色音，音调又高又怪，忽高忽低，带尖细的颤音和好奇心，像科幻片里的小外星人。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "大魔王",
+   "name": "大魔王",
+   "kind": "design",
+   "desc": "阴沉邪恶的大魔王角色音，极低音，压着嗓子说话，语速慢而重，每个字都带着威胁和冷笑。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "阴沉邪恶的大魔王角色音，极低音，压着嗓子说话，语速慢而重，每个字都带着威胁和冷笑。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "天津话",
+   "name": "天津话",
+   "kind": "design",
+   "desc": "天津口音的男性，中音区，语速快，语气幽默诙谐，尾音下滑带哏儿味，像在说相声逗人乐。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "天津口音的男性，中音区，语速快，语气幽默诙谐，尾音下滑带哏儿味，像在说相声逗人乐。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "小怪兽",
+   "name": "小怪兽",
+   "kind": "design",
+   "desc": "呆萌小怪兽角色音，粗糙沙哑的低音，气息很重，语速慢，带呜呜的低吼感和憨憨的委屈。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "呆萌小怪兽角色音，粗糙沙哑的低音，气息很重，语速慢，带呜呜的低吼感和憨憨的委屈。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "少年音",
+   "name": "少年音",
+   "kind": "design",
+   "desc": "清亮的少年音，中高音区，嗓音年轻略带单薄，语速略快，语气真诚，有一点青春期少年的青涩感。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "清亮的少年音，中高音区，嗓音年轻略带单薄，语速略快，语气真诚，有一点青春期少年的青涩感。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "广东口音",
+   "name": "广东口音",
+   "kind": "design",
+   "desc": "广东口音的普通话男性，中低音区，语速中等，字尾偏短促，带一点粤语腔调，听感利落。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "广东口音的普通话男性，中低音区，语速中等，字尾偏短促，带一点粤语腔调，听感利落。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "广告促销",
+   "name": "广告促销",
+   "kind": "design",
+   "desc": "高亢的促销广告音，中高音区，语速快，情绪饱满有煽动性，尾音上扬，节奏感强，像电视购物。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "高亢的促销广告音，中高音区，语速快，情绪饱满有煽动性，尾音上扬，节奏感强，像电视购物。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "御姐",
+   "name": "御姐",
+   "kind": "design",
+   "desc": "御姐音。成熟自信的年轻女性，中低音区，嗓音略带沙哑磁性，语速从容不紧不慢，尾音微微下沉，带一点慵懒和距离感。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "御姐音。成熟自信的年轻女性，中低音区，嗓音略带沙哑磁性，语速从容不紧不慢，尾音微微下沉，带一点慵懒和距离感。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "悬疑旁白",
+   "name": "悬疑旁白",
+   "kind": "design",
+   "desc": "悬疑惊悚旁白，压低的男声，气声和沙哑感重，语速慢，停顿多，音量收着，制造不安和悬念。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "悬疑惊悚旁白，压低的男声，气声和沙哑感重，语速慢，停顿多，音量收着，制造不安和悬念。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "情感电台",
+   "name": "情感电台",
+   "kind": "design",
+   "desc": "深夜情感电台主播，中低音区，气声偏多，语速极慢，句尾轻轻落下，温柔治愈，有一点疲惫的暖意。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "深夜情感电台主播，中低音区，气声偏多，语速极慢，句尾轻轻落下，温柔治愈，有一点疲惫的暖意。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "搞怪小丑",
+   "name": "搞怪小丑",
+   "kind": "design",
+   "desc": "尖细夸张的小丑角色音，音调忽高忽低，语速快，带笑声式的起伏和滑稽的拖腔，古灵精怪。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "尖细夸张的小丑角色音，音调忽高忽低，语速快，带笑声式的起伏和滑稽的拖腔，古灵精怪。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "新闻播报",
+   "name": "新闻播报",
+   "kind": "design",
+   "desc": "标准的新闻播音女声，中高音区，吐字清晰饱满，语速稳，节奏规整，字正腔圆，正式而客观。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "标准的新闻播音女声，中高音区，吐字清晰饱满，语速稳，节奏规整，字正腔圆，正式而客观。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "日语少女",
+   "name": "日语少女",
+   "kind": "design",
+   "desc": "日语少女音，清亮偏高音，语速稍快，语气活泼可爱，尾音轻扬，像动画里的元气少女。",
+   "category": "foreign",
+   "native": "Chinese",
+   "design_prompt": "日语少女音，清亮偏高音，语速稍快，语气活泼可爱，尾音轻扬，像动画里的元气少女。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "日语少年",
+   "name": "日语少年",
+   "kind": "design",
+   "desc": "日语少年音，中高音区，音色清冷克制，语速平稳，情绪内敛，像安静的少年在低声说话。",
+   "category": "foreign",
+   "native": "Chinese",
+   "design_prompt": "日语少年音，中高音区，音色清冷克制，语速平稳，情绪内敛，像安静的少年在低声说话。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "机器人",
+   "name": "机器人",
+   "kind": "design",
+   "desc": "机械感机器人角色音，音色扁平没有情绪起伏，语速均匀，字与字之间有明显停顿，冰冷生硬。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "机械感机器人角色音，音色扁平没有情绪起伏，语速均匀，字与字之间有明显停顿，冰冷生硬。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "沧桑大叔",
+   "name": "沧桑大叔",
+   "kind": "design",
+   "desc": "饱经沧桑的中年男声，中低音区，嗓音沙哑干涩，语速慢，时不时带一点叹息感，声音里有故事。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "饱经沧桑的中年男声，中低音区，嗓音沙哑干涩，语速慢，时不时带一点叹息感，声音里有故事。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "河南话",
+   "name": "河南话",
+   "kind": "design",
+   "desc": "河南口音的男性，中音区，普通话带明显的河南味，语速中等偏慢，语气实在憨厚，尾音往下压。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "河南口音的男性，中音区，普通话带明显的河南味，语速中等偏慢，语气实在憨厚，尾音往下压。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "法语女声",
+   "name": "法语女声",
+   "kind": "design",
+   "desc": "法语女性，中音区，鼻化元音明显，语速中等，语气优雅从容，带着一点慵懒的法式腔调。",
+   "category": "foreign",
+   "native": "English",
+   "design_prompt": "法语女性，中音区，鼻化元音明显，语速中等，语气优雅从容，带着一点慵懒的法式腔调。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "清冷女声",
+   "name": "清冷女声",
+   "kind": "design",
+   "desc": "清冷疏离的年轻女性，中高音区，音色干净偏冷，语速平缓，几乎没有情绪起伏，句尾平收。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "清冷疏离的年轻女性，中高音区，音色干净偏冷，语速平缓，几乎没有情绪起伏，句尾平收。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": "Kingsley哥哥，我喜欢你"
+   }
+  },
+  {
+   "id": "温柔哥哥",
+   "name": "温柔哥哥",
+   "kind": "design",
+   "desc": "温柔耐心的年轻男性，中音区，气声柔和，语速慢，句尾轻，像在安慰人，温暖而没有攻击性。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "温柔耐心的年轻男性，中音区，气声柔和，语速慢，句尾轻，像在安慰人，温暖而没有攻击性。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "温柔姐姐",
+   "name": "温柔姐姐",
+   "kind": "design",
+   "desc": "温柔成熟的大姐姐，中音区，气声偏多，语速缓慢，句尾轻软，听起来亲切安心，像在耳边安慰人。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "温柔成熟的大姐姐，中音区，气声偏多，语速缓慢，句尾轻软，听起来亲切安心，像在耳边安慰人。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "猴哥",
+   "name": "猴哥",
+   "kind": "design",
+   "desc": "滑稽夸张的猴子角色音，音调高而尖，语速极快，音高上蹿下跳，语气戏谑调侃，像动画片里的猴子。",
+   "category": "cartoon",
+   "native": "Chinese",
+   "design_prompt": "滑稽夸张的猴子角色音，音调高而尖，语速极快，音高上蹿下跳，语气戏谑调侃，像动画片里的猴子。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "甜妹",
+   "name": "甜妹",
+   "kind": "design",
+   "desc": "甜美的年轻女孩，嗓音清亮偏细，语速稍快，句尾轻轻上扬带笑意，撒娇感明显，整体甜而不腻。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "甜美的年轻女孩，嗓音清亮偏细，语速稍快，句尾轻轻上扬带笑意，撒娇感明显，整体甜而不腻。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "痞帅男声",
+   "name": "痞帅男声",
+   "kind": "design",
+   "desc": "痞帅的年轻男性，中低音区，语气松弛懒散，尾音上扬带一点玩世不恭，说话像带着坏笑。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "痞帅的年轻男性，中低音区，语气松弛懒散，尾音上扬带一点玩世不恭，说话像带着坏笑。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "知性女声",
+   "name": "知性女声",
+   "kind": "design",
+   "desc": "知性稳重的成熟女性，中低音区，吐字清晰饱满，语速从容，语气专业而不冷淡，像访谈节目主持人。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "知性稳重的成熟女性，中低音区，吐字清晰饱满，语速从容，语气专业而不冷淡，像访谈节目主持人。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "磁性低音",
+   "name": "磁性低音",
+   "kind": "design",
+   "desc": "深沉磁性的成熟男声，低音区，颗粒感明显，气息厚实，语速慢，像深夜电台主播，安静而可靠。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "深沉磁性的成熟男声，低音区，颗粒感明显，气息厚实，语速慢，像深夜电台主播，安静而可靠。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "磁性女中音",
+   "name": "磁性女中音",
+   "kind": "design",
+   "desc": "磁性醇厚的女中音，中低音区，胸腔共鸣明显，颗粒感强，语速偏慢，像深夜讲故事的人，很有故事感。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "磁性醇厚的女中音，中低音区，胸腔共鸣明显，颗粒感强，语速偏慢，像深夜讲故事的人，很有故事感。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "科普讲解",
+   "name": "科普讲解",
+   "kind": "design",
+   "desc": "亲切的科普讲解声，中音区，语气自然带一点兴奋，吐字清楚，重点处稍微加重，像在跟你解释原理。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "亲切的科普讲解声，中音区，语气自然带一点兴奋，吐字清楚，重点处稍微加重，像在跟你解释原理。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "纪录片解说",
+   "name": "纪录片解说",
+   "kind": "design",
+   "desc": "沉稳的纪录片解说男声，中低音区，共鸣厚实，语速缓慢庄重，句尾平稳下落，有画面感和权威感。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "沉稳的纪录片解说男声，中低音区，共鸣厚实，语速缓慢庄重，句尾平稳下落，有画面感和权威感。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "美式男声",
+   "name": "美式男声",
+   "kind": "design",
+   "desc": "美式英语男性，中低音区，共鸣饱满，美式口音明显，语速中等偏慢，语气自然随意，像播客主持。",
+   "category": "foreign",
+   "native": "English",
+   "design_prompt": "美式英语男性，中低音区，共鸣饱满，美式口音明显，语速中等偏慢，语气自然随意，像播客主持。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "英式女声",
+   "name": "英式女声",
+   "kind": "design",
+   "desc": "英式英语女性，中音区，发音讲究清晰，英式口音，语速平稳，语气优雅克制，像纪录片旁白。",
+   "category": "foreign",
+   "native": "English",
+   "design_prompt": "英式英语女性，中音区，发音讲究清晰，英式口音，语速平稳，语气优雅克制，像纪录片旁白。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "财经播报",
+   "name": "财经播报",
+   "kind": "design",
+   "desc": "冷静专业的财经播报，中音区，吐字干脆利落，语速稳，语气理性克制，像在念市场数据。",
+   "category": "narration",
+   "native": "Chinese",
+   "design_prompt": "冷静专业的财经播报，中音区，吐字干脆利落，语速稳，语气理性克制，像在念市场数据。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "软糯少女",
+   "name": "软糯少女",
+   "kind": "design",
+   "desc": "软糯嗲甜的少女音，音色偏稚嫩，咬字靠前，语速慢，带一点黏糊的撒娇感，像撒娇的小猫。",
+   "category": "female",
+   "native": "Chinese",
+   "design_prompt": "软糯嗲甜的少女音，音色偏稚嫩，咬字靠前，语速慢，带一点黏糊的撒娇感，像撒娇的小猫。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "阳光男孩",
+   "name": "阳光男孩",
+   "kind": "design",
+   "desc": "阳光开朗的年轻男生，中高音区，明亮有弹性，语速快，尾音上扬，笑起来很有感染力。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "阳光开朗的年轻男生，中高音区，明亮有弹性，语速快，尾音上扬，笑起来很有感染力。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "陕西腔",
+   "name": "陕西腔",
+   "kind": "design",
+   "desc": "陕西口音的男性，中低音区，语速慢，开口音重，语气憨厚豪爽，尾音粗犷有力。",
+   "category": "dialect",
+   "native": "Chinese",
+   "design_prompt": "陕西口音的男性，中低音区，语速慢，开口音重，语气憨厚豪爽，尾音粗犷有力。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "霸总",
+   "name": "霸总",
+   "kind": "design",
+   "desc": "低沉霸道的成熟男性，低音区，胸腔共鸣厚重，语速缓慢有压迫感，尾音下沉，冷峻自信，不容置疑。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "低沉霸道的成熟男性，低音区，胸腔共鸣厚重，语速缓慢有压迫感，尾音下沉，冷峻自信，不容置疑。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "青年男声",
+   "name": "青年男声",
+   "kind": "design",
+   "desc": "普通青年男性，中音区，声音干净自然，语速中等，吐字松紧适中，像身边的朋友在聊天，不刻意。",
+   "category": "male",
+   "native": "Chinese",
+   "design_prompt": "普通青年男性，中音区，声音干净自然，语速中等，吐字松紧适中，像身边的朋友在聊天，不刻意。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "韩语女声",
+   "name": "韩语女声",
+   "kind": "design",
+   "desc": "韩语年轻女声，中音区，音色温柔亲切，语速中等，语气柔和礼貌，句尾轻收。",
+   "category": "foreign",
+   "native": "Chinese",
+   "design_prompt": "韩语年轻女声，中音区，音色温柔亲切，语速中等，语气柔和礼貌，句尾轻收。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  },
+  {
+   "id": "韩语男声",
+   "name": "韩语男声",
+   "kind": "design",
+   "desc": "韩语年轻男声，中低音区，音色温暖干净，语速平稳，语气礼貌克制，像温柔的哥哥。",
+   "category": "foreign",
+   "native": "Chinese",
+   "design_prompt": "韩语年轻男声，中低音区，音色温暖干净，语速平稳，语气礼貌克制，像温柔的哥哥。",
+   "tunable": {
+    "rate": true,
+    "pitch": true,
+    "instruct": false,
+    "redesign": true
+   },
+   "settings": {
+    "rate": 1.0,
+    "pitch": 0.0,
+    "instruct": "",
+    "sample": ""
+   }
+  }
+ ]
+}

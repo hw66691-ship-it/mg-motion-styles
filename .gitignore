@@ -1,0 +1,12 @@
+# local environments / build outputs (recreate with scripts/setup.sh)
+vendor/.venv/
+vendor/node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+vendor/demos/*/out/
+# fonts are fetched by scripts/fetch-fonts.sh
+vendor/assets/fonts/**/*.ttf
+vendor/assets/fonts/**/*.otf
+# BigApple local install metadata
+bigapple/

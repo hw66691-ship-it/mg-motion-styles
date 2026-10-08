@@ -1,0 +1,11 @@
+# 配乐与交付质检所需的依赖（做一支片的最小集合）。
+# 完整清单（含生成素材用的 pillow/opencv/rembg 等）见 requirements-full.txt。
+# 注意：matplotlib 3.9.1 在 Python 3.13 上无 wheel，这里放宽为实现同族的 >=3.9.2。
+numpy==2.4.6
+scipy==1.16.3
+soundfile==0.14.0
+numba==0.66.0
+pedalboard==0.9.25
+pyloudnorm==0.2.0
+matplotlib>=3.9.2,<4
+librosa==0.11.0

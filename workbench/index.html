@@ -1,0 +1,1394 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MG 视频工作台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffd84d'/%3E%3Cpath d='M9 22V10l7 7 7-7v12' stroke='%231a1a12' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#14151c;--panel:#1c1e27;--panel2:#22242f;--line:#2e3140;--fg:#eceef5;--dim:#9aa0b4;
+  --accent:#ffd84d;--accent2:#7cc4ff;--ok:#5fd38d;--bad:#ff6b6b;--r:12px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"PingFang SC","Noto Sans SC",system-ui,sans-serif}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+.hidden{display:none!important}
+header{display:flex;align-items:center;gap:14px;padding:18px 30px;border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:5;background:rgba(20,21,28,.94);backdrop-filter:blur(8px)}
+header h1{margin:0;font-size:20px}header h1 span{color:var(--accent)}
+header .sp{flex:1}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:8px 14px;font-size:14px}
+.btn:hover{border-color:#4a5068}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#1a1a12;font-weight:650}
+.btn.pri:disabled{opacity:.5;cursor:wait}
+.btn.pri[data-act=save]:disabled{cursor:default;background:var(--panel2);border-color:var(--line);color:var(--dim)}
+.btn.sm{padding:4px 10px;font-size:13px}
+a.btn{color:var(--fg);text-decoration:none;display:inline-block}a.btn.pri{color:#1a1a12}
+.btn.danger{color:var(--bad)}
+.badge{display:inline-block;font-size:11.5px;padding:1px 8px;border-radius:7px;border:1px solid var(--line);color:var(--dim)}
+main{padding:24px 30px 60px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+input[type=search],input[type=text],input[type=password],select,textarea{background:var(--panel2);border:1px solid var(--line);
+  border-radius:9px;padding:9px 12px;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--accent2)}
+.chip{background:var(--panel2);border:1px solid var(--line);color:var(--dim);padding:6px 13px;border-radius:20px;font-size:13px}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#1a1a12;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:left;padding:0;
+  transition:.15s transform,.15s border-color}
+.card:hover{transform:translateY(-3px);border-color:#4a5068}
+.thumb{position:relative;aspect-ratio:16/9;background:#0e0f14}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.num{position:absolute;top:8px;left:8px;background:rgba(10,11,16,.82);color:var(--accent);font-size:12px;font-weight:700;padding:2px 8px;border-radius:7px}
+.diff{position:absolute;top:8px;right:8px;background:rgba(10,11,16,.82);font-size:11.5px;padding:2px 8px;border-radius:7px}
+.meta{padding:12px 14px 14px}.cn{font-size:16px;font-weight:650}.en{font-size:12.5px;color:var(--dim)}
+.when{font-size:12.5px;color:#8d94a8;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* create page */
+.crumb{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.crumb img{width:120px;aspect-ratio:16/9;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+.crumb h2{margin:0;font-size:20px}
+.cols{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(360px,1fr);gap:20px;align-items:start}
+@media(max-width:980px){.cols{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.panel h3{margin:0 0 12px;font-size:15px;display:flex;align-items:center;gap:8px}
+.field{margin-bottom:14px}.field>label,.lbl{display:block;font-size:13px;color:var(--dim);margin-bottom:6px}
+textarea.idea{width:100%;min-height:230px;resize:vertical;line-height:1.7}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.seg button{background:var(--panel2);border:0;padding:7px 14px;font-size:14px;color:var(--dim)}
+.seg button.on{background:var(--accent2);color:#0d1622;font-weight:650}
+.hint{font-size:12.5px;color:var(--dim)}
+.gen{width:100%;padding:13px;font-size:16px;margin-top:6px}
+details.card-md{margin-top:14px;border-top:1px solid var(--line);padding-top:10px}
+details.card-md summary{cursor:pointer;color:var(--dim);font-size:13.5px}
+.md{font-size:13.5px;color:#cdd2e2;max-height:420px;overflow:auto}
+.md h1,.md h2{font-size:15px;margin:14px 0 6px}.md code{background:#0e0f14;padding:1px 5px;border-radius:5px}
+/* voices */
+.cats{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 2px}
+.cat{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel2);font-size:12.5px;color:#c7ccdc;cursor:pointer}
+.cat i{font-style:normal;font-size:11px;color:var(--dim)}
+.cat.on{border-color:var(--accent);color:#fff}
+.cat.on i{color:#fff;opacity:.75}
+.buildbar{border:1px solid var(--line);background:var(--panel2);border-radius:10px;padding:9px 11px;margin-top:8px;font-size:12.5px}
+.buildbar .prog{height:6px;border-radius:4px;background:#0e0f14;margin-top:7px;overflow:hidden}
+.buildbar .prog i{display:block;height:100%;background:var(--accent);transition:width .4s}
+.pend{font-size:11px;color:var(--dim);margin-left:6px;white-space:nowrap}
+.vlist{display:flex;flex-direction:column;gap:8px;max-height:640px;overflow:auto;padding-right:4px}
+.voice{border:1px solid var(--line);border-radius:11px;background:var(--panel2)}
+.voice.sel{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.vrow{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.vpick{flex:1;display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;text-align:left;min-width:0}
+.dot{width:16px;height:16px;border-radius:50%;border:2px solid #555b70;flex:none}
+.voice.sel .dot{border-color:var(--accent);background:radial-gradient(var(--accent) 45%,transparent 50%)}
+.vname{font-weight:650}.vdesc{font-size:12.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vtxt{min-width:0}
+.ib{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);background:var(--panel);display:grid;place-items:center;flex:none;font-size:16px}
+.ib:hover{border-color:#5a6080}.ib.playing{border-color:var(--accent);color:var(--accent)}
+.ib.loading{animation:pulse 1s infinite}@keyframes pulse{50%{opacity:.4}}
+.tuned{color:var(--accent);font-size:11px}
+.drawer{border-top:1px dashed var(--line);padding:12px 14px 14px;display:grid;gap:12px}
+.slider{display:grid;grid-template-columns:62px 1fr 56px;gap:10px;align-items:center;font-size:13px}
+.slider input{width:100%;accent-color:var(--accent2)}
+.moods{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.moods button{font-size:12px;padding:3px 9px;border-radius:14px;background:var(--panel);border:1px solid var(--line);color:var(--dim)}
+.drawer textarea{width:100%;min-height:58px;resize:vertical}
+.drawer input[type=text]{width:100%}
+.vfoot{display:flex;gap:8px;margin-top:12px}.vfoot .btn{flex:1}
+/* modal + jobs */
+.mask{position:fixed;inset:0;background:rgba(8,9,13,.76);backdrop-filter:blur(5px);z-index:20;display:none;padding:40px 20px;overflow:auto}
+.mask.on{display:block}
+.modal{max-width:560px;margin:0 auto;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.modal h3{margin:0 0 14px;font-size:17px}
+.modal .field input,.modal .field textarea,.modal .field select{width:100%}
+.modal .acts{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+.side{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--panel);border-left:1px solid var(--line);
+  z-index:15;transform:translateX(100%);transition:.2s transform;display:flex;flex-direction:column}
+.side.on{transform:none}
+.side .hd{display:flex;align-items:center;padding:16px 18px;border-bottom:1px solid var(--line)}
+.side .hd h3{margin:0;flex:1;font-size:16px}
+.side .bd{overflow:auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+.job{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--panel2)}
+.job .t{display:flex;gap:8px;align-items:center;font-weight:650}
+.st{font-size:12px;padding:1px 8px;border-radius:7px;background:#2b2e3c}
+.st.running{background:#21406a;color:#bfe0ff}.st.done{background:#1e4d33;color:#b8f5cf}
+.st.failed,.st.stopped{background:#5a2328;color:#ffc9c9}.st.handoff{background:#584a1c;color:#ffe9a6}
+.log{font:12px/1.55 ui-monospace,Menlo,monospace;color:#b6bcd0;background:#101117;border-radius:8px;padding:8px 10px;
+  margin-top:8px;max-height:180px;overflow:auto;white-space:pre-wrap;word-break:break-all}
+.job video{width:100%;border-radius:8px;margin-top:8px;background:#000}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:#2a2d3a;border:1px solid var(--line);
+  padding:10px 18px;border-radius:10px;opacity:0;transition:.2s;z-index:40;pointer-events:none;max-width:80vw}
+.toast.on{opacity:1;transform:translateX(-50%)}
+.banner{background:#5a2328;color:#ffd6d6;padding:12px 30px}
+.libgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+.lib{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.lib video{width:100%;aspect-ratio:16/9;background:#000;display:block}
+.lib .b{padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.lib .tt{font-weight:650;font-size:15.5px}
+.lib .tags{display:flex;flex-wrap:wrap;gap:6px}
+.lib .tags .badge.m{color:var(--accent);border-color:#5a5226}
+.lib .tags .badge.s{color:var(--accent2);border-color:#2c4a63}
+.slots{display:flex;flex-direction:column;gap:18px;min-width:0}
+.slot{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;scroll-margin-top:90px}
+.slot.active{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.slot.done{opacity:.97;background:#191b23}
+.slot-hd{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.slot-hd img{width:96px;aspect-ratio:16/9;object-fit:cover;border-radius:7px;border:1px solid var(--line)}
+.slot-hd .nm{font-weight:650;font-size:15.5px}
+.slot-hd .no{font-size:12px;color:var(--dim)}
+.slot-hd .sp,.slot-sum .sp{flex:1}
+.slot textarea.idea{min-height:120px}
+.slot-sum{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px dashed var(--line);border-radius:9px;margin-bottom:10px;font-size:13.5px}
+.slot-sum b{font-weight:600}
+.slot video{width:100%;border-radius:9px;background:#000;margin-top:8px}
+.slot .pick-style{border:1px dashed var(--accent);color:var(--accent);background:transparent}
+.add-slot{width:100%;padding:14px;border:1px dashed var(--line);background:transparent;border-radius:14px;color:var(--dim);font-size:15px}
+.add-slot:hover{border-color:var(--accent);color:var(--accent)}
+.rcol{position:sticky;top:84px;max-height:calc(100vh - 100px);overflow:auto;display:flex;flex-direction:column;gap:16px;padding-right:2px}
+.rcol .vlist{max-height:34vh}
+.req{font-size:11.5px;font-weight:600;color:#1a1a12;background:var(--accent);border-radius:6px;padding:1px 7px}
+.opt{font-size:11.5px;font-weight:500;color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:0 7px}
+.slot-sum.missing{border-color:var(--bad);color:#ffc9c9}
+.vfor{font-size:12.5px;font-weight:500;color:var(--accent);background:#3a3418;border-radius:7px;padding:1px 8px}
+.flash{animation:flash .9s 2}@keyframes flash{50%{box-shadow:0 0 0 3px var(--accent)}}
+.mlist{display:flex;flex-direction:column;gap:6px;max-height:34vh;overflow:auto;margin-top:10px;padding-right:4px}
+.song{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);cursor:pointer}
+.song.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.song .ck{width:20px;height:20px;border-radius:6px;border:2px solid #5a6080;flex:none;display:grid;place-items:center;font-size:13px;color:#1a1a12}
+.song.on .ck{background:var(--accent);border-color:var(--accent)}
+.song .sn{font-weight:600;font-size:14px}
+.song .sm{font-size:12px;color:var(--dim)}
+.song .sx{flex:1;min-width:0}
+.song .sx>div{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.picked{display:flex;flex-wrap:wrap;gap:6px;min-height:28px;margin:8px 0}
+.picked span{background:#3a3418;color:var(--accent);border-radius:999px;padding:3px 10px;font-size:12.5px;cursor:pointer}
+.engine{font-size:12.5px;color:var(--dim)}
+.engine.stuck{color:var(--bad);cursor:pointer;text-decoration:underline}
+</style></head>
+<body>
+<div id="filebanner" class="banner hidden">这个页面需要本地服务。请双击项目里的「启动MG视频工作台.command」，它会自动在浏览器里打开。</div>
+<header>
+  <h1>MG <span>视频工作台</span></h1>
+  <span class="engine" id="engine" aria-live="polite"></span>
+  <span class="sp"></span>
+  <button class="btn" id="b-create">✏️ 创作台</button>
+  <button class="btn" id="b-lib">📼 作品库 <span id="libcount" class="badge">0</span></button>
+  <button class="btn" id="b-jobs">任务 <span id="jobcount" class="badge">0</span></button>
+  <button class="btn" id="b-settings" aria-label="设置">⚙ 设置</button>
+</header>
+
+<main id="v-home">
+  <div class="tools">
+    <input type="search" id="q" placeholder="搜风格：手绘、像素、赛博…" aria-label="搜索风格">
+    <button class="chip on" data-d="">全部</button><button class="chip" data-d="入门">入门</button>
+    <button class="chip" data-d="进阶">进阶</button><button class="chip" data-d="困难">困难</button>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<main id="v-lib" class="hidden">
+  <div class="crumb">
+    <button class="btn" id="b-lib-back">← 返回</button>
+    <div><h2 style="margin:0">作品库</h2><div class="hint" id="lib-sum"></div></div>
+  </div>
+  <div class="tools" id="lib-filter"></div>
+  <div class="libgrid" id="lib-grid"></div>
+</main>
+
+<main id="v-create" class="hidden">
+  <div class="crumb">
+    <button class="btn" id="b-back">← 风格列表</button>
+    <div><h2 style="margin:0">创作台</h2>
+      <div class="hint">每个版面都是独立的一条片子，可以同时提交任意多条。本机最多同时渲染 2 条，其余自动排队。</div></div>
+  </div>
+  <div class="cols">
+    <div class="slots" id="slots"></div>
+    <div class="rcol">
+    <section class="panel vpanel" aria-label="音色">
+      <h3>① 选音色 <span class="req">必选，选一个</span> <span class="vfor" id="vfor"></span></h3>
+      <div class="hint" id="vhint"></div>
+      <div class="buildbar hidden" id="buildbar"></div>
+      <input type="search" id="vq" placeholder="搜音色：御姐、机器人、新闻播报…" aria-label="搜索音色" style="margin-top:10px">
+      <div class="cats" id="cats" role="tablist" aria-label="音色分类"></div>
+      <div class="vlist" id="vlist" role="radiogroup" aria-label="音色列表"></div>
+      <div class="vfoot">
+        <button class="btn" id="b-design">＋ 用文字描述造音色</button>
+        <button class="btn" id="b-clone">＋ 克隆音色</button>
+      </div>
+    </section>
+    <section class="panel mpanel" aria-label="选歌">
+      <h3>② 选歌 <span class="opt">可选，不限首数</span> <span class="vfor" id="mfor"></span></h3>
+      <div class="hint" id="m-hint">不选：AI 从整个曲库里按片子的起伏自己找歌。选了：只用你选的歌，AI 按起伏放进合适的位置；选太多放不下时会挑着用，并告诉你哪首没用上、为什么。</div>
+      <div class="picked" id="m-picked"></div>
+      <div class="row">
+        <input type="search" id="m-q" placeholder="搜歌名、歌手、情绪…" aria-label="搜索歌曲" style="flex:1;min-width:160px">
+        <select id="m-vocal" aria-label="人声筛选"><option value="">人声：全部</option><option value="none">纯音乐</option><option value="vocal">带人声</option></select>
+      </div>
+      <div class="cats" id="m-cats" role="tablist" aria-label="曲库分类"></div>
+      <div class="mlist" id="m-list"></div>
+      <audio id="m-player" preload="none"></audio>
+      <div class="vfoot"><button class="btn" id="m-clear">清空，交给 AI 选</button></div>
+    </section>
+    </div>
+  </div>
+</main>
+
+<!-- jobs side panel -->
+<aside class="side" id="side" aria-label="任务">
+  <div class="hd"><h3>制作任务</h3><button class="btn sm" id="b-side-close" aria-label="关闭">✕</button></div>
+  <div class="bd" id="jobs"></div>
+</aside>
+
+<!-- modals -->
+<div class="mask" id="m-design" role="dialog" aria-modal="true" aria-labelledby="t-design"><div class="modal">
+  <h3 id="t-design">用文字描述造音色</h3>
+  <div class="field"><label for="d-desc">音色描述（越具体越好）</label>
+    <textarea id="d-desc" rows="4" placeholder="例如：三十岁左右的女性，声音温暖略带沙哑，语速偏慢，像深夜电台主持人"></textarea></div>
+  <div class="field"><label for="d-lang">生成样音用的语言</label>
+    <select id="d-lang"><option value="zh">中文</option><option value="en">English</option></select></div>
+  <div class="field hidden" id="d-result"><span class="lbl">样音（不满意就改描述再生成）</span>
+    <audio id="d-audio" controls style="width:100%"></audio>
+    <label class="lbl" for="d-name" style="margin-top:10px">给它起个名字</label><input type="text" id="d-name"></div>
+  <div class="hint">由本机 1.7B VoiceDesign 生成，首次加载模型约 20–40 秒。</div>
+  <div class="acts"><button class="btn" data-close>取消</button>
+    <button class="btn" id="d-gen">生成样音</button><button class="btn pri hidden" id="d-save">保存到音色库</button></div>
+</div></div>
+
+<div class="mask" id="m-clone" role="dialog" aria-modal="true" aria-labelledby="t-clone"><div class="modal">
+  <h3 id="t-clone">克隆音色</h3>
+  <div class="field"><label for="k-file">参考音频（5–15 秒、单人、干净无背景音乐最好）</label>
+    <input type="file" id="k-file" accept="audio/*,.wav,.mp3,.m4a,.flac"></div>
+  <div class="field"><label for="k-name">名字</label><input type="text" id="k-name"></div>
+  <div class="field"><label for="k-text">音频里说的原话（建议留空）</label><textarea id="k-text" rows="2" placeholder="留空 = 只提取音色特征，最稳、不会卡。填的话必须和音频里念的一字不差，否则合成会卡住不出声。"></textarea></div>
+  <div class="field"><label for="k-lang">参考音频语言</label>
+    <select id="k-lang"><option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option><option value="ko">한국어</option></select></div>
+  <label class="row" style="font-size:14px"><input type="checkbox" id="k-auth"> 我确认这是我本人的声音，或已获得声音主人的授权</label>
+  <div class="acts"><button class="btn" data-close>取消</button><button class="btn pri" id="k-save">保存</button></div>
+</div></div>
+
+
+<div class="mask" id="m-settings" role="dialog" aria-modal="true" aria-labelledby="t-settings"><div class="modal">
+  <h3 id="t-settings">设置</h3>
+  <p class="hint" style="margin-top:0">默认不需要 Key：点「生成视频」把需求交给 BigApple 出片。<br>
+    在 BigApple HTML 预览里打开本页时，直接走 BigApple Agent，全程自动。</p>
+  <details class="adv"><summary>高级（可选）：用中转站 Key 在本机后台全自动出片</summary>
+    <p class="hint">默认关闭：点「生成」会把开工指令交给 BigApple，你粘贴发送。<br>
+      勾上下面这个开关后，才在本机后台调用 BigApple 自带的 Claude Code 全自动出片。<br>
+      Key 只存在本机 <code>~/.config/mg-workbench/config.json</code>（仅你可读），不会写进网页。不管它就当没有。</p>
+    <label class="row" style="font-size:14px"><input type="checkbox" id="s-usekey"> 启用 Key 全自动出片</label>
+    <div class="field"><label for="s-base">Base URL（中转站地址）</label><input type="text" id="s-base" placeholder="https://your-relay.example.com"></div>
+    <div class="field"><label for="s-key">API Key</label><input type="password" id="s-key" autocomplete="off" placeholder="sk-..."></div>
+    <div class="field"><label for="s-model">模型</label><input type="text" id="s-model" placeholder="claude-opus-5-5"></div>
+  </details>
+  <div class="hint" id="s-claude"></div>
+  <div class="acts"><button class="btn danger" id="s-clear">清除 Key</button><span style="flex:1"></span>
+    <button class="btn" data-close>取消</button><button class="btn pri" id="s-save">保存</button></div>
+</div></div>
+
+<div class="mask" id="m-handoff" role="dialog" aria-modal="true" aria-labelledby="t-handoff"><div class="modal">
+  <h3 id="t-handoff">已交给 BigApple</h3>
+  <p>开工指令已经复制到剪贴板，BigApple 也已唤起。在 BigApple 里打开<b>这个项目</b>的对话，<b>粘贴并发送</b>就会开始制作。</p>
+  <div class="log" id="h-prompt"></div>
+  <p class="hint">进度会显示在右上角「任务」里。想全自动出片，可以在「设置」里填中转站 Key。</p>
+  <div class="acts"><button class="btn" id="h-copy">再复制一次</button><button class="btn pri" data-close>好的</button></div>
+</div></div>
+
+<div class="toast" id="toast" role="status"></div>
+<audio id="player" preload="none"></audio>
+<script>
+const TOKEN='__MGW_TOKEN__';
+// BigApple 建会话必须传项目文件夹绝对路径（本地服务 / 同步副本时替换成真实路径）
+const PROJECT_DIR='__MGW_PROJECT__';
+// 在 BigApple 预览里用相对地址；浏览器、双击 HTML、本地服务里用 BigApple 的本机地址
+const BA=location.pathname.startsWith('/api/files/html-preview/')?'/ba/v1':'http://127.0.0.1:38451/ba/v1';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const LS={get:(k,d)=>{try{return JSON.parse(localStorage.getItem('mgw.'+k))??d}catch{return d}},set:(k,v)=>localStorage.setItem('mgw.'+k,JSON.stringify(v))};
+const S={styles:[],style:null,voices:[],voice:'',lang:LS.get('lang','zh'),aspect:'16:9',subs:LS.get('subs',true),
+  open:null,filter:'',q:'',langs:{},instruct:false,design:false,jobs:[],playing:null,handoffPrompt:'',
+  categories:[],cat:LS.get('cat','all'),vq:'',build:null,buildTimer:null,wasBuilding:false};
+
+if(location.protocol==='file:'){ $('#filebanner').classList.remove('hidden'); }
+
+async function api(path,body){
+  const opt=body===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json','X-MGW-Token':TOKEN},body:JSON.stringify(body)};
+  const r=await fetch(path,opt); let j={};
+  try{ j=await r.json(); }catch{}
+  if(!r.ok){
+    if(r.status===403){
+      // 服务重启后 token 会换，旧页面里的 token 就失效了。自动刷新一次拿新的。
+      if(!sessionStorage.getItem('mgw.stale')){
+        sessionStorage.setItem('mgw.stale','1');
+        toast('页面已过期，正在自动刷新…',1800);
+        setTimeout(()=>location.reload(),700);
+      }
+      throw new Error('页面已过期，请刷新页面（⌘R）');
+    }
+    throw new Error(j.error||('HTTP '+r.status));
+  }
+  sessionStorage.removeItem('mgw.stale');
+  return j;
+}
+
+/* ---------- BigApple HTML 预览模式 ----------
+   同一个页面有两种跑法：
+   · 本地模式：由 127.0.0.1 的 Python 服务提供数据，出片走本机 Claude Code / 交给 BigApple 粘贴。
+   · 预览模式：在 BigApple HTML 预览里打开时，/ba/v1 可用，直接建 Agent 会话出片，不需要 Key。
+     预览页读不到 ~/local-video-dubbing，所以音色表与试听走同目录的 voices.json + previews/。 */
+const MODE={preview:false,static:false,ba:false};
+let VD=null;
+async function detectMode(){
+  try{ const r=await fetch(BA+'/health',{cache:'no-store'}); MODE.ba=r.ok; }catch{ MODE.ba=false; }
+  MODE.preview=MODE.ba&&location.pathname.startsWith('/api/files/html-preview/');
+  return MODE.preview;
+}
+async function vdata(){
+  if(!VD) VD=await (await fetch('voices.json',{cache:'no-store'})).json();
+  return VD;
+}
+function call(path,body){ return (MODE.preview||MODE.static)?previewCall(path,body):api(path,body); }
+async function previewCall(path,body){
+  const u=new URL(path,location.href), p=u.pathname;
+  if(p==='/api/health') return {app:'mg-workbench',preview:true,engine:null};
+  if(p==='/api/styles') return await (await fetch('styles.json',{cache:'no-store'})).json();
+  if(p==='/api/voices'){
+    const d=await vdata(), lang=u.searchParams.get('lang')||'zh';
+    const clip=d.preview_clips[lang]||{}, txt=d.preview_texts[lang]||{};
+    return {voices:d.voices.map(v=>({...v,preview:clip[v.id]||null,preview_text:txt[v.id]||'',
+              settings:{rate:1,pitch:0,instruct:'',sample:'',...(v.settings||{}),...(LS.get('vset.'+v.id,{})||{})}})),
+            categories:d.categories,langs:d.langs,instruct_model:false,design_model:false,
+            build:{running:false,phase:'',total:0,done:0,failed:[],preview:true}};
+  }
+  if(p==='/api/preview'){
+    const d=await vdata(), lang=(body&&body.lang)||S.lang, id=body&&body.voice;
+    const url=(d.preview_clips[lang]||{})[id]||(d.preview_clips.zh||{})[id];
+    if(!url) return {error:'这个音色的试听还没生成（刚改过设置的话，本地工作台开着时约 1 分钟后自动补好，刷新页面再试）'};
+    const same=!!(d.preview_clips[lang]||{})[id];
+    return {file:url.split('/').pop(),url,text:(d.preview_texts[lang]||{})[id]||'',cached:true,fallback:!same};
+  }
+  if(p==='/api/voices/settings'){ LS.set('vset.'+body.voice,body.settings); return {ok:true,...body.settings}; }
+  if(p==='/api/config') return {has_key:false,base_url:'',api_key:'',model:'',claude:false,preview:true};
+  if(p==='/api/jobs'){
+    if(body){
+      if(!MODE.preview) throw new Error('这个页面不在 BigApple 预览里，出片要回本地工作台或 BigApple 预览');
+      return agentStart(body);
+    }
+    return reconcileJobs(loadAgentJobs());
+  }
+  if(p==='/api/jobs/stop'){ return agentStop((body&&body.id)||''); }
+  if(p==='/api/library'){
+    const r=await fetch('library.json',{cache:'no-store'}).catch(()=>null);
+    return r&&r.ok?await r.json():[];
+  }
+  if(p==='/api/bgm'){
+    const r=await fetch('bgm.json',{cache:'no-store'}).catch(()=>null);
+    return r&&r.ok?await r.json():{songs:[],categories:[]};
+  }
+  return {ok:true};
+}
+
+/* ---------- 出片模型：只列这三个，id 以 BigApple /ba/v1/models 实际返回为准 ---------- */
+const MODEL_PICKS=[
+  {label:'Opus 5.5',ids:['claude-opus-5-5'],re:/opus[^a-z0-9]*5[^0-9]?5/i},
+  {label:'GPT 6.1 Sol',ids:['gpt-6.1-sol'],re:/gpt[^a-z0-9]*6[^0-9]?1[^a-z0-9]*sol/i},
+  {label:'DeepSeek 4.1 Flash',ids:['deepseek-flash'],re:/deepseek.*flash/i},
+];
+function catalogModelIds(node,out=new Set()){
+  if(Array.isArray(node)) node.forEach(n=>catalogModelIds(n,out));
+  else if(node&&typeof node==='object'){
+    for(const k of ['id','model','modelId','name']) if(typeof node[k]==='string') out.add(node[k]);
+    Object.values(node).forEach(v=>{ if(v&&typeof v==='object') catalogModelIds(v,out); });
+  }
+  return out;
+}
+async function loadModels(){
+  let list=[];
+  if(MODE.ba){
+    try{ const r=await fetch(BA+'/models',{cache:'no-store'}); if(r.ok){ const a=(await r.json()).agent||{};
+      list=a.models||[]; S.modelDefault=a.default||null; } }catch{}
+  }
+  S.modelCatalog=list.length>0;
+  const pick=m=>(list.find(x=>m.ids.includes(x.id))||list.find(x=>m.re.test(x.id)||m.re.test(x.name||''))||{}).id||'';
+  S.models=MODEL_PICKS.map(m=>({label:m.label,id:pick(m)}));
+}
+
+/* ---------- 作品库 ---------- */
+S.lib=[]; S.libModel='';
+const fmtLen=s=>{s=Math.round(+s||0);return s>=60?`${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`:`${s} 秒`;};
+const libSrc=p=>MODE.preview||MODE.static?p:'/'+p;
+async function loadLibrary(){
+  try{ S.lib=await call('/api/library'); }catch{ S.lib=[]; }
+  if(!Array.isArray(S.lib)) S.lib=[];
+  $('#libcount').textContent=S.lib.length;
+  return S.lib;
+}
+function renderLibrary(){
+  const models=[...new Set(S.lib.map(x=>x.model||'未记录'))];
+  if(S.libModel&&!models.includes(S.libModel)) S.libModel='';
+  $('#lib-filter').innerHTML=`<button class="chip ${S.libModel?'':'on'}" data-m="">全部 ${S.lib.length}</button>`
+    +models.map(m=>`<button class="chip ${S.libModel===m?'on':''}" data-m="${esc(m)}">${esc(m)} ${S.lib.filter(x=>(x.model||'未记录')===m).length}</button>`).join('');
+  const list=S.lib.filter(x=>!S.libModel||(x.model||'未记录')===S.libModel);
+  const mins=list.map(x=>x.elapsed_min).filter(v=>v>0);
+  const costs=list.map(x=>x.cost_usd).filter(v=>v!=null);
+  $('#lib-sum').textContent=list.length?`${list.length} 支 · 平均用时 ${mins.length?(mins.reduce((a,b)=>a+b,0)/mins.length).toFixed(1)+' 分钟':'—'} · 平均花费 ${costs.length?fmtCost(costs.reduce((a,b)=>a+b,0)/costs.length)+`（${costs.length} 支有记录）`:'—'}`:'';
+  $('#lib-grid').innerHTML=list.length?list.map(x=>`<article class="lib">
+    ${videoTag(libSrc(x.video),x.cover?libSrc(x.cover):'')}
+    <div class="b">
+      <div class="tt">${esc(x.title||x.id)}</div>
+      <div class="tags">
+        <span class="badge s" title="风格模板">🎨 ${esc(x.style_cn||x.style||'未知模板')}</span>
+        <span class="badge m" title="出片模型">🧠 ${esc(x.model||'未记录模型')}</span>
+        <span class="badge" title="这支片在 BigApple 会话里的模型花费（美元）">💰 ${x.cost_usd!=null?esc(fmtCost(x.cost_usd)):'未记录'}</span>
+        <span class="badge">${esc(fmtLen(x.seconds))} · ${esc(x.aspect||'')}</span>
+        <span class="badge">🎙 ${esc(x.voice||'')}</span>
+      </div>
+      <div class="hint">${esc(x.finished||x.created||'')}${x.elapsed_min?` · 制作用时 ${x.elapsed_min} 分钟`:''}</div>
+      ${x.music&&x.music.length?`<div class="hint">🎵 ${x.music_mode==='picked'?'指定歌曲':'AI 选歌'}：${esc([...new Set(x.music.map(c=>c.name))].join('、'))}（${x.music.length} 段）</div>`:''}
+      <div class="row" style="margin-top:4px">
+        <a class="btn sm pri" href="${esc(libSrc(x.video))}" download="${esc((x.title||x.id)+'.mp4')}">⬇ 下载视频</a>
+        ${x.cover?`<a class="btn sm" href="${esc(libSrc(x.cover))}" download>封面</a>`:''}
+      </div>
+    </div></article>`).join('')
+    :'<div class="hint">作品库还是空的。生成的视频验收通过后会自动存进来。</div>';
+}
+async function showLibrary(){
+  showView('lib'); await loadLibrary(); renderLibrary();
+}
+$('#b-lib').onclick=showLibrary;
+$('#b-lib-back').onclick=()=>showView(S.slots.some(x=>x.style||x.jobId)?'create':'home');
+$('#lib-filter').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;S.libModel=b.dataset.m;renderLibrary();};
+
+/* ---------- 预览模式：BigApple Agent 出片 ---------- */
+/* BigApple 预览服务器回媒体文件时不支持分段请求（Range），Safari 因此拒绝播放
+   （报 The operation is not supported）。预览里先整段下载成本地 blob 再播放，Chrome/Safari 都能用。 */
+const BLOBS=new Map();
+async function playable(url){
+  if(!MODE.preview||!url||url.startsWith('blob:')) return url;
+  if(!BLOBS.has(url)) BLOBS.set(url,fetch(url).then(r=>{if(!r.ok) throw new Error('HTTP '+r.status);return r.blob();})
+    .then(b=>URL.createObjectURL(b)).catch(e=>{BLOBS.delete(url);throw e;}));
+  return BLOBS.get(url);
+}
+// 视频较大：预览里先不加载，点播放时再下载
+function videoTag(url,poster){
+  if(!url) return '';
+  const p=poster?` poster="${esc(poster)}"`:'';
+  return MODE.preview?`<video controls preload="none" data-lazy="${esc(url)}"${p}></video>`
+    :`<video controls preload="metadata" src="${esc(url)}"${p}></video>`;
+}
+document.addEventListener('play',async e=>{
+  const v=e.target; if(!(v instanceof HTMLVideoElement)||!v.dataset.lazy||v.src) return;
+  v.pause(); toast('正在载入视频…',2000);
+  try{ v.src=await playable(v.dataset.lazy); await v.play(); }catch(err){ toast('视频载入失败：'+err.message,4000); }
+},true);
+function baErr(j,r){
+  const c=j&&j.code;
+  if(c==='WORKING_DIRECTORY_NOT_FOUND') return 'BigApple 找不到项目文件夹：'+PROJECT_DIR;
+  if(c==='WORKING_DIRECTORY_REQUIRED') return '页面缺少项目文件夹路径，请从本地工作台或同步后的副本打开';
+  if(c==='MODEL_NOT_FOUND') return 'BigApple 里没有这个模型，换一个或选 BigApple 默认';
+  if(c==='BIGAPPLE_CLOUD_UNREACHABLE') return '暂时连不上 BigApple 云端，稍后重试';
+  if(c==='ORIGIN_NOT_ALLOWED') return 'BigApple 拒绝了这个页面的请求（只接受本机页面）';
+  return (j&&j.error)||('HTTP '+(r?r.status:'?'));
+}
+async function newSession(title,model){
+  const r=await fetch(BA+'/agent/sessions',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({workingDirectory:PROJECT_DIR,title:title||'MG 视频工作台',...(model?{model}:{})})});
+  const j=await r.json();
+  if(!r.ok||!j.session) throw new Error(baErr(j,r));
+  return j.session.id;
+}
+function loadAgentJobs(){ return LS.get('agentJobs',[]); }
+function saveAgentJob(job){
+  const all=loadAgentJobs(); const i=all.findIndex(x=>x.id===job.id);
+  if(i<0) all.unshift(job); else all[i]=job;
+  LS.set('agentJobs',all.slice(0,200));
+  if(typeof loadJobs==='function') loadJobs();
+}
+/* 出片那一轮可能比 BigApple 的单次等待更久：页面这边收到错误，Agent 其实还在做。
+   真实进度以 mgw status 写的 MG视频工作台/progress.json 为准（按 started_ts + 会话标题对上任务），花费也从这里来。 */
+const fmtCost=v=>v==null?'':'$'+(+v).toFixed(2);
+async function reconcileJobs(jobs){
+  const r=await fetch('progress.json',{cache:'no-store'}).catch(()=>null);
+  const prog=r&&r.ok?await r.json().catch(()=>({})):{};
+  const entries=Object.entries(prog||{});
+  let dirty=false;
+  for(const j of jobs){
+    const q=j.request||{};
+    const hit=entries.find(([,e])=>e.started_ts&&e.started_ts===q.started_ts&&e.session_title===q.session_title);
+    if(!hit) continue;
+    const [dir,e]=hit, st=j.status||{};
+    j.jobDir=dir; if(e.cost_usd!=null) j.cost_usd=e.cost_usd;
+    if(st.state==='stopped') continue;
+    if(e.state==='done'){   // 渲染途中 final.mp4 已经在写，只认 done 状态
+      if(!j.final){ j.final=BA+'/agent/sessions/'+encodeURIComponent(j.sessionId)+'/files?path='+encodeURIComponent('mg-jobs/'+dir+'/final.mp4'); dirty=true; }
+      if(st.state!=='done'){ j.status={state:'done',message:'完成，已存进作品库'}; dirty=true; }
+    }else if(e.state==='running'){
+      const msg=`${e.message||'制作中'}（${String(e.updated||'').slice(11,16)} 更新）`;
+      if(st.state!=='running'||st.message!==msg){ j.status={state:'running',message:msg}; dirty=true; }
+    }
+  }
+  if(dirty){
+    const all=loadAgentJobs();
+    jobs.forEach(j=>{const i=all.findIndex(x=>x.id===j.id); if(i>=0) all[i]=j;});
+    LS.set('agentJobs',all);
+  }
+  return jobs;
+}
+function kickoffText(spec){
+  return '【MG 视频工作台任务】按 .claude/skills/mg-motion-styles/SKILL.md 和 '
+    +'references/narrated-production.md 的流程，在项目根目录 mg-jobs/ 下新建任务目录，'
+    +'一路做到 final.mp4。这个会话就是这支片的制作现场，完整步骤都留在这里，不要中途提问。\n\n'
+    +'任务规格（即 request.json 内容）：\n'
+    +JSON.stringify(spec,null,2)
+    +'\n\n硬要求：\n'
+    +'- 旁白用 .claude/skills/mg-motion-styles/workbench/mgw 在本地合成，'
+    +'音色 id 与 settings 原样使用，不要改。\n'
+    +'- 台词由你按 duration_seconds 自己写（用户给的是想法，不是台词）；'
+    +'画面按风格卡做，画幅按 aspect。\n'
+    +'- 背景音乐只能从曲库里选，禁止生成：按 references/narrated-production.md「配乐」一节，mgw bgm-list 看歌，'
+    +'按台词和画面的起伏逐段写 bgm-plan.json（不限首数、不限每段长短），mgw bgm-render 出 music.wav；'
+    +'动作音效用 mgaudio sfx 做 sfx.wav；最后 mgw mix --music music.wav --sfx sfx.wav。\n'
+    +(spec.music&&spec.music.picked&&spec.music.picked.length
+      ?'- 用户在工作台选了这些歌（曲库 id），只能用它们，尽量都用上、放进合适的位置；如果片子太短放不下全部，挑最合适的用，并在汇报里说明哪几首没用上、为什么：'+spec.music.picked.join('、')+'\n'
+      :'- 用户没选歌：从整个曲库里自己找合适的歌。\n')
+    +'- 渲染整片必须用 mgw render <任务目录> -- <render.mjs 参数>（本机最多同时渲染 2 条，会自动排队）。\n'
+    +'- 需要封面、贴图、参考素材时，用 BigApple 自己的图片生成能力做，并把用到的图落到任务目录里。\n'
+    +'- 成片验收通过后，必须运行：bash .claude/skills/mg-motion-styles/workbench/mgw library-add "<任务目录绝对路径>" --model '
+    +JSON.stringify(spec.model_label||'BigApple 默认')+'（把成片存进工作台作品库，并登记风格模板和模型）。\n'
+    +'- 任务目录里的 request.json 要包含上面整份任务规格（含 model_label、started_ts、session_title）。\n'
+    +'- 完成后在回复里给出：实际时长、所用音色、质检结果，然后**最后一段必须用下面的固定格式**'
+    +'列出成片和封面等产物的绝对路径（方便 BigApple 直接预览和发送）：\n'
+    +'文件已生成，点击下面路径打开：\n<绝对路径，每行一个>\n如果无法打开，请回复“帮我打开”。';
+}
+function findFinalPath(text){
+  const m=/mg-jobs\/[^\s`"'）)]+\/final\.mp4/.exec(String(text||''));
+  return m?m[0]:'';
+}
+async function agentStart(body){
+  const d=await vdata();
+  const v=d.voices.find(x=>x.id===body.voice)||{};
+  const secs=parseDur(body.duration);
+  const spec={style:body.style,style_cn:body.style_cn||'',style_en:body.style_en||'',music:{picked:(body.music&&body.music.picked)||[]},
+    idea:body.idea,duration:body.duration,duration_seconds:secs,aspect:body.aspect||'16:9',
+    language:body.language||'zh',subtitles:!!body.subtitles,
+    voice:{id:body.voice,settings:{...(v.settings||{}),...(body.voice_settings||{})}},
+    voice_name:v.name||body.voice,created:new Date().toLocaleString('zh-CN',{hour12:false}),
+    started_ts:Math.floor(Date.now()/1000),model:body.model||'',model_label:body.model_label||'BigApple 默认'};
+  spec.session_title='MG · '+(spec.style_cn||spec.style||'视频')+' · '+(spec.duration||'')+' · '+spec.model_label;
+  const sid=await newSession(spec.session_title,spec.model);
+  const job={id:'app-'+Date.now(),request:spec,status:{state:'running',message:'BigApple 正在制作…'},
+             sessionId:sid,requestId:(crypto.randomUUID?crypto.randomUUID():String(Date.now()))};
+  saveAgentJob(job);
+  fetch(BA+'/agent/sessions/'+encodeURIComponent(sid)+'/messages',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({content:kickoffText(spec),requestId:job.requestId,stream:false,...(spec.model?{model:spec.model}:{})})})
+    .then(async r=>{
+      const j=await r.json().catch(()=>({}));
+      if(!r.ok){ job.status={state:'failed',message:baErr(j,r)}; }
+      else{ job.text=(j.message&&j.message.text)||''; job.recovery=j.recoveryStatus;
+            const fp=findFinalPath(job.text);
+            job.final=fp?BA+'/agent/sessions/'+encodeURIComponent(sid)+'/files?path='+encodeURIComponent(fp):'';
+            // 没拿到成片路径不算完成；如果 Agent 其实还在做，reconcileJobs 会按 progress.json 改回制作中
+            job.status=fp?{state:'done',message:'完成，已存进作品库'}
+              :{state:'failed',message:'BigApple 这一轮回复结束了，但没看到成片路径'}; }
+      saveAgentJob(job); loadLibrary();
+    })
+    .catch(e=>{ job.status={state:'failed',message:String((e&&e.message)||e)}; saveAgentJob(job); });
+  return {id:job.id,mode:'agent'};
+}
+async function localDispatch(r,meta){
+  const title='MG · '+meta.style_cn+' · '+meta.duration+' · '+(meta.model_label||'BigApple 默认');
+  let sid;
+  try{ sid=await newSession(title,meta.model); }
+  catch(e){ await api('/api/jobs/finished',{id:r.id,error:e.message}).catch(()=>{}); throw e; }
+  const requestId=crypto.randomUUID?crypto.randomUUID():String(Date.now());
+  await api('/api/jobs/dispatched',{id:r.id,session_id:sid,request_id:requestId,model:meta.model,title});
+  // 这一轮会一直挂到成片做完；页面关了也不影响，BigApple 会继续做，进度由 mgw status 写回任务目录
+  fetch(BA+'/agent/sessions/'+encodeURIComponent(sid)+'/messages',{method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({content:r.prompt,requestId,stream:false,...(meta.model?{model:meta.model}:{})})})
+    .then(async x=>{ const j=await x.json().catch(()=>({}));
+      await api('/api/jobs/finished',x.ok?{id:r.id,text:(j.message&&j.message.text)||''}:{id:r.id,error:baErr(j,x)}); })
+    .catch(e=>api('/api/jobs/finished',{id:r.id,error:String(e&&e.message||e)}).catch(()=>{}))
+    .finally(()=>{loadJobs();loadLibrary();});
+}
+async function agentVoiceSession(){
+  const old=LS.get('voiceSession',''); if(old) return old;
+  const id=await newSession('MG 音色库');
+  LS.set('voiceSession',id);
+  return id;
+}
+async function agentMessage(content){
+  const sid=await agentVoiceSession();
+  const r=await fetch(BA+'/agent/sessions/'+encodeURIComponent(sid)+'/messages',{
+    method:'POST',headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({content,requestId:(crypto.randomUUID?crypto.randomUUID():String(Date.now())),stream:false})});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok) throw new Error(j.error||('HTTP '+r.status));
+  return (j.message&&j.message.text)||'';
+}
+async function agentVoiceClone(file,name,refText,lang){
+  const sid=await agentVoiceSession();
+  const fd=new FormData(); fd.append('files',file,file.name);
+  const up=await fetch(BA+'/agent/sessions/'+encodeURIComponent(sid)+'/uploads',{method:'POST',body:fd});
+  const uj=await up.json().catch(()=>({}));
+  if(!up.ok||!uj.files||!uj.files[0]) throw new Error(uj.error||'上传失败');
+  const p=uj.files[0].path;
+  const cmd='bash .claude/skills/mg-motion-styles/workbench/mgw voice-clone "'+p+'"'
+    +' --name '+JSON.stringify(name)+' --lang '+(lang||'zh')
+    +(refText?' --text '+JSON.stringify(refText):'');
+  return agentMessage('【MG 工作台 · 克隆音色】我在工作台上传了这段音频（项目相对路径：'+p+'），'
+    +'已确认这是我本人或已获授权的声音。\n请执行：\n'+cmd+'\n'
+    +'命令会存进本机音色库、生成中英试听，并刷新静态音色表。完成后只回复：音色 id。');
+}
+async function agentVoiceDesign(desc,lang,name){
+  return agentMessage('【MG 工作台 · 造音色】用本机 1.7B VoiceDesign 造一个音色。\n执行：\n'
+    +'bash .claude/skills/mg-motion-styles/workbench/mgw voice-design'
+    +' --name '+JSON.stringify(name)+' --prompt '+JSON.stringify(desc)+' --lang '+(lang||'zh')+'\n'
+    +'命令会存进本机音色库、生成中英试听，并刷新静态音色表。完成后只回复：音色 id。');
+}
+async function agentStop(id){
+  const job=loadAgentJobs().find(x=>x.id===id); if(!job) return {ok:false};
+  const sid=job.sessionId||'';
+  if(sid&&job.requestId){
+    await fetch(BA+'/agent/sessions/'+encodeURIComponent(sid)+'/runs/current?requestId='
+      +encodeURIComponent(job.requestId),{method:'DELETE'}).catch(()=>{});
+  }
+  job.status={state:'stopped',message:'已停止'}; saveAgentJob(job);
+  return {ok:true};
+}
+let tt;function toast(m,ms=2200){const el=$('#toast');el.textContent=m;el.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>el.classList.remove('on'),ms);}
+function md(src){
+  const lines=String(src).split('\n'); let html='',inList=false,inCode=false;
+  const inline=t=>esc(t).replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');
+  for(const l of lines){
+    if(l.startsWith('```')){html+=inCode?'</pre>':'<pre class="log">';inCode=!inCode;continue}
+    if(inCode){html+=esc(l)+'\n';continue}
+    const li=/^\s*[-*] (.*)/.exec(l);
+    if(li){if(!inList){html+='<ul>';inList=true}html+='<li>'+inline(li[1])+'</li>';continue}
+    if(inList){html+='</ul>';inList=false}
+    const h=/^(#{1,4}) (.*)/.exec(l);
+    if(h){html+=`<h2>${inline(h[2])}</h2>`;continue}
+    if(l.startsWith('>')){html+='<p class="hint">'+inline(l.replace(/^>\s?/,''))+'</p>';continue}
+    if(l.trim()) html+='<p>'+inline(l)+'</p>';
+  }
+  return html+(inList?'</ul>':'');
+}
+function parseDur(raw){
+  let s=String(raw).trim().toLowerCase().replace('：',':').replace(/\s/g,'');
+  if(!s) return NaN;
+  if(s.includes(':')) return s.split(':').reduce((a,p)=>a*60+(+p||0),0);
+  for(const u of ['分钟','分','min','m']){ if(s.includes(u)){const [m,rest]=s.split(u);return (+m||0)*60+(+(rest.replace(/[秒s]$/,'')||0));} }
+  return +s.replace(/[秒s]$/,'');
+}
+const fmt=sec=>`${Math.floor(sec/60)}:${String(Math.round(sec%60)).padStart(2,'0')}`;
+
+/* ---------- home ---------- */
+function renderGrid(){
+  const q=S.q.trim().toLowerCase();
+  const list=S.styles.filter(s=>(!S.filter||s.difficulty===S.filter)&&(!q||[s.cn,s.en,s.when,s.visual].join(' ').toLowerCase().includes(q)));
+  $('#grid').innerHTML=list.map(s=>`<button class="card" data-slug="${s.slug}" aria-label="${esc(s.cn)}">
+    <div class="thumb"><img src="${s.cover}" alt="" loading="lazy"><span class="num">#${String(s.n).padStart(2,'0')}</span>
+    <span class="diff">${esc(s.difficulty)}</span></div>
+    <div class="meta"><div class="cn">${esc(s.cn)}</div><div class="en">${esc(s.en)}</div><div class="when">${esc(s.when)}</div></div></button>`).join('');
+}
+$('#q').oninput=e=>{S.q=e.target.value;renderGrid();};
+$$('.tools .chip').forEach(c=>c.onclick=()=>{$$('.tools .chip').forEach(x=>x.classList.remove('on'));c.classList.add('on');S.filter=c.dataset.d;renderGrid();});
+
+/* ---------- 创作台：多版面，每个版面一条独立的片子 ---------- */
+let slotSeq=Date.now();
+function newSlot(){
+  return {id:'s'+(slotSeq++),style:'',idea:'',dur:'1:00',aspect:'16:9',lang:LS.get('lang','zh'),
+    subs:LS.get('subs',true),voice:'',model:'',music:[],jobId:''};
+}
+S.slots=LS.get('slots',null)||[newSlot()];
+if(!S.slots.some(s=>!s.jobId)) S.slots.push(newSlot());
+S.activeSlot=LS.get('activeSlot','');
+const saveSlots=()=>{LS.set('slots',S.slots);LS.set('activeSlot',S.activeSlot);};
+const slotById=id=>S.slots.find(s=>s.id===id);
+function activeSlot(){
+  let s=slotById(S.activeSlot);
+  if(!s||s.jobId) s=S.slots.find(x=>!x.jobId);
+  if(!s){s=newSlot();S.slots.push(s);}
+  S.activeSlot=s.id; return s;
+}
+const styleBy=slug=>S.styles.find(x=>x.slug===slug);
+const slotNo=s=>S.slots.indexOf(s)+1;
+const DURS=[['0:15','15秒'],['0:30','30秒'],['1:00','1分钟'],['1:30','1分30'],['3:00','3分钟']];
+function durText(raw){const v=parseDur(raw);return isFinite(v)&&v>0?`≈ ${Math.round(v)} 秒`:'格式不对，例如 1:30';}
+function langOpts(sel){return Object.entries(S.langs||{zh:'中文'}).map(([k,v])=>`<option value="${k}" ${k===sel?'selected':''}>${esc(v)}</option>`).join('');}
+function modelOpts(sel){
+  return '<option value="">BigApple 默认</option>'+(S.models||[]).map(m=>{
+    const off=MODE.ba&&!m.id&&S.modelCatalog;
+    return `<option value="${esc(m.label)}" ${m.label===sel?'selected':''} ${off?'disabled':''}>${esc(m.label)}${off?'（BigApple 里没有）':''}</option>`;}).join('');
+}
+function modelHintFor(label){
+  if(!label) return '跟随你在 BigApple 里最后选的模型';
+  const m=(S.models||[]).find(x=>x.label===label);
+  if(MODE.ba) return m&&m.id?`BigApple 会用 ${m.id} 出片`:'没在 BigApple 模型目录里找到这个模型';
+  return '没连上 BigApple：会写进开工指令，粘贴前请在 BigApple 对话里切到这个模型';
+}
+function musicSummary(list,dur){
+  if(!list||!list.length) return '不选：AI 从曲库自动找歌';
+  const n=list.map(id=>(songBy(id)||{name:id}).name), secs=parseDur(dur||'');
+  const many=isFinite(secs)&&n.length>Math.max(2,Math.floor(secs/8));
+  return `已选 ${n.length} 首：${n.slice(0,3).join('、')}${n.length>3?' 等':''}${many?`（${Math.round(secs)} 秒可能放不下全部，AI 会挑着用并说明）`:''}`;
+}
+function slotHead(s,editable){
+  const st=styleBy(s.style);
+  return `<div class="slot-hd">
+    ${st?`<img src="${esc(st.cover)}" alt="">`:''}
+    <div><div class="no">版面 ${slotNo(s)}</div><div class="nm">${st?`#${String(st.n).padStart(2,'0')} ${esc(st.cn)}`:'还没选风格模板'}</div></div>
+    <span class="sp"></span>
+    ${editable?`<button class="btn sm ${st?'':'pick-style'}" data-a="style">${st?'换风格':'选风格模板'}</button>`:''}
+    ${S.slots.length>1?`<button class="btn sm" data-a="remove" aria-label="移除版面 ${slotNo(s)}" title="从页面移除（不影响已在做的片子）">✕</button>`:''}
+  </div>`;
+}
+function slotEdit(s){
+  const v=vById(s.voice), st=styleBy(s.style);
+  return `<section class="slot ${s.id===S.activeSlot?'active':''}" data-slot="${s.id}" aria-label="版面 ${slotNo(s)}">
+    ${slotHead(s,true)}
+    <div class="field"><label class="lbl" for="idea-${s.id}">你想做什么</label>
+      <textarea class="idea" id="idea-${s.id}" data-k="idea" placeholder="写下你对这支视频的想法：主题、想表达什么、给谁看、什么情绪……台词不用写，AI 会按时长自己写。">${esc(s.idea)}</textarea></div>
+    <div class="field"><label class="lbl" for="dur-${s.id}">时长（不限长度，例如 1:30、90秒、3分钟）</label>
+      <div class="row"><input type="text" id="dur-${s.id}" data-k="dur" value="${esc(s.dur)}" style="width:120px">
+        ${DURS.map(([d,l])=>`<button class="chip ${s.dur===d?'on':''}" data-dur="${d}">${l}</button>`).join('')}
+        <span class="hint" data-durhint>${durText(s.dur)}</span></div></div>
+    <div class="field row" style="gap:22px">
+      <div><span class="lbl">画幅</span><div class="seg" data-seg="aspect">
+        <button data-v="16:9" class="${s.aspect==='16:9'?'on':''}">横屏 16:9</button><button data-v="9:16" class="${s.aspect==='9:16'?'on':''}">竖屏 9:16</button></div></div>
+      <div><label class="lbl" for="lang-${s.id}">旁白语言</label><select id="lang-${s.id}" data-k="lang">${langOpts(s.lang)}</select></div>
+      <div><span class="lbl">字幕</span><div class="seg" data-seg="subs">
+        <button data-v="1" class="${s.subs?'on':''}">自动生成</button><button data-v="0" class="${s.subs?'':'on'}">不要</button></div></div>
+    </div>
+    <div class="field row" style="gap:10px"><label class="lbl" for="model-${s.id}" style="margin:0">出片模型</label>
+      <select id="model-${s.id}" data-k="model" style="min-width:200px">${modelOpts(s.model)}</select>
+      <span class="hint" data-modelhint>${esc(modelHintFor(s.model))}</span></div>
+    <div class="slot-sum ${v?'':'missing'}" data-voicerow>① 🎙 音色（必选）：<b data-voicename>${esc(v?v.name:'还没选')}</b><span class="sp"></span>
+      <button class="btn sm" data-a="voice">在右侧①选音色</button></div>
+    <div class="slot-sum">② 🎵 选歌（可选）：<span data-musicsum>${esc(musicSummary(s.music,s.dur))}</span><span class="sp"></span>
+      <button class="btn sm" data-a="music">在右侧②选歌</button></div>
+    <button class="btn pri gen" data-a="gen">生成视频</button>
+    <div class="hint" data-genhint style="margin-top:8px">${esc(S.genhint||'')}</div>
+    ${st?`<details class="card-md"><summary>查看这套风格的说明</summary><div class="md">${md(st.card)}</div></details>`:''}
+  </section>`;
+}
+function slotJob(s){return S.jobs.find(j=>j.id===s.jobId)||{id:s.jobId,status:{state:'created',message:'已提交，等待开工…'},request:{}};}
+function slotKey(s){const j=slotJob(s);return [j.status?.state,j.status?.message,j.final||''].join('|');}
+function slotDone(s){
+  const j=slotJob(s), st=j.status||{}, k=st.state||'created', v=vById(s.voice);
+  const src=j.final?(MODE.preview?j.final:`/jobs/${encodeURIComponent(j.id)}/final.mp4`):'';
+  return `<section class="slot done" data-slot="${s.id}" data-key="${esc(slotKey(s))}" aria-label="版面 ${slotNo(s)}">
+    ${slotHead(s,false)}
+    <div class="row" style="margin-bottom:6px"><span class="st ${k}">${STN[k]||k}</span>
+      <span class="hint">${esc(s.dur)} · ${esc(s.aspect)} · 🎙 ${esc(v?v.name:s.voice)} · 🧠 ${esc(s.model||'BigApple 默认')}${j.cost_usd!=null?` · 💰 ${k==='running'?'已花 ':''}${fmtCost(j.cost_usd)}`:''}</span></div>
+    <div class="hint">🎵 ${esc(musicSummary(s.music,s.dur))}</div>
+    <div style="font-size:13.5px;margin-top:6px">${esc(s.idea.slice(0,120))}${s.idea.length>120?'…':''}</div>
+    ${st.message?`<div class="hint" style="margin-top:4px">${esc(st.message)}</div>`:''}
+    ${videoTag(src)}
+    <div class="row" style="margin-top:10px">
+      ${k==='running'?'<button class="btn sm danger" data-a="stop">停止</button>':''}
+      ${k==='handoff'?'<button class="btn sm" data-a="copy">复制开工指令</button>':''}
+      <button class="btn sm" data-a="dup">用这套设置再来一条</button>
+    </div></section>`;
+}
+function renderSlots(){
+  activeSlot();
+  $('#slots').innerHTML=S.slots.map(s=>s.jobId?slotDone(s):slotEdit(s)).join('')
+    +'<button class="add-slot" id="b-add-slot">＋ 新建一个版面</button>';
+  syncVoicePanel(); saveSlots();
+}
+function refreshDoneSlots(){
+  (S.slots||[]).filter(s=>s.jobId).forEach(s=>{
+    const el=$(`#slots [data-slot="${s.id}"]`); if(!el) return;
+    const vid=el.querySelector('video'); if(vid&&!vid.paused) return;
+    if(el.dataset.key!==slotKey(s)) el.outerHTML=slotDone(s);
+  });
+}
+function syncVoicePanel(){
+  const s=activeSlot();
+  $('#vfor').textContent=`给版面 ${slotNo(s)}`;
+  if(S.mfor!==s.id){S.mfor=s.id; if(S.bgm.songs.length) renderMusic();}
+  $$('#slots .slot').forEach(el=>el.classList.toggle('active',el.dataset.slot===s.id));
+  if(s.lang!==S.lang){S.lang=s.lang;S.voice=s.voice;loadVoices();}
+  else if(s.voice!==S.voice){S.voice=s.voice;renderVoices();}
+}
+function setActive(id){const s=slotById(id);if(!s||s.jobId||S.activeSlot===id)return;S.activeSlot=id;saveSlots();syncVoicePanel();}
+function setVoice(id){
+  S.voice=id; LS.set('voice',id);
+  const s=activeSlot(); s.voice=id; saveSlots();
+  const el=$(`#slots [data-slot="${s.id}"] [data-voicename]`); if(el) el.textContent=(vById(id)||{name:id}).name;
+  $(`#slots [data-slot="${s.id}"] [data-voicerow]`)?.classList.remove('missing');
+  renderVoices();
+}
+const scrollToSlot=id=>$(`#slots [data-slot="${id}"]`)?.scrollIntoView({behavior:'smooth',block:'start'});
+$('#slots').addEventListener('focusin',e=>{const el=e.target.closest('.slot');if(el)setActive(el.dataset.slot);});
+$('#slots').onclick=async e=>{
+  if(e.target.closest('#b-add-slot')){const n=newSlot();S.slots.push(n);S.activeSlot=n.id;renderSlots();scrollToSlot(n.id);return;}
+  const el=e.target.closest('.slot'); if(!el) return; const s=slotById(el.dataset.slot); if(!s) return;
+  setActive(s.id);
+  const dc=e.target.closest('[data-dur]');
+  if(dc){s.dur=dc.dataset.dur; el.querySelector('[data-k=dur]').value=s.dur; el.querySelector('[data-durhint]').textContent=durText(s.dur); updateMusicSum(s);
+    el.querySelectorAll('[data-dur]').forEach(c=>c.classList.toggle('on',c===dc)); saveSlots(); return;}
+  const sb=e.target.closest('[data-seg] button');
+  if(sb){const k=sb.closest('[data-seg]').dataset.seg; s[k]=k==='subs'?sb.dataset.v==='1':sb.dataset.v;
+    if(k==='subs') LS.set('subs',s.subs);
+    sb.parentElement.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b===sb)); saveSlots(); return;}
+  const a=e.target.closest('[data-a]')?.dataset.a; if(!a) return;
+  if(a==='style'){S.pickFor=s.id; showView('home'); toast(`给版面 ${slotNo(s)} 选一个风格模板`,2600);}
+  else if(a==='remove'){
+    if(!s.jobId&&s.idea.trim()&&!confirm(`版面 ${slotNo(s)} 还没提交，确定移除？`)) return;
+    S.slots=S.slots.filter(x=>x!==s); if(!S.slots.some(x=>!x.jobId)) S.slots.push(newSlot()); renderSlots();
+    if(s.jobId) toast('已从页面移除，片子照常做，做完在作品库里');}
+  else if(a==='voice') flashPanel('.vpanel');
+  else if(a==='music') flashPanel('.mpanel');
+  else if(a==='gen') genSlot(s,e.target.closest('[data-a]'));
+  else if(a==='dup'){const n={...newSlot(),style:s.style,idea:s.idea,dur:s.dur,aspect:s.aspect,lang:s.lang,subs:s.subs,voice:s.voice,model:s.model,music:[...(s.music||[])]};
+    S.slots.push(n); S.activeSlot=n.id; renderSlots(); scrollToSlot(n.id); toast('已复制到新版面，改一下模型或想法就能对比',3000);}
+  else if(a==='stop'){ if(confirm('停止这条片子？')){ await stopJob(s.jobId); loadJobs(); } }
+  else if(a==='copy'){ try{ if(MODE.preview){const j=slotJob(s); if(j.text) await navigator.clipboard.writeText(j.text);}
+      else await call('/api/jobs/copy-prompt',{id:s.jobId}); toast('开工指令已复制，BigApple 已唤起'); }catch(err){toast(err.message);} }
+};
+$('#slots').oninput=e=>{
+  const el=e.target, k=el.dataset.k; if(!k) return; const box=el.closest('.slot'), s=slotById(box.dataset.slot); if(!s) return;
+  s[k]=el.value;
+  if(k==='dur'){box.querySelector('[data-durhint]').textContent=durText(s.dur); updateMusicSum(s); box.querySelectorAll('[data-dur]').forEach(c=>c.classList.toggle('on',c.dataset.dur===s.dur));}
+  if(k==='model'){box.querySelector('[data-modelhint]').textContent=modelHintFor(s.model); LS.set('model',s.model);}
+  if(k==='lang'){LS.set('lang',s.lang); if(s.id===S.activeSlot){S.lang=s.lang; loadVoices().then(()=>primeLang(S.lang));}}
+  saveSlots();
+};
+async function genSlot(s,btn){
+  if(MODE.static) return toast('只读浏览：请从 BigApple 预览打开，或双击「启动MG视频工作台.command」',4500);
+  const st=styleBy(s.style); if(!st) return toast(`版面 ${slotNo(s)} 还没选风格模板`);
+  if(!s.idea.trim()) return toast('先写下你对这支视频的想法');
+  if(!(parseDur(s.dur)>=3)) return toast('时长格式不对，例如 1:30');
+  const v=vById(s.voice);
+  if(!v){ flashPanel('.vpanel'); $(`#slots [data-slot="${s.id}"] [data-voicerow]`)?.classList.add('missing');
+    return toast(`版面 ${slotNo(s)} 还没选音色：音色是必选的，请在右侧①选一个`,4200); }
+  const pm=s.model?((S.models||[]).find(m=>m.label===s.model)||{label:s.model,id:''}):null;
+  if(MODE.ba&&pm&&!pm.id) return toast(`BigApple 模型目录里没找到「${pm.label}」，换一个或选 BigApple 默认`,4500);
+  btn.disabled=true; btn.textContent='创建任务…';
+  try{
+    const r=await call('/api/jobs',{style:st.slug,style_cn:st.cn,style_en:st.en,idea:s.idea.trim(),duration:s.dur,
+      language:s.lang,aspect:s.aspect,subtitles:s.subs,voice:v.id,voice_settings:v.settings,
+      model:pm?pm.id:'',model_label:pm?pm.label:'',music:{picked:[...(s.music||[])]},
+      ...(MODE.ba&&!MODE.preview&&!(CFG.has_key&&CFG.use_key)?{dispatch:'agent'}:{})});
+    if(r.mode==='agent'&&!MODE.preview)
+      await localDispatch(r,{style_cn:st.cn,duration:s.dur,model:pm?pm.id:'',model_label:pm?pm.label:''});
+    s.jobId=r.id;
+    const n=newSlot(); S.slots.push(n); S.activeSlot=n.id; saveSlots();
+    await loadJobs(); renderSlots();
+    if(r.mode==='handoff'){S.handoffPrompt=r.prompt;$('#h-prompt').textContent=r.prompt;openM('#m-handoff');}
+    else toast(`版面 ${slotNo(s)} 已交给 BigApple 开工，下面多了一个空版面可以接着写`,4200);
+    scrollToSlot(n.id);
+  }catch(e){toast('创建失败：'+e.message,4500); btn.disabled=false; btn.textContent='生成视频';}
+}
+function showView(v){
+  $('#v-home').classList.toggle('hidden',v!=='home'); $('#v-create').classList.toggle('hidden',v!=='create');
+  $('#v-lib').classList.toggle('hidden',v!=='lib');
+  if(v!=='lib') $$('#v-lib video').forEach(x=>x.pause());
+  if(v==='create') renderSlots();
+  scrollTo(0,0);
+}
+function useStyle(slug){
+  let s=slotById(S.pickFor); S.pickFor='';
+  if(!s||s.jobId) s=S.slots.find(x=>!x.jobId&&!x.style);
+  if(!s){s=newSlot();S.slots.push(s);}
+  const st=styleBy(slug); if(s.style!==slug) s.aspect=st.native_aspect||'16:9';
+  s.style=slug; S.activeSlot=s.id;
+  showView('create'); scrollToSlot(s.id); $(`#idea-${s.id}`)?.focus({preventScroll:true});
+}
+$('#grid').onclick=e=>{const c=e.target.closest('.card');if(c) useStyle(c.dataset.slug);};
+$('#b-back').onclick=()=>showView('home');
+$('#b-create').onclick=()=>showView('create');
+
+/* ---------- 曲库选歌（每个版面各选各的） ---------- */
+S.bgm={songs:[],categories:[]}; S.mcat=''; S.mq=''; S.mvocal=''; S.mfor=''; S.mplay='';
+async function loadBgm(){ try{ const d=await call('/api/bgm'); S.bgm={songs:d.songs||[],categories:d.categories||[]}; }catch{} }
+const songBy=id=>S.bgm.songs.find(x=>x.id===id);
+const mSlot=()=>slotById(S.mfor)||{music:[]};
+function flashPanel(sel){const p=$(sel); p.scrollIntoView({behavior:'smooth',block:'nearest'}); p.classList.remove('flash'); void p.offsetWidth; p.classList.add('flash');}
+function renderPicked(){
+  const s=mSlot();
+  $('#m-picked').innerHTML=s.music.length?s.music.map(id=>`<span data-un="${esc(id)}" title="点一下取消">✓ ${esc((songBy(id)||{name:id}).name)} ✕</span>`).join('')
+    :'<span class="hint" style="background:none;color:var(--dim);padding:3px 0">还没勾选：AI 会从整个曲库里自己找</span>';
+}
+function renderMusic(){
+  const s=mSlot(); s.music=s.music||[];
+  $('#mfor').textContent=`版面 ${slotNo(s)}`;
+  renderPicked();
+  const all=S.bgm.songs, n=c=>all.filter(x=>x.categories.includes(c)).length;
+  $('#m-cats').innerHTML=`<button class="cat ${S.mcat?'':'on'}" data-mc="">全部 <i>${all.length}</i></button>`
+    +S.bgm.categories.map(c=>`<button class="cat ${S.mcat===c?'on':''}" data-mc="${esc(c)}">${esc(c)} <i>${n(c)}</i></button>`).join('');
+  renderMusicList();
+}
+function musicList(){
+  const q=S.mq.trim().toLowerCase();
+  return S.bgm.songs.filter(x=>(!S.mcat||x.categories.includes(S.mcat))
+    &&(!S.mvocal||(S.mvocal==='none'?x.vocal==='none':x.vocal!=='none'))
+    &&(!q||[x.name,x.artist,x.album,x.mood,x.use].join(' ').toLowerCase().includes(q)));
+}
+const ENW={low:'舒缓',mid:'中等',high:'激昂'};
+function songRow(x,on){
+  return `<div class="song ${on?'on':''}" data-song="${esc(x.id)}" role="checkbox" aria-checked="${on}" tabindex="0">
+    <span class="ck">${on?'✓':''}</span>
+    <div class="sx"><div class="sn">${esc(x.name)} <span class="sm">· ${esc(x.artist)}</span></div>
+      <div class="sm">${esc(fmtLen(x.duration))} · ${x.bpm?Math.round(x.bpm)+' BPM · ':''}${ENW[x.energy]||''} · ${esc(x.categories.join(' / '))}${x.vocal!=='none'?' · 🎤 带人声':''}${x.copyright_risk?' · © 版权曲':''}${x.mood?' · '+esc(x.mood):''}</div></div>
+    <button class="ib ${S.mplay===x.id?'playing':''}" data-mplay="${esc(x.id)}" aria-label="试听 ${esc(x.name)}">${S.mplay===x.id?'⏸':'▶'}</button>
+  </div>`;
+}
+function renderMusicList(){
+  const s=mSlot(), list=musicList();
+  $('#m-list').innerHTML=list.length?list.map(x=>songRow(x,s.music.includes(x.id))).join(''):'<div class="hint">没有匹配的歌</div>';
+}
+function updateMusicSum(s){const el=$(`#slots [data-slot="${s.id}"] [data-musicsum]`); if(el) el.textContent=musicSummary(s.music,s.dur);}
+function toggleSong(id){
+  const s=mSlot(), i=s.music.indexOf(id); if(i<0) s.music.push(id); else s.music.splice(i,1);
+  saveSlots(); updateMusicSum(s); renderPicked();
+  const row=$(`#m-list [data-song="${CSS.escape(id)}"]`);
+  if(row){const on=s.music.includes(id); row.classList.toggle('on',on); row.setAttribute('aria-checked',on); row.querySelector('.ck').textContent=on?'✓':'';}
+}
+const mp=$('#m-player');
+function markPlaying(){$$('#m-list [data-mplay]').forEach(b=>{const on=b.dataset.mplay===S.mplay;b.classList.toggle('playing',on);b.textContent=on?'⏸':'▶';});}
+async function playSong(id){
+  if(S.mplay===id){mp.pause();S.mplay='';markPlaying();return;}
+  const x=songBy(id); if(!x) return;
+  S.mplay=id; markPlaying();
+  try{ mp.src=await playable(libSrc(x.file)); }catch(e){ S.mplay=''; markPlaying(); return toast('试听失败：'+e.message,4000); }
+  if(S.mplay!==id) return;
+  // 从这首歌最适合当背景的那一段开始放
+  mp.onloadedmetadata=()=>{ try{ mp.currentTime=Math.min(x.preview_start||0,Math.max(0,(mp.duration||0)-5)); }catch{} };
+  mp.play().catch(e=>toast('试听失败：'+e.message));
+  markPlaying();
+}
+mp.onended=()=>{S.mplay='';markPlaying();};
+$('#m-q').oninput=e=>{S.mq=e.target.value;renderMusicList();};
+$('#m-vocal').onchange=e=>{S.mvocal=e.target.value;renderMusicList();};
+$('#m-cats').onclick=e=>{const b=e.target.closest('[data-mc]');if(!b)return;S.mcat=b.dataset.mc;renderMusic();};
+$('#m-picked').onclick=e=>{const b=e.target.closest('[data-un]');if(b) toggleSong(b.dataset.un);};
+$('#m-list').onclick=e=>{
+  const p=e.target.closest('[data-mplay]'); if(p){playSong(p.dataset.mplay);return;}
+  const r=e.target.closest('[data-song]'); if(r) toggleSong(r.dataset.song);
+};
+$('#m-list').onkeydown=e=>{if((e.key===' '||e.key==='Enter')&&e.target.matches('[data-song]')){e.preventDefault();toggleSong(e.target.dataset.song);}};
+$('#m-clear').onclick=()=>{const s=mSlot(); s.music=[]; saveSlots(); updateMusicSum(s); renderMusic();};
+
+/* ---------- voices ---------- */
+const MOODS=['开心活泼','温柔','沉稳有力','激昂','略带伤感','神秘低沉','慵懒随意','像讲故事一样'];
+const KIND={preset:'内置',design:'设计',clone:'克隆'};
+async function loadVoices(){
+  const j=await call('/api/voices?lang='+encodeURIComponent(S.lang));
+  S.voices=j.voices; S.instruct=j.instruct_model; S.design=j.design_model; S.langs=j.langs;
+  S.categories=j.categories||[]; S.build=j.build||null;
+  if(S.voice&&!S.voices.find(v=>v.id===S.voice)) S.voice='';
+  { const sl=activeSlot(); if(sl.voice!==S.voice){ sl.voice=S.voice; saveSlots(); } }
+  $('#b-design').disabled=!S.design;
+  renderCats();
+  renderVoices();
+  renderBuild();
+  if(S.build?.running){ S.wasBuilding=true; pollBuild(); }
+}
+const catOrder=id=>{const i=S.categories.findIndex(c=>c.id===id);return i<0?99:i};
+const catName=id=>(S.categories.find(c=>c.id===id)||{}).name||id;
+function renderCats(){
+  const n={}; S.voices.forEach(v=>{n[v.category]=(n[v.category]||0)+1});
+  const item=(id,name,c)=>`<button class="cat ${S.cat===id?'on':''}" role="tab" aria-selected="${S.cat===id}" data-cat="${esc(id)}">${esc(name)}<i>${c}</i></button>`;
+  const cats=S.categories.filter(c=>n[c.id]).sort((a,b)=>catOrder(a.id)-catOrder(b.id));
+  $('#cats').innerHTML=item('all','全部',S.voices.length)+cats.map(c=>item(c.id,c.name,n[c.id])).join('');
+}
+function visibleVoices(){
+  const q=S.vq.trim().toLowerCase();
+  return S.voices.filter(v=>(S.cat==='all'||v.category===S.cat)&&
+    (!q||[v.name,v.desc,v.design_prompt||''].join(' ').toLowerCase().includes(q)));
+}
+function fmtSec(s){s=Math.round(s);return s<60?`${s} 秒`:`${Math.floor(s/60)} 分 ${s%60} 秒`;}
+function renderBuild(){
+  const b=S.build||{}, el=$('#buildbar');
+  const active=b.running||(b.started&&!/^全部完成$/.test(b.phase||''));
+  if(!active){el.classList.add('hidden');return;}
+  el.classList.remove('hidden');
+  const pct=b.total?Math.round(b.done/b.total*100):0;
+  el.innerHTML=`<div><b>${esc(b.phase||'构建中')}</b>${b.current?` · ${esc(b.current)}`:''}
+    <span class="hint" style="float:right">${b.running&&b.eta?`约剩 ${fmtSec(b.eta)}`:(b.running?'进行中':'已结束')}</span></div>
+    <div class="prog"><i style="width:${pct}%"></i></div>
+    ${b.failed?.length?`<div class="hint" style="margin-top:6px">${b.failed.length} 条失败</div>`:''}`;
+}
+async function pollBuild(){
+  clearTimeout(S.buildTimer);
+  try{
+    const b=await call('/api/build'); S.build=b; renderBuild();
+    if(b.running){ S.buildTimer=setTimeout(pollBuild,4000); return; }
+    if(S.wasBuilding){ S.wasBuilding=false; await loadVoices(); toast('音色库已就绪，试听秒出'); }
+  }catch{}
+}
+async function primeLang(lang){
+  try{ S.build=await call('/api/previews/prime',{langs:[lang]}); S.wasBuilding=true; renderBuild(); pollBuild(); }
+  catch(e){ toast('预热失败：'+e.message); }
+}
+function isTuned(st){return st.rate!==1||st.pitch!==0||!!st.instruct;}
+function voiceRow(v){
+  const st=v.settings, open=S.open===v.id, sel=S.voice===v.id;
+  return `<div class="voice ${sel?'sel':''}" data-id="${esc(v.id)}">
+    <div class="vrow">
+      <button class="vpick" role="radio" aria-checked="${sel}" data-act="pick"><span class="dot"></span>
+        <span class="vtxt"><span class="vname">${esc(v.name)}</span> <span class="badge">${KIND[v.kind]}</span>
+        ${isTuned(st)?'<span class="tuned">● 已微调</span>':''}${v.preview?'':'<span class="pend">首次播放需合成</span>'}
+        <div class="vdesc" title="${esc(v.desc)}">${esc(v.desc)}</div></span></button>
+      <button class="ib ${S.playing===v.id?'playing':''}" data-act="play" aria-label="试听 ${esc(v.name)}" title="试听：${esc(st.sample||v.preview_text)}">🔈</button>
+      <button class="ib" data-act="tune" aria-expanded="${open}" aria-label="微调 ${esc(v.name)}" title="微调">⚙</button>
+    </div>${open?drawer(v):''}</div>`;
+}
+/* 微调先改草稿，点「保存设置」才落盘 */
+const TUNE_KEYS=['rate','pitch','instruct','sample'];
+S.draft={};
+const curSet=id=>S.draft[id]||vById(id).settings;
+const isDirty=id=>!!S.draft[id]&&TUNE_KEYS.some(k=>String(S.draft[id][k]??'')!==String(vById(id).settings[k]??''));
+function editDraft(id,patch){
+  S.draft[id]={...curSet(id),...patch};
+  if(!isDirty(id)) delete S.draft[id];
+  markDirty(id);
+}
+function markDirty(id){
+  const row=[...$$('#vlist .voice')].find(r=>r.dataset.id===id); if(!row) return;
+  const d=isDirty(id), sv=row.querySelector('[data-act=save]'), rv=row.querySelector('[data-act=revert]'), s=row.querySelector('[data-saved]');
+  if(sv){sv.disabled=!d; sv.textContent=d?'💾 保存设置':'已保存';}
+  if(rv) rv.classList.toggle('hidden',!d);
+  if(s&&d) s.textContent='有未保存的修改';
+}
+function drawer(v){
+  const st=curSet(v.id), t=v.tunable;
+  let instr='';
+  if(v.kind==='preset'){
+    instr=t.instruct?`<div><label class="lbl" for="in-${esc(v.id)}">语气描述（用文字微调，例如「温柔一点，带点笑意」）</label>
+      <textarea id="in-${esc(v.id)}" data-k="instruct">${esc(st.instruct)}</textarea>
+      <div class="moods">${MOODS.map(m=>`<button data-mood="${m}">${m}</button>`).join('')}</div></div>`
+      :`<div class="hint">语气描述需要 1.7B CustomVoice 模型（未安装）。</div>`;
+  }else if(v.kind==='design'){
+    instr=`<div><span class="lbl">音色描述</span><div class="hint">${esc(v.design_prompt)}</div>
+      <button class="btn sm" data-act="redesign" style="margin-top:6px">改描述重新设计</button></div>`;
+  }else{
+    instr=`<div class="hint">克隆音色按参考音频说话，可调语速和音高；想换语气请换一段参考音频。</div>`;
+  }
+  return `<div class="drawer">
+    <div class="slider"><label for="r-${esc(v.id)}">语速</label><input type="range" id="r-${esc(v.id)}" min="0.7" max="1.4" step="0.05" value="${st.rate}" data-k="rate"><span>${(+st.rate).toFixed(2)}×</span></div>
+    <div class="slider"><label for="p-${esc(v.id)}">音高</label><input type="range" id="p-${esc(v.id)}" min="-4" max="4" step="0.5" value="${st.pitch}" data-k="pitch"><span>${st.pitch>0?'+':''}${st.pitch}</span></div>
+    ${instr}
+    <div><label class="lbl" for="sm-${esc(v.id)}">试听句（留空用默认：${esc(v.preview_text)}）</label>
+      <input type="text" id="sm-${esc(v.id)}" data-k="sample" value="${esc(st.sample)}"></div>
+    <div class="row"><button class="btn sm" data-act="play">▶ 试听当前设置</button>
+      <button class="btn sm pri" data-act="save" ${isDirty(v.id)?'':'disabled'}>${isDirty(v.id)?'💾 保存设置':'已保存'}</button>
+      <button class="btn sm ${isDirty(v.id)?'':'hidden'}" data-act="revert">撤销修改</button>
+      <button class="btn sm" data-act="reset">恢复默认</button>
+      <span class="hint" data-saved>${isDirty(v.id)?'有未保存的修改':''}</span><span style="flex:1"></span>
+      ${v.kind!=='preset'?'<button class="btn sm danger" data-act="delete">删除音色</button>':''}</div>
+  </div>`;
+}
+function renderVoices(){
+  const list=visibleVoices();
+  $('#vlist').innerHTML=list.map(voiceRow).join('')||'<div class="hint" style="padding:10px 2px">没有匹配的音色</div>';
+  $('#vhint').textContent=`${list.length}/${S.voices.length} 个 · ${S.cat==='all'?'全部分类':catName(S.cat)} · 试听跟随「旁白语言」`;
+}
+$('#vq').oninput=e=>{S.vq=e.target.value;renderVoices();};
+$('#cats').onclick=e=>{const b=e.target.closest('.cat');if(!b)return;S.cat=b.dataset.cat;LS.set('cat',S.cat);renderCats();renderVoices();};
+const vById=id=>S.voices.find(v=>v.id===id);
+async function saveSetting(id,btn){
+  const v=vById(id), d=S.draft[id]; if(!d) return;
+  if(btn){btn.disabled=true;btn.textContent='保存中…';}
+  try{
+    v.settings=await call('/api/voices/settings',{voice:id,settings:{...v.settings,...d}});
+    delete S.draft[id]; renderVoices();
+    toast(`「${v.name}」的微调已保存，生成视频会用这套设置`,2600);
+  }catch(e){ toast('保存失败：'+e.message,4000); markDirty(id); }
+}
+async function play(id,btn){
+  const v=vById(id), player=$('#player');
+  if(S.playing===id){player.pause();S.playing=null;renderVoices();return;}
+  btn?.classList.add('loading'); setEngine('合成试听中…（首次加载模型约 10–30 秒）');
+  try{
+    const r=await call('/api/preview',{voice:id,lang:S.lang,settings:curSet(id)});
+    if(r.error) throw new Error(r.error);
+    if(r.note) toast(r.note,3500);
+    if(r.fallback) toast('这个语言还没预生成试听，先放中文的',2600);
+    player.src=MODE.preview?await playable(r.url||('previews/'+r.file)):(r.url||('/previews/'+r.file))+'?t='+Date.now();
+    S.playing=id; renderVoices(); await player.play();
+  }catch(e){toast('试听失败：'+e.message,4000);}
+  finally{btn?.classList.remove('loading'); refreshEngine();}
+}
+$('#player').onended=()=>{S.playing=null;renderVoices();};
+$('#vlist').onclick=async e=>{
+  const row=e.target.closest('.voice'); if(!row) return; const id=row.dataset.id, v=vById(id);
+  const mood=e.target.closest('[data-mood]');
+  if(mood){const ta=row.querySelector('[data-k=instruct]');ta.value=mood.dataset.mood;editDraft(id,{instruct:ta.value});return;}
+  const act=e.target.closest('[data-act]')?.dataset.act;
+  if(act==='pick'){setVoice(id);}
+  else if(act==='play') play(id,e.target.closest('[data-act]'));
+  else if(act==='tune'){
+    if(S.open){ const o=S.open;
+      if(isDirty(o)&&!confirm(`「${vById(o).name}」的微调还没保存，要丢掉这些修改吗？`)) return;
+      delete S.draft[o]; }
+    S.open=S.open===id?null:id;renderVoices();}
+  else if(act==='save') saveSetting(id,e.target.closest('[data-act]'));
+  else if(act==='revert'){delete S.draft[id];renderVoices();}
+  else if(act==='reset'){editDraft(id,{rate:1,pitch:0,instruct:'',sample:''});renderVoices();}
+  else if(act==='redesign'){openDesign(v);}
+  else if(act==='delete'){ if(!confirm(`删除音色「${v.name}」？（会移到回收目录，可找回）`))return;
+    try{await call('/api/voices/delete',{voice:id});toast('已删除');S.open=null;await loadVoices();}catch(e){toast(e.message);} }
+};
+$('#vlist').oninput=e=>{
+  const el=e.target, k=el.dataset.k; if(!k) return; const id=el.closest('.voice').dataset.id;
+  let val=el.value; if(k==='rate'||k==='pitch'){val=+val; el.nextElementSibling.textContent=k==='rate'?val.toFixed(2)+'×':(val>0?'+':'')+val;}
+  editDraft(id,{[k]:val});
+};
+
+/* ---------- modals ---------- */
+function openM(id){$(id).classList.add('on');}
+function closeM(el){el.closest('.mask').classList.remove('on');$('#m-player').pause();S.mplay='';}
+$$('[data-close]').forEach(b=>b.onclick=()=>closeM(b));
+$$('.mask').forEach(m=>m.onclick=e=>{if(e.target===m)m.classList.remove('on');});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){$$('.mask.on').forEach(m=>m.classList.remove('on'));$('#side').classList.remove('on');$('#m-player').pause();S.mplay='';}});
+
+let draft=null, replaceId='';
+function openDesign(v){
+  draft=null; replaceId=v?v.id:'';
+  $('#t-design').textContent=v?`重新设计「${v.name}」`:'用文字描述造音色';
+  $('#d-desc').value=v?v.design_prompt:''; $('#d-name').value=v?v.name:'';
+  if(MODE.preview){
+    // 预览模式没有本地引擎：直接填名字，保存时交给 BigApple 造。
+    $('#d-audio').classList.add('hidden');
+    $('#d-result').querySelector('.lbl').textContent='保存后由 BigApple 生成，样音会自动进音色库';
+    $('#d-result').classList.remove('hidden');
+    $('#d-gen').classList.add('hidden');
+    $('#d-save').classList.remove('hidden'); $('#d-save').textContent='交给 BigApple 生成';
+    if(v) toast('预览模式不能改已有音色的描述，请新建一个',3500);
+    return openM('#m-design');
+  }
+  $('#d-result').classList.add('hidden'); $('#d-save').classList.add('hidden'); openM('#m-design'); $('#d-desc').focus();
+}
+$('#b-design').onclick=()=>openDesign(null);
+$('#d-gen').onclick=async()=>{
+  const b=$('#d-gen'); b.disabled=true; b.textContent='生成中…';
+  try{
+    const r=await call('/api/voices/design',{description:$('#d-desc').value,lang:$('#d-lang').value});
+    draft=r.draft; $('#d-audio').src='/'+r.file+'?t='+Date.now(); $('#d-result').classList.remove('hidden');
+    $('#d-save').classList.remove('hidden'); if(!$('#d-name').value) $('#d-name').value=$('#d-desc').value.slice(0,10);
+    $('#d-audio').play().catch(()=>{});
+  }catch(e){toast('生成失败：'+e.message,4000);}
+  finally{b.disabled=false;b.textContent='重新生成';}
+};
+$('#d-save').onclick=async()=>{
+  const name=$('#d-name').value.trim()||$('#d-desc').value.trim().slice(0,10)||'我的音色';
+  const b=$('#d-save'); b.disabled=true;
+  try{
+    let id=name;
+    if(MODE.preview){
+      toast('已交给 BigApple 生成音色，约 1–2 分钟',4000);
+      await agentVoiceDesign($('#d-desc').value.trim(),$('#d-lang').value,name);
+      VD=null; await loadVoices();
+      const nv=S.voices.find(v=>v.name===name||v.id===name); if(nv) id=nv.id;
+    }else{
+      const r=await call('/api/voices/design/save',{draft,name,replace:replaceId});
+      id=r.id; await loadVoices();
+    }
+    closeM($('#d-save')); setVoice(id); toast('音色已保存并选中');
+  }catch(e){toast('保存失败：'+e.message,4500);}
+  finally{b.disabled=false;}
+};
+$('#b-clone').onclick=()=>{$('#k-auth').checked=false;openM('#m-clone');};
+$('#k-save').onclick=async()=>{
+  const f=$('#k-file').files[0]; if(!f) return toast('先选一段参考音频');
+  if(f.size>40*1024*1024) return toast('文件太大，截一段 5–15 秒的就够了');
+  if(!$('#k-auth').checked) return toast('需要先勾选授权确认');
+  const name=($('#k-name').value||f.name.replace(/\.[^.]+$/,'')).trim();
+  const refText=$('#k-text').value.trim(), lang=$('#k-lang').value;
+  const b=$('#k-save'); b.disabled=true; const old=b.textContent; b.textContent=MODE.preview?'交给 BigApple…':'保存中…';
+  try{
+    let id=name;
+    if(MODE.preview){
+      toast('已交给 BigApple 处理，克隆 + 试听生成约 1–2 分钟',4500);
+      await agentVoiceClone(f,name,refText,lang);
+      VD=null; await loadVoices();
+      const nv=S.voices.find(v=>v.name===name||v.id===name); if(nv) id=nv.id;
+    }else{
+      const b64=await new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(String(r.result).split(',')[1]);r.onerror=no;r.readAsDataURL(f);});
+      const r=await call('/api/voices/clone',{audio_b64:b64,filename:f.name,name,ref_text:refText,lang,authorised:true});
+      id=r.id; await loadVoices();
+    }
+    closeM($('#k-save')); setVoice(id);
+    toast('克隆音色已保存并选中，点 🔈 试听');
+  }catch(e){toast('克隆失败：'+e.message,5000);}
+  finally{b.disabled=false;b.textContent=old;}
+};
+
+let CFG={};
+async function stopJob(id){
+  try{
+    if(!MODE.preview){
+      const ss=(S.jobs.find(x=>x.id===id)||{}).session||{};
+      if(ss.session_id&&ss.request_id&&MODE.ba)
+        await fetch(BA+'/agent/sessions/'+encodeURIComponent(ss.session_id)+'/runs/current?requestId='
+          +encodeURIComponent(ss.request_id),{method:'DELETE'}).catch(()=>{});
+    }
+    await call('/api/jobs/stop',{id});
+  }catch(err){toast(err.message,4000);}
+}
+function setGenHint(t){S.genhint=t;$$('#slots [data-genhint]').forEach(el=>el.textContent=t);}
+async function loadConfig(){
+  CFG=await call('/api/config');
+  if(CFG.preview){ setGenHint('预览模式：点「生成视频」直接把需求交给 BigApple Agent 出片，不需要 Key。'); return; }
+  if(MODE.ba&&!(CFG.has_key&&CFG.use_key)){ setGenHint('点「生成视频」直接交给 BigApple 开工，不用粘贴；进度在这个版面和右上角「任务」里实时显示。'); return; }
+  setGenHint((CFG.has_key&&CFG.use_key)?'已开启 Key 全自动出片：点击后本机后台出片，进度看右上角「任务」。'
+    :'没连上 BigApple（请先打开 BigApple）：点「生成视频」会复制开工指令，到 BigApple 粘贴发送。');
+}
+$('#b-settings').onclick=async()=>{
+  await loadConfig();
+  if(CFG.preview){
+    $('#t-settings').textContent='设置 · BigApple 预览模式';
+    document.querySelector('#m-settings .hint').innerHTML='在 BigApple HTML 预览里打开时，出片通过 <code>/ba/v1</code> 直接交给 BigApple Agent，'
+      +'不需要中转站 Key，也不需要粘贴。</p><p class="hint">音色试听用的是同目录预生成的音频；造音色、克隆音色请回本地工作台（双击「启动MG视频工作台.command」）。';
+    $('#s-base').value=$('#s-key').value=$('#s-model').value='';
+    ['#s-base','#s-key','#s-model'].forEach(s=>{$(s).disabled=true;$(s).closest('.field').classList.add('hidden')});
+    document.querySelector('#m-settings details.adv').classList.add('hidden');
+    $('#s-clear').disabled=true; $('#s-save').disabled=true; $('#s-claude').textContent='';
+    return openM('#m-settings');
+  }
+  $('#s-base').value=CFG.base_url; $('#s-key').value=CFG.api_key; $('#s-model').value=CFG.model;
+  $('#s-usekey').checked=!!CFG.use_key;
+  $('#s-claude').textContent=CFG.claude?'后台出片使用 BigApple 自带的 Claude Code。':'⚠ 没找到 Claude Code，可执行文件缺失时只能用「交给 BigApple」方式。';
+  openM('#m-settings');
+};
+$('#s-save').onclick=async()=>{
+  try{await call('/api/config',{base_url:$('#s-base').value,api_key:$('#s-key').value,model:$('#s-model').value,
+      use_key:$('#s-usekey').checked});
+    await loadConfig(); closeM($('#s-save')); toast(CFG.has_key?'已保存，之后生成会全自动出片':'已保存');
+  }catch(e){toast(e.message);}
+};
+$('#s-clear').onclick=async()=>{await call('/api/config',{api_key:''});$('#s-key').value='';await loadConfig();toast('Key 已清除');};
+
+/* ---------- generate + jobs ---------- */
+$('#h-copy').onclick=()=>navigator.clipboard.writeText(S.handoffPrompt).then(()=>toast('已复制'));
+const STN={created:'已创建',running:'制作中',handoff:'等你在 BigApple 粘贴',done:'完成',failed:'失败',stopped:'已停止'};
+function jobCardPreview(j){
+  const r=j.request||{}, st=j.status||{}, s=st.state||'created';
+  return `<div class="job" data-id="${esc(j.id)}">
+    <div class="t"><span style="flex:1">${esc(r.style_cn||r.style||'')} · ${esc(r.duration||'')} · ${esc(r.aspect||'')}</span><span class="st ${s}">${STN[s]||s}</span></div>
+    <div class="hint">${esc(r.created||'')} · 音色 ${esc(r.voice_name||(r.voice&&r.voice.id)||'')} · 🧠 ${esc(r.model_label||'BigApple 默认')}${j.cost_usd!=null?` · 💰 ${s==='running'?'已花 ':''}${fmtCost(j.cost_usd)}`:''} · 🎵 ${esc(musicSummary((r.music&&r.music.picked)||[]))}</div>
+    <div style="font-size:13.5px;margin-top:4px">${esc((r.idea||'').slice(0,90))}${(r.idea||'').length>90?'…':''}</div>
+    ${st.message?`<div class="hint" style="margin-top:4px">${esc(st.message)}</div>`:''}
+    ${videoTag(j.final)}
+    ${j.text?`<div class="log">${esc(String(j.text).slice(-1600))}</div>`:''}
+    <div class="row" style="margin-top:8px">
+      ${s==='running'?'<button class="btn sm danger" data-j="stop">停止</button>':''}
+      ${j.text?`<button class="btn sm" data-j="copy">复制这条指令</button>`:''}
+    </div></div>`;
+}
+function jobCardLocal(j){
+  const r=j.request||{}, st=j.status||{}, s=st.state||'created';
+  const nar=j.narration&&j.narration.state==='running'?`<div class="hint">🎙 旁白合成 ${j.narration.done}/${j.narration.total}：${esc(j.narration.message)}</div>`:'';
+  return `<div class="job" data-id="${esc(j.id)}">
+    <div class="t"><span style="flex:1">${esc(r.style?.cn||'')} · ${esc(r.duration_human||'')} · ${esc(r.aspect||'')}</span><span class="st ${s}">${STN[s]||s}</span></div>
+    <div class="hint">${esc(r.created||'')} · 音色 ${esc(r.voice?.id||'')} ${st.phase?'· 阶段 '+esc(st.phase):''}</div>
+    <div style="font-size:13.5px;margin-top:4px">${esc((r.idea||'').slice(0,90))}${(r.idea||'').length>90?'…':''}</div>
+    ${st.message?`<div class="hint" style="margin-top:4px">${esc(st.message)}</div>`:''}${nar}
+    ${j.music&&j.music.length?`<div class="hint">🎵 ${esc(j.music.map(c=>`${Math.round(c.start)}–${Math.round(c.end)}s ${c.name}`).join(' · '))}</div>`:''}
+    ${j.final?`<video controls preload="metadata" src="/jobs/${encodeURIComponent(j.id)}/final.mp4"></video>`:''}
+    ${j.log?.length?`<div class="log">${esc(j.log.join('\n'))}</div>`:''}
+    <div class="row" style="margin-top:8px">
+      <button class="btn sm" data-j="reveal">${j.final?'在访达中显示成片':'打开任务目录'}</button>
+      ${s==='handoff'?'<button class="btn sm" data-j="copy">复制开工指令</button>':''}
+      ${s==='running'?'<button class="btn sm danger" data-j="stop">停止</button>':''}
+      ${['failed','stopped','handoff'].includes(s)&&CFG.has_key?'<button class="btn sm" data-j="start">后台重新开工</button>':''}
+    </div></div>`;
+}
+const jobCard=j=>MODE.preview?jobCardPreview(j):jobCardLocal(j);
+let jobT;
+async function loadJobs(){
+  try{S.jobs=await call('/api/jobs');}catch{return;}
+  const active=S.jobs.filter(j=>['running','handoff','created'].includes(j.status?.state));
+  $('#jobcount').textContent=active.length||S.jobs.length;
+  refreshDoneSlots();
+  if($('#side').classList.contains('on')){
+    const open=new Set($$('.job video').filter(v=>!v.paused).map(v=>v.closest('.job').dataset.id));
+    if(!open.size) $('#jobs').innerHTML=S.jobs.length?S.jobs.map(jobCard).join(''):'<div class="hint">还没有任务。选一个风格，写下想法，点「生成视频」。</div>';
+    $$('.job .log').forEach(l=>l.scrollTop=l.scrollHeight);
+  }
+  clearTimeout(jobT); jobT=setTimeout(loadJobs,active.length||$('#side').classList.contains('on')?4000:15000);
+}
+$('#b-jobs').onclick=()=>{$('#side').classList.add('on');loadJobs();};
+$('#b-side-close').onclick=()=>$('#side').classList.remove('on');
+$('#jobs').onclick=async e=>{
+  const b=e.target.closest('[data-j]'); if(!b) return; const id=b.closest('.job').dataset.id, a=b.dataset.j;
+  try{
+    if(a==='reveal'){ if(MODE.preview) toast('预览模式：成片在上面直接播放或下载'); else await call('/api/jobs/reveal',{id}); }
+    if(a==='copy'){
+      const j=S.jobs.find(x=>x.id===id)||{};
+      const txt=String(j.text||S.handoffPrompt||'');
+      if(txt) await navigator.clipboard.writeText(txt).then(()=>toast('已复制'));
+      else if(!MODE.preview){ await call('/api/jobs/copy-prompt',{id}); toast('开工指令已复制，BigApple 已唤起'); }
+      else toast('这条任务没有可复制的文本');
+    }
+    if(a==='stop'&&confirm('停止这个任务？')) await stopJob(id);
+    if(a==='start') await call('/api/jobs/start',{id});
+    loadJobs();
+  }catch(err){toast(err.message,4000);}
+};
+
+/* ---------- engine status + init ---------- */
+function setEngine(t){$('#engine').textContent=t;}
+async function refreshEngine(){
+  if(MODE.preview){ setEngine('🧠 BigApple 预览模式 · 出片走 BigApple Agent'); return; }
+  if(MODE.static){ setEngine('📄 只读浏览 · 未连本地服务'); return; }
+  try{const h=await call('/api/health'),e=h.engine;
+    if(e.stuck){ $('#engine').classList.add('stuck');
+      setEngine(`⚠ 语音引擎卡住 ${Math.round(e.busy_seconds)} 秒（${e.busy}）· 点这里重启`); }
+    else{ $('#engine').classList.remove('stuck');
+      setEngine((MODE.ba?'🧠 本地工作台 · 出片直接交给 BigApple · ':'⚠ 没连上 BigApple · ')
+        +(e.busy?`🎙 ${e.busy}${e.queued?`（排队 ${e.queued}）`:''}`:(e.loaded?`语音模型已就绪`:'语音模型空闲'))); }
+  }catch{setEngine('⚠ 本地服务未连接');}
+}
+$('#engine').onclick=async()=>{
+  if(MODE.preview||MODE.static) return;
+  const h=await call('/api/health').catch(()=>null);
+  if(!h?.engine?.stuck) return toast('语音引擎没卡住，不用重启');
+  if(!confirm('重启语音引擎？卡住的那次合成会被清掉，其它不受影响。')) return;
+  toast('正在重启语音引擎…',4000);
+  await call('/api/engine/reset').catch(()=>{});
+  setTimeout(()=>location.reload(),3500);
+};
+function applyMode(){
+  if(!MODE.preview) return;
+  document.title='MG 视频工作台 · BigApple';
+  $('#b-design').title=$('#b-clone').title='交给 BigApple，用本机模型生成';
+  setGenHint('预览模式：点「生成视频」直接把需求交给 BigApple Agent 出片，不需要 Key。');
+}
+setInterval(refreshEngine,5000);
+(async function init(){
+  if(location.protocol==='file:'){
+    // 双击文件打开：本地服务在跑就直接跳过去，否则提示怎么启动
+    const LOCAL='http://127.0.0.1:7870/';
+    $('#filebanner').innerHTML='正在连接本地工作台…';
+    try{
+      await fetch(LOCAL+'api/health',{mode:'no-cors',signal:AbortSignal.timeout(2500)});
+      location.replace(LOCAL+location.hash); return;
+    }catch{}
+    $('#filebanner').innerHTML='本地工作台没在运行。请双击项目里的「启动MG视频工作台.command」，它会自动在浏览器里打开；'+
+      '启动后也可以直接访问 <a style="color:#fff" href="'+LOCAL+'">'+LOCAL+'</a>';
+    return;
+  }
+  try{
+    await detectMode();
+    if(!MODE.preview){
+      try{ await api('/api/health'); }
+      catch{
+        // 既不是本地服务、也没走 BigApple 预览：退成只读浏览，避免白屏
+        MODE.static=true;
+        toast('没连上本地服务，也没在 BigApple 预览里：只能浏览，不能出片',6500);
+      }
+    }
+    S.styles=await call('/api/styles');
+    renderGrid();
+    { const sl=activeSlot(); S.lang=sl.lang; S.voice=sl.voice; }
+    await Promise.all([loadVoices(),loadConfig(),loadJobs(),refreshEngine(),loadModels(),loadLibrary(),loadBgm()]);
+    applyMode();
+    if(MODE.static) setGenHint('当前是只读浏览：请从 BigApple 预览打开本页，或双击「启动MG视频工作台.command」。');
+    renderSlots();
+    history.replaceState(null,'','#');
+    if(S.slots.some(x=>x.style||x.jobId)) showView('create');
+  }catch(e){toast('加载失败：'+e.message,5000);}
+})();
+</script></body></html>

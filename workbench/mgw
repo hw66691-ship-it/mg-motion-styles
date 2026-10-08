@@ -1,0 +1,8 @@
+#!/bin/sh
+# 制作期命令行：mgw narrate|assemble|status <job_dir> ...（见 mgw.py）
+HERE="$(cd "$(dirname "$0")" && pwd)"
+LVD="${LVD_HOME:-$HOME/local-video-dubbing}"
+export LVD_HOME="$LVD" PYTHONPATH="$LVD/app"
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+export PYTORCH_ENABLE_MPS_FALLBACK=1 TOKENIZERS_PARALLELISM=false HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+exec "$LVD/venv/bin/python" "$HERE/mgw.py" "$@"

@@ -1,0 +1,1177 @@
+{
+ "cabasa": [
+  {
+   "file": "cabasa/Cabasa1_Hit_rr1_Mid.flac",
+   "name": "Cabasa1_Hit_rr1_Mid",
+   "dur": 0.467,
+   "peak": 0.10584,
+   "rms": 0.004497,
+   "ch": 2,
+   "name_midi": null
+  }
+ ],
+ "crash": [
+  {
+   "file": "crash/cymbal_crash1_ff2.flac",
+   "name": "cymbal_crash1_ff2",
+   "dur": 7.0,
+   "peak": 0.67466,
+   "rms": 0.02638,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "crash/cymbal_crash1_ff3.flac",
+   "name": "cymbal_crash1_ff3",
+   "dur": 7.0,
+   "peak": 0.88357,
+   "rms": 0.03112,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "crash/cymbal_crash1_mf1.flac",
+   "name": "cymbal_crash1_mf1",
+   "dur": 7.0,
+   "peak": 0.43591,
+   "rms": 0.0114,
+   "ch": 2,
+   "name_midi": null
+  }
+ ],
+ "glock": [
+  {
+   "file": "glock/glock_loud_C5_01.flac",
+   "name": "glock_loud_C5_01",
+   "dur": 5.0,
+   "peak": 0.06599,
+   "rms": 0.003335,
+   "ch": 2,
+   "name_midi": 72,
+   "detected_midi": 84.087,
+   "midi": 84.04,
+   "midi_orig": 84.087
+  },
+  {
+   "file": "glock/glock_loud_G#6_01.flac",
+   "name": "glock_loud_G#6_01",
+   "dur": 2.913,
+   "peak": 0.06234,
+   "rms": 0.005844,
+   "ch": 2,
+   "name_midi": 92,
+   "detected_midi": 104.187,
+   "midi": 104.157,
+   "midi_orig": 104.187
+  },
+  {
+   "file": "glock/glock_loud_G5_01.flac",
+   "name": "glock_loud_G5_01",
+   "dur": 4.539,
+   "peak": 0.06694,
+   "rms": 0.003648,
+   "ch": 2,
+   "name_midi": 79,
+   "detected_midi": 91.087,
+   "midi": 91.117,
+   "midi_orig": 91.087
+  },
+  {
+   "file": "glock/glock_medium_C5_01.flac",
+   "name": "glock_medium_C5_01",
+   "dur": 5.0,
+   "peak": 0.04759,
+   "rms": 0.002361,
+   "ch": 2,
+   "name_midi": 72,
+   "detected_midi": 84.087,
+   "midi": 84.054,
+   "midi_orig": 84.087
+  },
+  {
+   "file": "glock/glock_medium_C6_01.flac",
+   "name": "glock_medium_C6_01",
+   "dur": 3.931,
+   "peak": 0.04731,
+   "rms": 0.001833,
+   "ch": 2,
+   "name_midi": 84,
+   "detected_midi": 96.187,
+   "midi": 96.154,
+   "midi_orig": 96.187
+  },
+  {
+   "file": "glock/glock_medium_C7_01.flac",
+   "name": "glock_medium_C7_01",
+   "dur": 1.393,
+   "peak": 0.04742,
+   "rms": 0.001778,
+   "ch": 2,
+   "name_midi": 96,
+   "detected_midi": 96.287,
+   "midi": 108.241,
+   "midi_orig": 108.0
+  },
+  {
+   "file": "glock/glock_medium_G4_01.flac",
+   "name": "glock_medium_G4_01",
+   "dur": 5.0,
+   "peak": 0.04881,
+   "rms": 0.002011,
+   "ch": 2,
+   "name_midi": 67,
+   "detected_midi": 79.087,
+   "midi": 79.12,
+   "midi_orig": 79.087
+  },
+  {
+   "file": "glock/glock_medium_G5_01.flac",
+   "name": "glock_medium_G5_01",
+   "dur": 4.247,
+   "peak": 0.04434,
+   "rms": 0.002023,
+   "ch": 2,
+   "name_midi": 79,
+   "detected_midi": 91.087,
+   "midi": 91.118,
+   "midi_orig": 91.087
+  },
+  {
+   "file": "glock/glock_medium_G6_01.flac",
+   "name": "glock_medium_G6_01",
+   "dur": 3.405,
+   "peak": 0.04932,
+   "rms": 0.002453,
+   "ch": 2,
+   "name_midi": 91,
+   "detected_midi": 103.187,
+   "midi": 103.157,
+   "midi_orig": 103.187
+  }
+ ],
+ "guiro": [
+  {
+   "file": "guiro/Guiro_Med_rr1_Mid.flac",
+   "name": "Guiro_Med_rr1_Mid",
+   "dur": 1.397,
+   "peak": 0.01308,
+   "rms": 0.001089,
+   "ch": 2,
+   "name_midi": null
+  }
+ ],
+ "harp": [
+  {
+   "file": "harp/KSHarp_B5_mf1.flac",
+   "name": "KSHarp_B5_mf1",
+   "dur": 3.654,
+   "peak": 0.05452,
+   "rms": 0.004555,
+   "ch": 2,
+   "name_midi": 83,
+   "detected_midi": 82.887,
+   "midi": 82.913,
+   "midi_orig": 82.887
+  },
+  {
+   "file": "harp/KSHarp_C5_mf1.flac",
+   "name": "KSHarp_C5_mf1",
+   "dur": 6.941,
+   "peak": 0.13875,
+   "rms": 0.007649,
+   "ch": 2,
+   "name_midi": 72,
+   "detected_midi": 71.887,
+   "midi": 71.887
+  },
+  {
+   "file": "harp/KSHarp_D6_mf1.flac",
+   "name": "KSHarp_D6_mf1",
+   "dur": 2.391,
+   "peak": 0.08199,
+   "rms": 0.005839,
+   "ch": 2,
+   "name_midi": 86,
+   "detected_midi": 85.887,
+   "midi": 85.925,
+   "midi_orig": 85.887
+  },
+  {
+   "file": "harp/KSHarp_E5_mf1.flac",
+   "name": "KSHarp_E5_mf1",
+   "dur": 6.592,
+   "peak": 0.10224,
+   "rms": 0.008154,
+   "ch": 2,
+   "name_midi": 76,
+   "detected_midi": 75.887,
+   "midi": 75.887
+  },
+  {
+   "file": "harp/KSHarp_F6_mf1.flac",
+   "name": "KSHarp_F6_mf1",
+   "dur": 2.186,
+   "peak": 0.05138,
+   "rms": 0.003485,
+   "ch": 2,
+   "name_midi": 89,
+   "detected_midi": 88.987,
+   "midi": 88.938,
+   "midi_orig": 88.987
+  },
+  {
+   "file": "harp/KSHarp_G5_mf1.flac",
+   "name": "KSHarp_G5_mf1",
+   "dur": 3.981,
+   "peak": 0.08833,
+   "rms": 0.005014,
+   "ch": 2,
+   "name_midi": 79,
+   "detected_midi": 78.987,
+   "midi": 78.964,
+   "midi_orig": 78.987
+  }
+ ],
+ "kalimba": [
+  {
+   "file": "kalimba/MBira3_pluck_Main_A#3_k18_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_A#3_k18_50_100_rr2",
+   "dur": 1.388,
+   "peak": 0.79433,
+   "rms": 0.038472,
+   "ch": 2,
+   "name_midi": 58,
+   "detected_midi": 69.987,
+   "midi": 70.49,
+   "midi_orig": 69.987
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_A#4_k2_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_A#4_k2_50_100_rr2",
+   "dur": 0.907,
+   "peak": 0.78298,
+   "rms": 0.029836,
+   "ch": 2,
+   "name_midi": 70,
+   "detected_midi": 63.487,
+   "midi": 82.359,
+   "midi_orig": 82.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_B4_k23_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_B4_k23_50_100_rr2",
+   "dur": 0.791,
+   "peak": 0.78886,
+   "rms": 0.049144,
+   "ch": 2,
+   "name_midi": 71,
+   "detected_midi": 63.487,
+   "midi": 82.577,
+   "midi_orig": 83.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_C#4_k5_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_C#4_k5_50_100_rr2",
+   "dur": 1.704,
+   "peak": 0.79433,
+   "rms": 0.041151,
+   "ch": 2,
+   "name_midi": 61,
+   "detected_midi": 54.187,
+   "midi": 73.094,
+   "midi_orig": 73.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_C#5_k24_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_C#5_k24_50_100_rr2",
+   "dur": 1.145,
+   "peak": 0.77622,
+   "rms": 0.044992,
+   "ch": 2,
+   "name_midi": 73,
+   "detected_midi": 65.837,
+   "midi": 85.361,
+   "midi_orig": 85.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_D#4_k20_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_D#4_k20_50_100_rr2",
+   "dur": 1.099,
+   "peak": 0.79432,
+   "rms": 0.071696,
+   "ch": 2,
+   "name_midi": 63,
+   "detected_midi": 75.187,
+   "midi": 75.139,
+   "midi_orig": 75.187
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_D#4_k4_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_D#4_k4_50_100_rr2",
+   "dur": 1.532,
+   "peak": 0.7941,
+   "rms": 0.068671,
+   "ch": 2,
+   "name_midi": 63,
+   "detected_midi": 56.287,
+   "midi": 75.327,
+   "midi_orig": 75.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_E5_k25_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_E5_k25_50_100_rr2",
+   "dur": 1.283,
+   "peak": 0.74731,
+   "rms": 0.030933,
+   "ch": 2,
+   "name_midi": 76,
+   "detected_midi": 66.587,
+   "midi": 87.79,
+   "midi_orig": 88.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_F3_k17_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_F3_k17_50_100_rr2",
+   "dur": 2.43,
+   "peak": 0.79334,
+   "rms": 0.063154,
+   "ch": 2,
+   "name_midi": 53,
+   "detected_midi": 65.387,
+   "midi": 65.387
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_F4_k3_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_F4_k3_50_100_rr2",
+   "dur": 1.287,
+   "peak": 0.7926,
+   "rms": 0.047885,
+   "ch": 2,
+   "name_midi": 65,
+   "detected_midi": 39.387,
+   "midi": 77.26,
+   "midi_orig": 77.0
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_G#5_k26_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_G#5_k26_50_100_rr2",
+   "dur": 1.003,
+   "peak": 0.78898,
+   "rms": 0.050043,
+   "ch": 2,
+   "name_midi": 80,
+   "detected_midi": 92.087,
+   "midi": 92.131,
+   "midi_orig": 92.087
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_G3_k6_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_G3_k6_50_100_rr2",
+   "dur": 2.41,
+   "peak": 0.79416,
+   "rms": 0.119683,
+   "ch": 2,
+   "name_midi": 55,
+   "detected_midi": 67.187,
+   "midi": 67.163,
+   "midi_orig": 67.187
+  },
+  {
+   "file": "kalimba/MBira3_pluck_Main_G4_k22_50_100_rr2.flac",
+   "name": "MBira3_pluck_Main_G4_k22_50_100_rr2",
+   "dur": 1.188,
+   "peak": 0.74097,
+   "rms": 0.038948,
+   "ch": 2,
+   "name_midi": 67,
+   "detected_midi": 66.387,
+   "midi": 79.328,
+   "midi_orig": 79.0
+  }
+ ],
+ "marimba": [
+  {
+   "file": "marimba/Marimba_hit_Outrigger_B2_med_01.flac",
+   "name": "Marimba_hit_Outrigger_B2_med_01",
+   "dur": 4.251,
+   "peak": 0.01567,
+   "rms": 0.001973,
+   "ch": 2,
+   "name_midi": 47,
+   "detected_midi": 59.087,
+   "midi": 59.026,
+   "midi_orig": 59.087
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_B4_med_01.flac",
+   "name": "Marimba_hit_Outrigger_B4_med_01",
+   "dur": 1.167,
+   "peak": 0.02754,
+   "rms": 0.004412,
+   "ch": 2,
+   "name_midi": 71,
+   "detected_midi": 83.087,
+   "midi": 83.001,
+   "midi_orig": 83.087
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_C2_med_01.flac",
+   "name": "Marimba_hit_Outrigger_C2_med_01",
+   "dur": 5.0,
+   "peak": 0.01585,
+   "rms": 0.001954,
+   "ch": 2,
+   "name_midi": 36,
+   "detected_midi": 48.087,
+   "midi": 48.012,
+   "midi_orig": 48.087
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_C4_med_01.flac",
+   "name": "Marimba_hit_Outrigger_C4_med_01",
+   "dur": 2.289,
+   "peak": 0.03328,
+   "rms": 0.004051,
+   "ch": 2,
+   "name_midi": 60,
+   "detected_midi": 72.087,
+   "midi": 72.045,
+   "midi_orig": 72.087
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_C6_med_01.flac",
+   "name": "Marimba_hit_Outrigger_C6_med_01",
+   "dur": 1.367,
+   "peak": 0.01582,
+   "rms": 0.00095,
+   "ch": 2,
+   "name_midi": 84,
+   "detected_midi": 27.487,
+   "midi": 96.0
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_F3_med_01.flac",
+   "name": "Marimba_hit_Outrigger_F3_med_01",
+   "dur": 3.561,
+   "peak": 0.01826,
+   "rms": 0.002662,
+   "ch": 2,
+   "name_midi": 53,
+   "detected_midi": 64.987,
+   "midi": 64.987
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_F5_med_01.flac",
+   "name": "Marimba_hit_Outrigger_F5_med_01",
+   "dur": 1.367,
+   "peak": 0.01088,
+   "rms": 0.000743,
+   "ch": 2,
+   "name_midi": 77,
+   "detected_midi": 88.987,
+   "midi": 88.987
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_G2_med_01.flac",
+   "name": "Marimba_hit_Outrigger_G2_med_01",
+   "dur": 5.0,
+   "peak": 0.01195,
+   "rms": 0.001725,
+   "ch": 2,
+   "name_midi": 43,
+   "detected_midi": 54.987,
+   "midi": 54.987
+  },
+  {
+   "file": "marimba/Marimba_hit_Outrigger_G4_med_01.flac",
+   "name": "Marimba_hit_Outrigger_G4_med_01",
+   "dur": 1.31,
+   "peak": 0.02663,
+   "rms": 0.003149,
+   "ch": 2,
+   "name_midi": 67,
+   "detected_midi": 78.987,
+   "midi": 78.987
+  }
+ ],
+ "piano": [
+  {
+   "file": "piano/GPiano_sus_A#2_v2_rr1_Player.flac",
+   "name": "GPiano_sus_A#2_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02468,
+   "rms": 0.002159,
+   "ch": 2,
+   "name_midi": 46,
+   "detected_midi": 57.987,
+   "midi": 57.935,
+   "midi_orig": 57.987
+  },
+  {
+   "file": "piano/GPiano_sus_A#2_v3_rr1_Player.flac",
+   "name": "GPiano_sus_A#2_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.15042,
+   "rms": 0.0109,
+   "ch": 2,
+   "name_midi": 46,
+   "detected_midi": 57.987,
+   "midi": 57.95,
+   "midi_orig": 57.987
+  },
+  {
+   "file": "piano/GPiano_sus_A#3_v2_rr1_Player.flac",
+   "name": "GPiano_sus_A#3_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.01896,
+   "rms": 0.001167,
+   "ch": 2,
+   "name_midi": 58,
+   "detected_midi": 69.987,
+   "midi": 69.929,
+   "midi_orig": 69.987
+  },
+  {
+   "file": "piano/GPiano_sus_A#3_v3_rr1_Player.flac",
+   "name": "GPiano_sus_A#3_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.17784,
+   "rms": 0.008403,
+   "ch": 2,
+   "name_midi": 58,
+   "detected_midi": 69.987,
+   "midi": 69.957,
+   "midi_orig": 69.987
+  },
+  {
+   "file": "piano/GPiano_sus_A#4_v3_rr1_Player.flac",
+   "name": "GPiano_sus_A#4_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.15296,
+   "rms": 0.006927,
+   "ch": 2,
+   "name_midi": 70,
+   "detected_midi": 81.987,
+   "midi": 82.04,
+   "midi_orig": 81.987
+  },
+  {
+   "file": "piano/GPiano_sus_A0_v2_rr1_Player.flac",
+   "name": "GPiano_sus_A0_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.03545,
+   "rms": 0.004599,
+   "ch": 2,
+   "name_midi": 21,
+   "detected_midi": 32.987,
+   "midi": 32.934,
+   "midi_orig": 32.987
+  },
+  {
+   "file": "piano/GPiano_sus_A1_v3_rr1_Player.flac",
+   "name": "GPiano_sus_A1_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.24496,
+   "rms": 0.018137,
+   "ch": 2,
+   "name_midi": 33,
+   "detected_midi": 44.987,
+   "midi": 44.923,
+   "midi_orig": 44.987
+  },
+  {
+   "file": "piano/GPiano_sus_B4_v3_rr1_Player.flac",
+   "name": "GPiano_sus_B4_v3_rr1_Player",
+   "dur": 6.06,
+   "peak": 0.18515,
+   "rms": 0.007329,
+   "ch": 2,
+   "name_midi": 71,
+   "detected_midi": 82.987,
+   "midi": 82.987
+  },
+  {
+   "file": "piano/GPiano_sus_C1_v2_rr1_Player.flac",
+   "name": "GPiano_sus_C1_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02039,
+   "rms": 0.001813,
+   "ch": 2,
+   "name_midi": 24,
+   "detected_midi": 35.887,
+   "midi": 35.834,
+   "midi_orig": 35.887
+  },
+  {
+   "file": "piano/GPiano_sus_C1_v3_rr1_Player.flac",
+   "name": "GPiano_sus_C1_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.17331,
+   "rms": 0.010901,
+   "ch": 2,
+   "name_midi": 24,
+   "detected_midi": 35.987,
+   "midi": 35.84,
+   "midi_orig": 35.987
+  },
+  {
+   "file": "piano/GPiano_sus_C2_v2_rr1_Player.flac",
+   "name": "GPiano_sus_C2_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.03916,
+   "rms": 0.003117,
+   "ch": 2,
+   "name_midi": 36,
+   "detected_midi": 47.987,
+   "midi": 47.927,
+   "midi_orig": 47.987
+  },
+  {
+   "file": "piano/GPiano_sus_C2_v3_rr1_Player.flac",
+   "name": "GPiano_sus_C2_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.18165,
+   "rms": 0.011885,
+   "ch": 2,
+   "name_midi": 36,
+   "detected_midi": 48.087,
+   "midi": 47.931,
+   "midi_orig": 48.087
+  },
+  {
+   "file": "piano/GPiano_sus_C3_v2_rr1_Player.flac",
+   "name": "GPiano_sus_C3_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.03772,
+   "rms": 0.002246,
+   "ch": 2,
+   "name_midi": 48,
+   "detected_midi": 59.987,
+   "midi": 59.987
+  },
+  {
+   "file": "piano/GPiano_sus_C4_v2_rr1_Player.flac",
+   "name": "GPiano_sus_C4_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.04872,
+   "rms": 0.003064,
+   "ch": 2,
+   "name_midi": 60,
+   "detected_midi": 71.987,
+   "midi": 71.951,
+   "midi_orig": 71.987
+  },
+  {
+   "file": "piano/GPiano_sus_C4_v3_rr1_Player.flac",
+   "name": "GPiano_sus_C4_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.20521,
+   "rms": 0.012335,
+   "ch": 2,
+   "name_midi": 60,
+   "detected_midi": 71.987,
+   "midi": 71.966,
+   "midi_orig": 71.987
+  },
+  {
+   "file": "piano/GPiano_sus_C5_v3_rr1_Player.flac",
+   "name": "GPiano_sus_C5_v3_rr1_Player",
+   "dur": 8.066,
+   "peak": 0.23891,
+   "rms": 0.011767,
+   "ch": 2,
+   "name_midi": 72,
+   "detected_midi": 83.987,
+   "midi": 83.987
+  },
+  {
+   "file": "piano/GPiano_sus_D#0_v2_rr1_Player.flac",
+   "name": "GPiano_sus_D#0_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02189,
+   "rms": 0.002693,
+   "ch": 2,
+   "name_midi": 15,
+   "detected_midi": 46.187,
+   "midi": 26.782,
+   "midi_orig": 27.0
+  },
+  {
+   "file": "piano/GPiano_sus_D#1_v2_rr1_Player.flac",
+   "name": "GPiano_sus_D#1_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02337,
+   "rms": 0.002024,
+   "ch": 2,
+   "name_midi": 27,
+   "detected_midi": 38.887,
+   "midi": 38.887
+  },
+  {
+   "file": "piano/GPiano_sus_D#5_v2_rr1_Player.flac",
+   "name": "GPiano_sus_D#5_v2_rr1_Player",
+   "dur": 3.401,
+   "peak": 0.03006,
+   "rms": 0.001806,
+   "ch": 2,
+   "name_midi": 75,
+   "detected_midi": 86.987,
+   "midi": 87.041,
+   "midi_orig": 86.987
+  },
+  {
+   "file": "piano/GPiano_sus_D3_v2_rr1_Player.flac",
+   "name": "GPiano_sus_D3_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.0186,
+   "rms": 0.001163,
+   "ch": 2,
+   "name_midi": 50,
+   "detected_midi": 61.887,
+   "midi": 61.918,
+   "midi_orig": 61.887
+  },
+  {
+   "file": "piano/GPiano_sus_D3_v3_rr1_Player.flac",
+   "name": "GPiano_sus_D3_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.14143,
+   "rms": 0.007487,
+   "ch": 2,
+   "name_midi": 50,
+   "detected_midi": 61.987,
+   "midi": 61.931,
+   "midi_orig": 61.987
+  },
+  {
+   "file": "piano/GPiano_sus_D4_v2_rr1_Player.flac",
+   "name": "GPiano_sus_D4_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.05178,
+   "rms": 0.004037,
+   "ch": 2,
+   "name_midi": 62,
+   "detected_midi": 73.987,
+   "midi": 74.019,
+   "midi_orig": 73.987
+  },
+  {
+   "file": "piano/GPiano_sus_D4_v3_rr1_Player.flac",
+   "name": "GPiano_sus_D4_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.18279,
+   "rms": 0.012878,
+   "ch": 2,
+   "name_midi": 62,
+   "detected_midi": 74.087,
+   "midi": 74.033,
+   "midi_orig": 74.087
+  },
+  {
+   "file": "piano/GPiano_sus_E2_v3_rr1_Player.flac",
+   "name": "GPiano_sus_E2_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.22885,
+   "rms": 0.015678,
+   "ch": 2,
+   "name_midi": 40,
+   "detected_midi": 51.987,
+   "midi": 51.951,
+   "midi_orig": 51.987
+  },
+  {
+   "file": "piano/GPiano_sus_E3_v2_rr1_Player.flac",
+   "name": "GPiano_sus_E3_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02798,
+   "rms": 0.001834,
+   "ch": 2,
+   "name_midi": 52,
+   "detected_midi": 63.987,
+   "midi": 63.932,
+   "midi_orig": 63.987
+  },
+  {
+   "file": "piano/GPiano_sus_E3_v3_rr1_Player.flac",
+   "name": "GPiano_sus_E3_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.26053,
+   "rms": 0.012097,
+   "ch": 2,
+   "name_midi": 52,
+   "detected_midi": 63.987,
+   "midi": 63.954,
+   "midi_orig": 63.987
+  },
+  {
+   "file": "piano/GPiano_sus_E4_v2_rr1_Player.flac",
+   "name": "GPiano_sus_E4_v2_rr1_Player",
+   "dur": 5.102,
+   "peak": 0.03016,
+   "rms": 0.001737,
+   "ch": 2,
+   "name_midi": 64,
+   "detected_midi": 75.987,
+   "midi": 75.987
+  },
+  {
+   "file": "piano/GPiano_sus_F#0_v3_rr1_Player.flac",
+   "name": "GPiano_sus_F#0_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.09154,
+   "rms": 0.009614,
+   "ch": 2,
+   "name_midi": 18,
+   "detected_midi": 29.987,
+   "midi": 29.895,
+   "midi_orig": 29.987
+  },
+  {
+   "file": "piano/GPiano_sus_F#1_v3_rr1_Player.flac",
+   "name": "GPiano_sus_F#1_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.11835,
+   "rms": 0.010662,
+   "ch": 2,
+   "name_midi": 30,
+   "detected_midi": 42.087,
+   "midi": 41.964,
+   "midi_orig": 42.087
+  },
+  {
+   "file": "piano/GPiano_sus_F#2_v2_rr1_Player.flac",
+   "name": "GPiano_sus_F#2_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.01294,
+   "rms": 0.000907,
+   "ch": 2,
+   "name_midi": 42,
+   "detected_midi": 53.987,
+   "midi": 53.958,
+   "midi_orig": 53.987
+  },
+  {
+   "file": "piano/GPiano_sus_F#2_v3_rr1_Player.flac",
+   "name": "GPiano_sus_F#2_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.19627,
+   "rms": 0.012145,
+   "ch": 2,
+   "name_midi": 42,
+   "detected_midi": 54.087,
+   "midi": 53.972,
+   "midi_orig": 54.087
+  },
+  {
+   "file": "piano/GPiano_sus_F#3_v2_rr1_Player.flac",
+   "name": "GPiano_sus_F#3_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02977,
+   "rms": 0.002134,
+   "ch": 2,
+   "name_midi": 54,
+   "detected_midi": 65.887,
+   "midi": 65.917,
+   "midi_orig": 65.887
+  },
+  {
+   "file": "piano/GPiano_sus_F#4_v2_rr1_Player.flac",
+   "name": "GPiano_sus_F#4_v2_rr1_Player",
+   "dur": 7.202,
+   "peak": 0.01321,
+   "rms": 0.000739,
+   "ch": 2,
+   "name_midi": 66,
+   "detected_midi": 77.987,
+   "midi": 78.01,
+   "midi_orig": 77.987
+  },
+  {
+   "file": "piano/GPiano_sus_F#4_v3_rr1_Player.flac",
+   "name": "GPiano_sus_F#4_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.17863,
+   "rms": 0.008477,
+   "ch": 2,
+   "name_midi": 66,
+   "detected_midi": 77.987,
+   "midi": 78.028,
+   "midi_orig": 77.987
+  },
+  {
+   "file": "piano/GPiano_sus_G#2_v2_rr1_Player.flac",
+   "name": "GPiano_sus_G#2_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.01008,
+   "rms": 0.00073,
+   "ch": 2,
+   "name_midi": 44,
+   "detected_midi": 55.987,
+   "midi": 55.937,
+   "midi_orig": 55.987
+  },
+  {
+   "file": "piano/GPiano_sus_G#2_v3_rr1_Player.flac",
+   "name": "GPiano_sus_G#2_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.16231,
+   "rms": 0.008337,
+   "ch": 2,
+   "name_midi": 44,
+   "detected_midi": 55.987,
+   "midi": 55.946,
+   "midi_orig": 55.987
+  },
+  {
+   "file": "piano/GPiano_sus_G#3_v2_rr1_Player.flac",
+   "name": "GPiano_sus_G#3_v2_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.02709,
+   "rms": 0.001731,
+   "ch": 2,
+   "name_midi": 56,
+   "detected_midi": 67.987,
+   "midi": 67.987
+  },
+  {
+   "file": "piano/GPiano_sus_G#3_v3_rr1_Player.flac",
+   "name": "GPiano_sus_G#3_v3_rr1_Player",
+   "dur": 9.0,
+   "peak": 0.22865,
+   "rms": 0.010352,
+   "ch": 2,
+   "name_midi": 56,
+   "detected_midi": 67.987,
+   "midi": 67.987
+  },
+  {
+   "file": "piano/GPiano_sus_G#4_v2_rr1_Player.flac",
+   "name": "GPiano_sus_G#4_v2_rr1_Player",
+   "dur": 4.102,
+   "peak": 0.00929,
+   "rms": 0.000483,
+   "ch": 2,
+   "name_midi": 68,
+   "detected_midi": 79.987,
+   "midi": 79.987
+  }
+ ],
+ "slapstick": [
+  {
+   "file": "slapstick/slapstick_rr1.flac",
+   "name": "slapstick_rr1",
+   "dur": 0.39,
+   "peak": 0.94895,
+   "rms": 0.034931,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "slapstick/slapstick_rr2.flac",
+   "name": "slapstick_rr2",
+   "dur": 0.358,
+   "peak": 0.97245,
+   "rms": 0.031986,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "slapstick/slapstick_rr3.flac",
+   "name": "slapstick_rr3",
+   "dur": 0.398,
+   "peak": 0.90988,
+   "rms": 0.033465,
+   "ch": 2,
+   "name_midi": null
+  }
+ ],
+ "suscymbal": [
+  {
+   "file": "suscymbal/susCymb1_hit_f1.flac",
+   "name": "susCymb1_hit_f1",
+   "dur": 9.0,
+   "peak": 0.16768,
+   "rms": 0.014293,
+   "ch": 2,
+   "name_midi": 29
+  }
+ ],
+ "timpani": [
+  {
+   "file": "timpani/Timpani1_Hit_v4_rr1_Sum.flac",
+   "name": "Timpani1_Hit_v4_rr1_Sum",
+   "dur": 5.034,
+   "peak": 0.22209,
+   "rms": 0.0142,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "timpani/Timpani2_Hit_v4_rr1_Sum.flac",
+   "name": "Timpani2_Hit_v4_rr1_Sum",
+   "dur": 3.255,
+   "peak": 0.34066,
+   "rms": 0.017933,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "timpani/Timpani3_Hit_v4_rr1_Sum.flac",
+   "name": "Timpani3_Hit_v4_rr1_Sum",
+   "dur": 4.609,
+   "peak": 0.31536,
+   "rms": 0.015451,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "timpani/Timpani4_Hit_v4_rr1_Sum.flac",
+   "name": "Timpani4_Hit_v4_rr1_Sum",
+   "dur": 2.759,
+   "peak": 0.38236,
+   "rms": 0.023054,
+   "ch": 2,
+   "name_midi": null
+  }
+ ],
+ "vibraphone": [
+  {
+   "file": "vibraphone/Vibes_hard_A2_v2_rr1_Main.flac",
+   "name": "Vibes_hard_A2_v2_rr1_Main",
+   "dur": 6.888,
+   "peak": 0.27628,
+   "rms": 0.012745,
+   "ch": 2,
+   "name_midi": 45,
+   "detected_midi": 56.987,
+   "midi": 56.987
+  },
+  {
+   "file": "vibraphone/Vibes_hard_B3_v2_rr1_Main.flac",
+   "name": "Vibes_hard_B3_v2_rr1_Main",
+   "dur": 7.0,
+   "peak": 0.06756,
+   "rms": 0.014773,
+   "ch": 2,
+   "name_midi": 59,
+   "detected_midi": 70.987,
+   "midi": 70.987
+  },
+  {
+   "file": "vibraphone/Vibes_hard_C3_v2_rr1_Main.flac",
+   "name": "Vibes_hard_C3_v2_rr1_Main",
+   "dur": 7.0,
+   "peak": 0.16808,
+   "rms": 0.00852,
+   "ch": 2,
+   "name_midi": 48,
+   "detected_midi": 59.987,
+   "midi": 59.987
+  },
+  {
+   "file": "vibraphone/Vibes_hard_E3_v2_rr1_Main.flac",
+   "name": "Vibes_hard_E3_v2_rr1_Main",
+   "dur": 7.0,
+   "peak": 0.12431,
+   "rms": 0.014638,
+   "ch": 2,
+   "name_midi": 52,
+   "detected_midi": 63.987,
+   "midi": 63.987
+  },
+  {
+   "file": "vibraphone/Vibes_hard_F2_v2_rr1_Main.flac",
+   "name": "Vibes_hard_F2_v2_rr1_Main",
+   "dur": 2.333,
+   "peak": 0.15177,
+   "rms": 0.013122,
+   "ch": 2,
+   "name_midi": 41,
+   "detected_midi": 94.487,
+   "midi": 53.026,
+   "midi_orig": 53.0
+  },
+  {
+   "file": "vibraphone/Vibes_hard_G3_v2_rr1_Main.flac",
+   "name": "Vibes_hard_G3_v2_rr1_Main",
+   "dur": 7.0,
+   "peak": 0.06267,
+   "rms": 0.010572,
+   "ch": 2,
+   "name_midi": 55,
+   "detected_midi": 66.987,
+   "midi": 66.987
+  }
+ ],
+ "vibraslap": [
+  {
+   "file": "vibraslap/vibraslap_rr1.flac",
+   "name": "vibraslap_rr1",
+   "dur": 2.859,
+   "peak": 0.07712,
+   "rms": 0.003832,
+   "ch": 2,
+   "name_midi": null
+  }
+ ],
+ "wineglass": [
+  {
+   "file": "wineglass/glass1_D#4_Fast_1_main.flac",
+   "name": "glass1_D#4_Fast_1_main",
+   "dur": 7.0,
+   "peak": 0.09828,
+   "rms": 0.022233,
+   "ch": 2,
+   "name_midi": 63,
+   "detected_midi": 75.287,
+   "midi": 75.287
+  }
+ ],
+ "woodblock": [
+  {
+   "file": "woodblock/wood_click2_mp.flac",
+   "name": "wood_click2_mp",
+   "dur": 0.441,
+   "peak": 0.11637,
+   "rms": 0.004438,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "woodblock/wood_click3_vl2.flac",
+   "name": "wood_click3_vl2",
+   "dur": 0.468,
+   "peak": 0.25342,
+   "rms": 0.016833,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "woodblock/wood_click_f_rr1.flac",
+   "name": "wood_click_f_rr1",
+   "dur": 0.463,
+   "peak": 0.39328,
+   "rms": 0.02692,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "woodblock/wood_click_ff.flac",
+   "name": "wood_click_ff",
+   "dur": 0.44,
+   "peak": 0.59447,
+   "rms": 0.033168,
+   "ch": 2,
+   "name_midi": null
+  },
+  {
+   "file": "woodblock/wood_click_mp.flac",
+   "name": "wood_click_mp",
+   "dur": 0.486,
+   "peak": 0.07031,
+   "rms": 0.005115,
+   "ch": 2,
+   "name_midi": null
+  }
+ ]
+}
