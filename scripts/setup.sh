@@ -8,20 +8,9 @@ VENDOR="$SKILL_DIR/vendor"
 
 echo "SKILL_DIR = $SKILL_DIR"
 
-missing=0
-for cmd in node npm python3 ffmpeg; do
-  if command -v "$cmd" >/dev/null 2>&1; then
-    echo "  ok   $cmd  $($cmd --version 2>&1 | head -1)"
-  else
-    echo "  MISS $cmd  → 请先安装" >&2
-    missing=1
-  fi
-done
-if [ ! -x "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" ] && [ -z "${MG_CHROME:-}" ]; then
-  echo "  warn 未找到 Google Chrome；设 MG_CHROME=/path/to/chrome 指定" >&2
-fi
-command -v blender >/dev/null 2>&1 || echo "  warn 未找到 Blender（仅 04-3d-render 需要）"
-[ "$missing" -eq 0 ] || { echo "缺少必需组件，已中止。" >&2; exit 1; }
+echo "==> 检查并补齐系统组件（缺什么自动装什么）"
+bash "$SKILL_DIR/scripts/bootstrap-deps.sh"
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 echo "==> npm install（在 vendor/ 根目录，片内 /node_modules 路径依赖它）"
 cd "$VENDOR"

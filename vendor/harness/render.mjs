@@ -27,7 +27,13 @@ import events from 'node:events';
 events.defaultMaxListeners = 100;
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const CHROME = process.env.MG_CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+// Chrome: MG_CHROME > system Chrome > the copy scripts/bootstrap-deps.sh downloaded.
+const CHROME = process.env.MG_CHROME || (() => {
+  const sys = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+  if (fs.existsSync(sys)) return sys;
+  const saved = path.join(os.homedir(), '.local/share/mg-motion-styles/chrome-path');
+  return fs.existsSync(saved) ? fs.readFileSync(saved, 'utf8').trim() : sys;
+})();
 // GPU flags: ANGLE/Metal on macOS; on Linux (e.g. the NVIDIA render box) default to ANGLE/Vulkan, override with MG_GPU_ARGS.
 const GPU_ARGS = process.env.MG_GPU_ARGS ? process.env.MG_GPU_ARGS.split(' ').filter(Boolean)
   : process.platform === 'darwin' ? ['--use-angle=metal']

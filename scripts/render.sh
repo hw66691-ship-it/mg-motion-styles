@@ -7,6 +7,7 @@ set -euo pipefail
 
 SKILL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 VENDOR="$SKILL_DIR/vendor"
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 if [ $# -lt 1 ]; then
   echo "用法: bash scripts/render.sh <demoDir> [render.mjs 参数...]" >&2

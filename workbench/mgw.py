@@ -29,6 +29,7 @@ import base64
 import contextlib
 import fcntl
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -39,6 +40,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import voicecore as vc  # noqa: E402
+
+# bootstrap-deps.sh puts node / ffmpeg / python3 in ~/.local/bin; make sure subprocesses find them.
+os.environ["PATH"] = os.pathsep.join([str(Path.home() / ".local/bin"), "/opt/homebrew/bin", "/usr/local/bin", os.environ.get("PATH", "")])
 
 
 def _server() -> dict | None:
