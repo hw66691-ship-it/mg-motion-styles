@@ -64,6 +64,7 @@ const MIME = {
   '.ktx2': 'application/octet-stream',
 };
 
+const MISSING_FONTS = new Set();
 function startServer() {
   return new Promise((resolve) => {
     const srv = http.createServer((req, res) => {
@@ -72,6 +73,15 @@ function startServer() {
         let p = path.join(ROOT, decodeURIComponent(u.pathname));
         if (!p.startsWith(ROOT)) { res.writeHead(403); return res.end(); }
         if (fs.existsSync(p) && fs.statSync(p).isDirectory()) p = path.join(p, 'index.html');
+        // A missing font (vendor fonts can't be redistributed) would stall document.fonts.load
+        // forever; serve Noto Sans SC instead so the page still renders, just with a fallback face.
+        if (!fs.existsSync(p) && /^\/assets\/fonts\/.+\.(ttf|otf|woff2?)$/i.test(u.pathname)) {
+          const fb = path.join(ROOT, 'assets/fonts/cjk/notosanssc/NotoSansSC-VF.ttf');
+          if (fs.existsSync(fb)) {
+            if (!MISSING_FONTS.has(u.pathname)) { MISSING_FONTS.add(u.pathname); console.log(`[font fallback] ${u.pathname} → NotoSansSC-VF.ttf`); }
+            p = fb;
+          }
+        }
         if (!fs.existsSync(p)) { res.writeHead(404); return res.end('404 ' + u.pathname); }
         res.writeHead(200, {
           'Content-Type': MIME[path.extname(p).toLowerCase()] || 'application/octet-stream',

@@ -21,12 +21,11 @@ description: 用代码制作 MG 动态设计短片（16 种风格：扁平矢量
      ```
 
      脚本会下载上面的 zip，解压覆盖到本 skill 目录，并运行完整版的 `scripts/setup.sh`
-     安装 Node / Python 依赖和开源字体。需要联网，首次约几分钟。
+     自动补齐缺少的 Node.js / Python / ffmpeg / Chrome，再装依赖和开源字体。需要联网，首次约 5–10 分钟。
 2. 安装成功后，**重新读取本目录下的 `SKILL.md`**（此时已是完整版说明），再按它处理用户的需求。
-3. 安装失败时把脚本的报错原样告诉用户。常见原因：没装 node / python3 / ffmpeg，
-   或网络无法访问 github.com。不要自行编造替代流程。
+3. 安装失败时把脚本的报错原样告诉用户（最常见的原因是网络无法访问 github.com），不要自行编造替代流程。
 
 ## 依赖
 
-Node.js、Python 3、ffmpeg、Google Chrome（无头渲染）；可选 Blender（3D 风格）、
-本地 Qwen3-TTS（旁白配音）。详见完整版 README。
+Node.js、Python 3.11+、ffmpeg、Chrome 缺哪个，安装脚本就自动下载哪个，装到 `~/.local`，不需要管理员权限。
+可选组件不会自动安装：Blender（只有 3D 风格需要）、本地 Qwen3-TTS（旁白配音）。详见完整版 README。
